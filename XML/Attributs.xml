@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<vues>
+    <champs id="fictif">
+        <valeur>NULL</valeur>
+        <valeur>Non</valeur>
+        <valeur>Oui</valeur>
+    </champs>
+    <champs id="nature">
+        <valeur>Canal</valeur>
+        <valeur>Conduit buse</valeur>
+        <valeur>Ecoulement naturel</valeur>
+        <valeur>Aqueduc</valeur>
+        <valeur>Conduit forcé</valeur>
+        <valeur>Delta</valeur>
+        <valeur>Ecoulement canalisé</valeur>
+        <valeur>Ecoulement endoréique</valeur>
+        <valeur>Ecoulement hyporhéique</valeur>
+        <valeur>Ecoulement karstique</valeur>
+        <valeur>Ecoulement naturel</valeur>
+        <valeur>Ecoulement phréatique</valeur>
+        <valeur>Estuaire</valeur>
+        <valeur>Glacier, névé</valeur>
+        <valeur>Inconnue</valeur>
+        <valeur>Lac</valeur>
+        <valeur>Lagune</valeur>
+        <valeur>Mangrove</valeur>
+        <valeur>Marais</valeur>
+        <valeur>Mare</valeur>
+        <valeur>Plan d'eau de gravière</valeur>
+        <valeur>Plan d'eau de mine</valeur>
+        <valeur>Ravine</valeur>
+        <valeur>Retenue</valeur>
+        <valeur>Retenue-barrage</valeur>
+        <valeur>Retenue-bassin portuaire</valeur>
+        <valeur>Retenue-digue</valeur>
+        <valeur>Réservoir-bassin</valeur>
+        <valeur>Réservoir-bassin d'orage</valeur>
+        <valeur>Réservoir-bassin piscicole</valeur>
+    </champs>
+    <champs id="inventaire_bcae">
+        <valeur>NULL</valeur>
+        <valeur>Non</valeur>
+        <valeur>Oui</valeur>
+    </champs>
+    <champs id="type_d_annexe">
+        <valeur>NULL</valeur>
+        <valeur>I-A</valeur>
+        <valeur>I-A_bis</valeur>
+        <valeur>I-B</valeur>
+        <valeur>I-C</valeur>
+        <valeur>I-C_bis</valeur>
+        <valeur>I-D</valeur>
+    </champs>
+    <champs id="fosse">
+        <valeur>NULL</valeur>
+        <valeur>Non</valeur>
+        <valeur>Oui</valeur>
+    </champs>
+    <champs id="origine">
+        <valeur>NULL</valeur>
+        <valeur>Artificielle</valeur>
+        <valeur>Inconnue</valeur>
+        <valeur>Naturelle aménagée</valeur>
+        <valeur>Naturelle non aménagée</valeur>
+    </champs>
+    <champs id="persistance">
+        <valeur>NULL</valeur>
+        <valeur>Ephémère</valeur>
+        <valeur>Inconnue</valeur>
+        <valeur>Intermittent</valeur>
+        <valeur>Permanent</valeur>
+        <valeur>Sec</valeur>
+    </champs>
+    <champs id="position_par_rapport_au_sol">
+        <valeur>NULL</valeur>
+        <valeur>-2</valeur>
+        <valeur>-1</valeur>
+        <valeur>0</valeur>
+        <valeur>1</valeur>
+        <valeur>2</valeur>
+        <valeur>Inconnue</valeur>
+    </champs>
+    <champs id="type_de_bras">
+        <valeur>NULL</valeur>
+        <valeur>Inconnu</valeur>
+        <valeur>Mort</valeur>
+        <valeur>Principal</valeur>
+        <valeur>Sans objet</valeur>
+        <valeur>Secondaire</valeur>
+    </champs>
+    <champs id="inventaire_police_de_l_eau">
+        <valeur>NULL</valeur>
+        <valeur>Expertise en cours</valeur>
+        <valeur>Inscrit</valeur>
+        <valeur>Non inscrit</valeur>
+    </champs>
+
+</vues>
