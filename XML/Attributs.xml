@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<vues>
+<modele>
     <champs id="fictif">
         <valeur>NULL</valeur>
         <valeur>Non</valeur>
@@ -41,6 +41,12 @@
         <valeur>NULL</valeur>
         <valeur>Non</valeur>
         <valeur>Oui</valeur>
+    </champs>
+    <champs id="inventaire_police_de_l_eau">
+        <valeur>NULL</valeur>
+        <valeur>Expertise en cours</valeur>
+        <valeur>Inscrit</valeur>
+        <valeur>Non inscrit</valeur>
     </champs>
     <champs id="type_d_annexe">
         <valeur>NULL</valeur>
@@ -88,11 +94,4 @@
         <valeur>Sans objet</valeur>
         <valeur>Secondaire</valeur>
     </champs>
-    <champs id="inventaire_police_de_l_eau">
-        <valeur>NULL</valeur>
-        <valeur>Expertise en cours</valeur>
-        <valeur>Inscrit</valeur>
-        <valeur>Non inscrit</valeur>
-    </champs>
-
-</vues>
+</modele>

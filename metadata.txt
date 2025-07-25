@@ -6,7 +6,7 @@
 name=IGN assistant hydro national
 qgisMinimumVersion=3.0
 description=plugin generique
-version=1.0
+version=1.0.0
 author=Gérôme PECHEUR
 email=gerome.pecheur@ign.fr
 

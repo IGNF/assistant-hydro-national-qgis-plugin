@@ -21,6 +21,8 @@
  *                                                                         *
  ***************************************************************************/
 """
+from PIL.features import features
+from PyQt5.QtCore import QEvent
 from PyQt5.QtWidgets import QDialog, QLineEdit, QComboBox, QLabel
 from PyQt5.uic import loadUi
 from qgis.core import Qgis
@@ -39,8 +41,13 @@ class ClassPlugin:
 
     def __init__(self, iface):
 
+        # list contenant pour chaque troncons un dictionnaire : clé = idchamps , val = attributs
+        self.dico_champs_val_xml = {}
+        self.list_dico_selection = []
+
         self.cheminpluscourt = None
         self.dico_champs_modifie = {}
+
         self.layer_hydro = None
         self.dlg = None
         self.iface = iface
@@ -54,11 +61,15 @@ class ClassPlugin:
         if len(self.dico_champs_modifie) == 0:
             return
         QGuiApplication.setOverrideCursor(Qt.WaitCursor)
-        self.layer_hydro.startEditing()
-        for sel in self.layer_hydro.selectedFeatures():
-            # changement d'attributs par paquet (dico de valeurs)
-            if not self.layer_hydro.changeAttributeValues(sel.id(), self.dico_champs_modifie):
-                print("Erreur: changement d'attribut non effectué")
+        # self.layer_hydro.startEditing()
+        # for sel in self.layer_hydro.selectedFeatures():
+        #     # changement d'attributs par paquet (dico de valeurs)
+        #     if not self.layer_hydro.changeAttributeValues(sel.id(), self.dico_champs_modifie):
+        #         print("Erreur: changement d'attribut non effectué")
+
+        # TEST
+        # for champs, val in self.dico_champs_modifie.items():
+        #     print(self.layer_hydro.fields().field(champs).name(), " = ", val)
 
         QGuiApplication.restoreOverrideCursor()
         self.afficheMessageBar(
@@ -66,6 +77,35 @@ class ClassPlugin:
 
     def afficheMessageBar(self, message):
         self.iface.messageBar().pushMessage("Info", message, level=Qgis.Info, duration=5)
+
+    def getattributs_from_selection(self):
+        self.list_dico_selection.clear()
+        dico_tmp = {}
+
+        # print(self.dico_champs_val_xml.keys())
+
+
+        for sel in self.layer_hydro.selectedFeatures():
+            for idchamps in self.layer_hydro.fields():
+                if idchamps.name() in self.dico_champs_val_xml.keys():
+                    dico_tmp[self.layer_hydro.fields().indexOf(idchamps.name())] = sel[idchamps.name()]
+            #         print(idchamps.name(), " - ", sel[idchamps.name()])
+            self.list_dico_selection.append(dico_tmp)
+
+        print("SELECTION : ",self.list_dico_selection)
+        print("MODIFIE   : ",self.dico_champs_modifie)
+
+        #     # recuperer tous les champs de la selection
+        #     for idchamps in listchamps:
+        #         valchamps = sel.attribute(idchamps)
+        #     print(valchamps)
+
+
+            # comparer avec les champs de l'interface (hors ceux en read only)
+
+            # remplir un dictionnaire avec les champs initiaux de la selection (juste ceux de l'interface et hors read only)
+
+
 
     def actualiserSelection(self):
         # gestion de la couleur de selection
@@ -84,12 +124,16 @@ class ClassPlugin:
             self.vide_attribut_widgets()
             self.set_enable_widget(False)
         else:
-            self.set_enable_widget()
+            self.set_enable_widget(True)
 
         self.dlg.pushButtonValider.setEnabled(False)
 
         self.dico_champs_modifie.clear()
         self.init_widgets_from_selection()
+
+        print("TEST")
+        # recuperer les valeurs des attributs de toute la selection
+        self.getattributs_from_selection()
 
     def apropos(self):
         self.dlgAProposDe.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.WindowCloseButtonHint)
@@ -112,31 +156,26 @@ class ClassPlugin:
         pass
 
     def colorchange(self):
-        self.actualiserSelection()
+        # self.actualiserSelection()
+        # self.iface.mapCanvas().refresh()
+        couleur = self.dlg.mColorButton.color()
+        self.iface.mapCanvas().setSelectionColor(couleur)
 
-    def set_enable_widget(self,etat = True):
-        for widget_inerface in self.get_widgets("QLineEdit"):
-            widget_inerface.setEnabled(etat)
-        for widget_inerface in self.get_widgets("QComboBox"):
-            widget_inerface.setEnabled(etat)
+    def set_enable_widget(self, etat):
+        for widget_interface in self.get_widgets("QLineEdit"):
+            widget_interface.setEnabled(etat)
+            if widget_interface.objectName() in LIST_LINEEDIT_READ_ONLY:
+                widget_interface.setEnabled(False)
+
+        for widget_interface in self.get_widgets("QComboBox"):
+            widget_interface.setEnabled(etat)
+            if widget_interface.objectName() in LIST_COMBOBOX_READ_ONLY:
+                widget_interface.setEnabled(False)
 
     def widgetChange(self,widget_interface):
         if self.layer_hydro.selectedFeatureCount() == 0:
             return
         widget_interface.setStyleSheet(CUSTOM_WIDGETS[1])
-
-    def combo_Change_utilisateur(self,widget_interface):
-        index_champs = self.layer_hydro.fields().indexOf(widget_interface.objectName())
-        valeur = widget_interface.currentText()
-        if valeur == "Non":
-            valeur = 0
-        elif valeur == "Oui":
-            valeur = 1
-        else:
-            valeur = widget_interface.currentText()
-        self.dico_champs_modifie[index_champs] = valeur
-        self.dlg.pushButtonValider.setEnabled(True)
-        print(self.dico_champs_modifie)
 
     def vide_attribut_widgets(self):
         for widget_inerface in self.get_widgets("QLineEdit"):
@@ -146,8 +185,19 @@ class ClassPlugin:
             widget_inerface.setCurrentIndex(0)
             widget_inerface.setStyleSheet(CUSTOM_WIDGETS[2])
 
-    def edit_Change_utilisateur(self,widget_interface):
-        print("edit_Change_utilisateur")
+    # detection changement d'un combobox
+    def combo_Change_utilisateur(self,widget_interface):
+        index_champs = self.layer_hydro.fields().indexOf(widget_interface.objectName())
+        valeur = widget_interface.currentText()
+        if valeur == "Non":
+            valeur = 0
+        elif valeur == "Oui":
+            valeur = 1
+        self.dico_champs_modifie[index_champs] = valeur
+        self.dlg.pushButtonValider.setEnabled(True)
+
+    # detection changement d'un lineedit
+    def lineedit_Change_utilisateur(self,widget_interface):
         index_champs = self.layer_hydro.fields().indexOf(widget_interface.objectName())
         if widget_interface.text() == "":
             self.dico_champs_modifie[index_champs] = "NULL"
@@ -207,7 +257,7 @@ class ClassPlugin:
                     widg.setStyleSheet(CUSTOM_WIDGETS[2])
 
     # retourne la liste des widgets dans le gridlayout
-    def get_widgets(self, type_widget="ALL"):
+    def get_widgets(self, type_widget):
         list_combo = []
         list_line_edit = []
         list_label = []
@@ -217,11 +267,9 @@ class ClassPlugin:
             if widg.objectName() == "gridLayoutWidget":
                 children = widg.children()
                 for child in children:
-                    if (type_widget == "QLineEdit"
-                        or type_widget == "ALL") and isinstance(child, QLineEdit):
+                    if type_widget == "QLineEdit"  and isinstance(child, QLineEdit):
                         list_line_edit.append(child)
-                    elif (type_widget == "QComboBox"
-                          or type_widget == "ALL") and isinstance(child, QComboBox):
+                    elif type_widget == "QComboBox" and isinstance(child, QComboBox):
                         list_combo.append(child)
                     elif type_widget == "QLabel" and isinstance(child, QLabel):
                         list_label.append(child)
@@ -233,7 +281,7 @@ class ClassPlugin:
     # et return : le dictionnaire
     # clé : champs
     # valeur = tous les attributs possibles
-    def ini_widget(self):
+    def init_widgets_from_xml(self):
         # parcours des widgets combobox inclu dans le formLayouWidget
         # et remplissage d'une liste de QComboBox
 
@@ -241,7 +289,7 @@ class ClassPlugin:
 
         # initialisation du dictionnaire des champs, attributs associés
         # à partir du xml
-        dico_champs_val_xml = {}
+        self.dico_champs_val_xml = {}
         tree = ET.parse(PATH_REP + "\XML\Attributs.xml")
         root = tree.getroot()
         for champs in root.findall("champs"):
@@ -250,17 +298,17 @@ class ClassPlugin:
             champs_id = champs.get('id')
             for valeur in champs.findall("valeur"):
                 list_valeur.append(valeur.text)
-            dico_champs_val_xml[champs_id] = list_valeur
+            self.dico_champs_val_xml[champs_id] = list_valeur
 
         # initialisation des combo a vide
-        for champs, valeur in dico_champs_val_xml.items():
+        for champs, valeur in self.dico_champs_val_xml.items():
             for widg in list_widget:
                 if champs == widg.objectName():
                     widg.clear()
 
         # comparaison entre les CComboBox de l'interface et ceux du xml
         # et remplissage des combos
-        for champs, valeur in dico_champs_val_xml.items():
+        for champs, valeur in self.dico_champs_val_xml.items():
             for widg in list_widget:
                 if champs == widg.objectName():
                     widg.addItems(valeur)
@@ -285,6 +333,16 @@ class ClassPlugin:
             layer = project.mapLayersByName(LAYER_HYDRO)
             self.layer_hydro = layer[0]
             return True
+
+    def affiche_spec(self,attribute):
+        import webbrowser
+        url = f"https://bdtopoexplorer.ign.fr/?id_theme=40&id_classe=44#attribute_{attribute}"
+        webbrowser.open(url)
+
+    def affiche_spec_code_hydro(self):
+        import webbrowser
+        url = "https://bdtopoexplorer.ign.fr/?attr_communs_theme=Hydrographie#attribute_296"
+        webbrowser.open(url)
 
     def run(self):
 
@@ -311,11 +369,25 @@ class ClassPlugin:
         # modif par l'utilisateur line edit
         for widget_interface in self.get_widgets("QLineEdit"):
             # textedited : changement par l'utilisateur, donc autre que par setText()
-            widget_interface.textEdited.connect(lambda _, w3=widget_interface: self.edit_Change_utilisateur(w3))
+            widget_interface.textEdited.connect(lambda _, w3=widget_interface: self.lineedit_Change_utilisateur(w3))
 
         #  modif par l'utilisateur combobox
         for widget_interface in self.get_widgets("QComboBox"):
-            widget_interface.activated.connect(lambda _, w3=widget_interface: self.combo_Change_utilisateur(w3))
+            # widget_interface.activated.connect(lambda _, w3=widget_interface: self.combo_Change_utilisateur(w3))
+            widget_interface.currentTextChanged.connect(lambda _, w3=widget_interface: self.combo_Change_utilisateur(w3))
+
+        # boutons des spécs
+        self.dlg.pushButtonSpecNature.clicked.connect(lambda:self.affiche_spec("337"))
+        self.dlg.pushButtonSpecFosse.clicked.connect(lambda:self.affiche_spec("340"))
+        self.dlg.pushButtonSpecPosSol.clicked.connect(lambda:self.affiche_spec("338"))
+        self.dlg.pushButtonSpecPersistance.clicked.connect(lambda: self.affiche_spec("339"))
+        self.dlg.pushButtonSpecOrigine.clicked.connect(lambda: self.affiche_spec("345"))
+        self.dlg.pushButtonSpecSens.clicked.connect(lambda: self.affiche_spec("347"))
+        self.dlg.pushButtonSpecTypeBras.clicked.connect(lambda: self.affiche_spec("351"))
+        self.dlg.pushButtonSpecDelimitation.clicked.connect(lambda: self.affiche_spec("349"))
+        self.dlg.pushButtonSpecCodeHydro.clicked.connect(self.affiche_spec_code_hydro)
+        self.dlg.pushButtonSpecInvenPE.clicked.connect(lambda: self.affiche_spec("361"))
+        self.dlg.pushButtonSpecIdentPE.clicked.connect(lambda: self.affiche_spec("362"))
 
         self.dlg.pushButtonValider.clicked.connect(self.valider)
         self.dlg.pushButtonValider.setStyleSheet(CUSTOM_WIDGETS[3])
@@ -326,13 +398,14 @@ class ClassPlugin:
         self.dlg.pushButtonCheminCourt.clicked.connect(self.chemin_court)
 
         # initialisation des widget ccombobox avec xml
-        self.ini_widget()
+        self.init_widgets_from_xml()
 
         self.iface.mapCanvas().selectionChanged.connect(self.actualiserSelection)
         self.actualiserSelection()
 
         # show the dialog
-        self.dlg.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.WindowCloseButtonHint)
+        self.dlg.setParent(self.iface.mainWindow())
+        self.dlg.setWindowFlags(Qt.Dialog | Qt.WindowTitleHint | Qt.WindowCloseButtonHint)
         self.dlg.show()
         # Run the dialog event loop
         result = self.dlg.exec_()
