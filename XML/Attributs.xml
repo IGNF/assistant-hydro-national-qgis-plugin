@@ -42,6 +42,11 @@
         <valeur>Non</valeur>
         <valeur>Oui</valeur>
     </champs>
+    <champs id="validation_bcae">
+        <valeur>NULL</valeur>
+        <valeur>Non</valeur>
+        <valeur>Oui</valeur>
+    </champs>
     <champs id="inventaire_police_de_l_eau">
         <valeur>NULL</valeur>
         <valeur>Expertise en cours</valeur>
@@ -57,7 +62,11 @@
         <valeur>I-C_bis</valeur>
         <valeur>I-D</valeur>
     </champs>
-    <champs id="fosse">
+    <champs id="delimitation">
+            <valeur>NULL</valeur>
+            <valeur>Non</valeur>
+            <valeur>Oui</valeur>
+        </champs>    <champs id="fosse">
         <valeur>NULL</valeur>
         <valeur>Non</valeur>
         <valeur>Oui</valeur>
@@ -85,6 +94,13 @@
         <valeur>1</valeur>
         <valeur>2</valeur>
         <valeur>Inconnue</valeur>
+    </champs>
+    <champs id="sens_de_l_ecoulement">
+        <valeur>NULL</valeur>
+        <valeur>Double sens</valeur>
+        <valeur>Inconnu</valeur>
+        <valeur>Sens direct</valeur>
+        <valeur>Sens inverse</valeur>
     </champs>
     <champs id="type_de_bras">
         <valeur>NULL</valeur>

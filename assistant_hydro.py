@@ -21,8 +21,7 @@
  *                                                                         *
  ***************************************************************************/
 """
-from PIL.features import features
-from PyQt5.QtCore import QEvent
+from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QDialog, QLineEdit, QComboBox, QLabel
 from PyQt5.uic import loadUi
 from qgis.core import Qgis
@@ -61,16 +60,11 @@ class ClassPlugin:
         if len(self.dico_champs_modifie) == 0:
             return
         QGuiApplication.setOverrideCursor(Qt.WaitCursor)
-        # self.layer_hydro.startEditing()
-        # for sel in self.layer_hydro.selectedFeatures():
-        #     # changement d'attributs par paquet (dico de valeurs)
-        #     if not self.layer_hydro.changeAttributeValues(sel.id(), self.dico_champs_modifie):
-        #         print("Erreur: changement d'attribut non effectué")
-
-        # TEST
-        # for champs, val in self.dico_champs_modifie.items():
-        #     print(self.layer_hydro.fields().field(champs).name(), " = ", val)
-
+        self.layer_hydro.startEditing()
+        for sel in self.layer_hydro.selectedFeatures():
+            # changement d'attributs par paquet (dico de valeurs)
+            if not self.layer_hydro.changeAttributeValues(sel.id(), self.dico_champs_modifie):
+                print("Erreur: changement d'attributs non effectués")
         QGuiApplication.restoreOverrideCursor()
         self.afficheMessageBar(
             f"Les modifications ont été effectués sur : {self.layer_hydro.selectedFeatureCount()} tronçon(s)")
@@ -82,30 +76,13 @@ class ClassPlugin:
         self.list_dico_selection.clear()
         dico_tmp = {}
 
-        # print(self.dico_champs_val_xml.keys())
-
-
         for sel in self.layer_hydro.selectedFeatures():
             for idchamps in self.layer_hydro.fields():
-                if idchamps.name() in self.dico_champs_val_xml.keys():
-                    dico_tmp[self.layer_hydro.fields().indexOf(idchamps.name())] = sel[idchamps.name()]
-            #         print(idchamps.name(), " - ", sel[idchamps.name()])
+                # TODO : on prend en compte tous les champs et non plus juste ceux du xml (combobox)
+                # permet d'integrer les lineedit et non plus que les combobox
+                # if idchamps.name() in self.dico_champs_val_xml.keys():
+                dico_tmp[self.layer_hydro.fields().indexOf(idchamps.name())] = sel[idchamps.name()]
             self.list_dico_selection.append(dico_tmp)
-
-        print("SELECTION : ",self.list_dico_selection)
-        print("MODIFIE   : ",self.dico_champs_modifie)
-
-        #     # recuperer tous les champs de la selection
-        #     for idchamps in listchamps:
-        #         valchamps = sel.attribute(idchamps)
-        #     print(valchamps)
-
-
-            # comparer avec les champs de l'interface (hors ceux en read only)
-
-            # remplir un dictionnaire avec les champs initiaux de la selection (juste ceux de l'interface et hors read only)
-
-
 
     def actualiserSelection(self):
         # gestion de la couleur de selection
@@ -131,7 +108,6 @@ class ClassPlugin:
         self.dico_champs_modifie.clear()
         self.init_widgets_from_selection()
 
-        print("TEST")
         # recuperer les valeurs des attributs de toute la selection
         self.getattributs_from_selection()
 
@@ -176,6 +152,7 @@ class ClassPlugin:
         if self.layer_hydro.selectedFeatureCount() == 0:
             return
         widget_interface.setStyleSheet(CUSTOM_WIDGETS[1])
+        # self.dlg.pushButtonValider.setEnabled(True)
 
     def vide_attribut_widgets(self):
         for widget_inerface in self.get_widgets("QLineEdit"):
@@ -194,16 +171,59 @@ class ClassPlugin:
         elif valeur == "Oui":
             valeur = 1
         self.dico_champs_modifie[index_champs] = valeur
-        self.dlg.pushButtonValider.setEnabled(True)
+        for sel in self.list_dico_selection:
+            # pas de reel changement (re selection de l'attributs de la selection
+            if sel[index_champs] == valeur:
+                widget_interface.setStyleSheet(CUSTOM_WIDGETS[0])
+            else:
+                # self.dico_champs_modifie[index_champs] = valeur
+                widget_interface.setStyleSheet(CUSTOM_WIDGETS[1])
+
+        if self.ischangements():
+            self.dlg.pushButtonValider.setEnabled(True)
+            # widget_interface.setStyleSheet(CUSTOM_WIDGETS[1])
+        else:
+            self.dlg.pushButtonValider.setEnabled(False)
+            # widget_interface.setStyleSheet(CUSTOM_WIDGETS[0])
+
+    # changement de date du QDateEdit
+    def on_date_changed(self,date):
+        print("Nouvelle date :", date.toString("dd/MM/yyyy"))
+
 
     # detection changement d'un lineedit
     def lineedit_Change_utilisateur(self,widget_interface):
         index_champs = self.layer_hydro.fields().indexOf(widget_interface.objectName())
         if widget_interface.text() == "":
             self.dico_champs_modifie[index_champs] = "NULL"
+
+        # on affecte ici meme si pas de changements car si on modifie puis si
+        # on revient à la valeur initial , le dernier changement n'est pas prit en compte
+        # pb : ca modifie la valeur meme si pas de changements.
+        self.dico_champs_modifie[index_champs] = widget_interface.text()
+        for sel in self.list_dico_selection:
+            # pas de reel changement (re selection de l'attributs de la selection
+            if sel[index_champs] == widget_interface.text():
+                widget_interface.setStyleSheet(CUSTOM_WIDGETS[0])
+            else:
+                widget_interface.setStyleSheet(CUSTOM_WIDGETS[1])
+        if self.ischangements():
+            self.dlg.pushButtonValider.setEnabled(True)
+            # widget_interface.setStyleSheet(CUSTOM_WIDGETS[1])
         else:
-            self.dico_champs_modifie[index_champs] = widget_interface.text()
-        self.dlg.pushButtonValider.setEnabled(True)
+            self.dlg.pushButtonValider.setEnabled(False)
+            # widget_interface.setStyleSheet(CUSTOM_WIDGETS[0])
+
+    def ischangements(self):
+        for sel in self.list_dico_selection:
+            for index,valeur in sel.items():
+                # try : si l'index n'existe pas dans le dico (il existe que si la valeur est modifiée)
+                try:
+                    if self.dico_champs_modifie[index] != valeur:
+                        return True
+                except KeyError:
+                    pass
+        return False
 
     def init_widgets_from_selection(self):
         self.vide_attribut_widgets()
@@ -227,8 +247,7 @@ class ClassPlugin:
             for elem, count in compte.items():
                 if count == self.layer_hydro.selectedFeatureCount():
                     widg.setCurrentText(list_attr[0])
-                    if list_attr[0] != "NULL":
-                        widg.setStyleSheet(CUSTOM_WIDGETS[0])
+                    widg.setStyleSheet(CUSTOM_WIDGETS[0])
 
         # LINEEDIT
         for widg in self.get_widgets("QLineEdit"):
@@ -360,11 +379,16 @@ class ClassPlugin:
         for widget_interface in self.get_widgets("QLabel"):
             widget_interface.setStyleSheet(CUSTOM_WIDGETS[4])
 
+        # initialisation à la date actuelle
+        self.dlg.date_de_validation_bcae.setDate(QDate.currentDate())
+        # evenement du QDateEdit
+        self.dlg.date_de_validation_bcae.dateChanged.connect(self.on_date_changed)
+
         # evenement des widgets
-        for widget_interface in self.get_widgets("QLineEdit"):
-            widget_interface.textChanged.connect(lambda _, w1=widget_interface: self.widgetChange(w1))
-        for widget_interface in self.get_widgets("QComboBox"):
-            widget_interface.currentTextChanged.connect(lambda _, w2=widget_interface: self.widgetChange(w2))
+        # for widget_interface in self.get_widgets("QLineEdit"):
+        #     widget_interface.textChanged.connect(lambda _, w1=widget_interface: self.widgetChange(w1))
+        # for widget_interface in self.get_widgets("QComboBox"):
+        #     widget_interface.currentTextChanged.connect(lambda _, w2=widget_interface: self.widgetChange(w2))
 
         # modif par l'utilisateur line edit
         for widget_interface in self.get_widgets("QLineEdit"):
@@ -373,8 +397,8 @@ class ClassPlugin:
 
         #  modif par l'utilisateur combobox
         for widget_interface in self.get_widgets("QComboBox"):
-            # widget_interface.activated.connect(lambda _, w3=widget_interface: self.combo_Change_utilisateur(w3))
-            widget_interface.currentTextChanged.connect(lambda _, w3=widget_interface: self.combo_Change_utilisateur(w3))
+            widget_interface.activated.connect(lambda _, w3=widget_interface: self.combo_Change_utilisateur(w3))
+            # widget_interface.currentTextChanged.connect(lambda _, w3=widget_interface: self.combo_Change_utilisateur(w3))
 
         # boutons des spécs
         self.dlg.pushButtonSpecNature.clicked.connect(lambda:self.affiche_spec("337"))
