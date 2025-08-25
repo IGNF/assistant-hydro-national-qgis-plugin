@@ -54,7 +54,7 @@ class ClassPlugin:
         self.plugin_dir = os.path.dirname(__file__)
 
         self.dlgAProposDe = QDialog()
-        loadUi(os.path.dirname(__file__) + "/aproposde.ui", self.dlgAProposDe)
+        loadUi(os.path.join(os.path.dirname(__file__) , "aproposde.ui") ,self.dlgAProposDe)
 
     def valider(self):
         if len(self.dico_champs_modifie) == 0:
@@ -320,7 +320,7 @@ class ClassPlugin:
         # initialisation du dictionnaire des champs, attributs associés
         # à partir du xml
         self.dico_champs_val_xml = {}
-        tree = ET.parse(PATH_REP + "\XML\Attributs.xml")
+        tree = ET.parse(os.path.join(PATH_REP, "XML","Attributs.xml"))
         root = tree.getroot()
         for champs in root.findall("champs"):
             # il faut reinitialiser la liste, pas juste la vider
@@ -379,6 +379,7 @@ class ClassPlugin:
         self.dlg = ClassPluginDialog()
         self.dlg.setWindowTitle(TITRE)
         self.dlgAProposDe.setWindowTitle(TITRE)
+        self.dlgAProposDe.pushButtonAffichedoc.clicked.connect(afficheDoc)
 
         # est-ce que les layer de l'espace co sont disponibles
         if not self.islayer_espaceco():

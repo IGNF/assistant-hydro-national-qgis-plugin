@@ -7,11 +7,12 @@ from .constante import *
 import subprocess
 
 
+
 def afficheDoc():
-    if not os.path.isfile(os.path.dirname(__file__) + "/assistant complexe.docx"):
+    if not os.path.isfile(os.path.join(os.path.dirname(__file__) , "contribution directe (hydro national).pdf")):
         afficheerreur("La documentation est introuvable", "Information")
     else:
-        os.popen(os.path.dirname(__file__) + "/assistant complexe.docx")
+        os.popen(os.path.join(os.path.dirname(__file__) , "contribution directe (hydro national).pdf"))
 
 def afficheerreur(text, titre=TITRE):
     msg = QMessageBox()
