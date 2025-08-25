@@ -7,25 +7,25 @@
     <x>0</x>
     <y>0</y>
     <width>390</width>
-    <height>583</height>
+    <height>455</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>390</width>
-    <height>583</height>
+    <height>455</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>390</width>
-    <height>583</height>
+    <height>455</height>
    </size>
   </property>
   <property name="baseSize">
    <size>
     <width>390</width>
-    <height>583</height>
+    <height>455</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -41,7 +41,7 @@
      <x>11</x>
      <y>11</y>
      <width>368</width>
-     <height>495</height>
+     <height>381</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -54,114 +54,6 @@
     <property name="verticalSpacing">
      <number>0</number>
     </property>
-    <item row="1" column="1">
-     <widget class="QComboBox" name="fictif"/>
-    </item>
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="identifiant_bcae"/>
-    </item>
-    <item row="14" column="1">
-     <widget class="QComboBox" name="origine"/>
-    </item>
-    <item row="13" column="0">
-     <widget class="QLabel" name="label_13">
-      <property name="text">
-       <string>Fossé</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QComboBox" name="nature"/>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>Code hydrographique</string>
-      </property>
-     </widget>
-    </item>
-    <item row="18" column="0">
-     <widget class="QLabel" name="label_18">
-      <property name="text">
-       <string>Type de bras</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="1">
-     <widget class="QDateEdit" name="date_de_validation_bcae">
-      <property name="calendarPopup">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="2">
-     <widget class="QPushButton" name="pushButtonSpecIdentPE">
-      <property name="minimumSize">
-       <size>
-        <width>20</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>40</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>spéc</string>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="1">
-     <widget class="QComboBox" name="delimitation"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Nature</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>Inventaire BCAE</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Fictif</string>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="1">
-     <widget class="QLineEdit" name="identifiant_police_de_l_eau"/>
-    </item>
-    <item row="16" column="2">
-     <widget class="QPushButton" name="pushButtonSpecPosSol">
-      <property name="minimumSize">
-       <size>
-        <width>20</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>40</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>spéc</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="1">
-     <widget class="QComboBox" name="inventaire_police_de_l_eau"/>
-    </item>
     <item row="2" column="2">
      <widget class="QPushButton" name="pushButtonSpecNature">
       <property name="minimumSize">
@@ -181,43 +73,21 @@
       </property>
      </widget>
     </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="cpx_toponyme_de_cours_d_eau">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="16" column="1">
-     <widget class="QComboBox" name="position_par_rapport_au_sol"/>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="label_6">
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_18">
       <property name="text">
-       <string>Identifiant BCAE</string>
+       <string>Type de bras</string>
       </property>
      </widget>
     </item>
-    <item row="15" column="2">
-     <widget class="QPushButton" name="pushButtonSpecPersistance">
-      <property name="minimumSize">
-       <size>
-        <width>20</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>40</width>
-        <height>16777215</height>
-       </size>
-      </property>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_16">
       <property name="text">
-       <string>spéc</string>
+       <string>Position par rapport au sol</string>
       </property>
      </widget>
     </item>
-    <item row="13" column="2">
+    <item row="3" column="2">
      <widget class="QPushButton" name="pushButtonSpecFosse">
       <property name="minimumSize">
        <size>
@@ -236,21 +106,17 @@
       </property>
      </widget>
     </item>
-    <item row="9" column="0">
-     <widget class="QLabel" name="label_9">
+    <item row="9" column="1">
+     <widget class="QComboBox" name="delimitation"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_13">
       <property name="text">
-       <string>Inventaire police de l'eau</string>
+       <string>Fossé</string>
       </property>
      </widget>
     </item>
-    <item row="12" column="0">
-     <widget class="QLabel" name="label_12">
-      <property name="text">
-       <string>Délimitation</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="2">
+    <item row="10" column="2">
      <widget class="QPushButton" name="pushButtonSpecCodeHydro">
       <property name="minimumSize">
        <size>
@@ -269,49 +135,55 @@
       </property>
      </widget>
     </item>
-    <item row="14" column="0">
+    <item row="11" column="1">
+     <widget class="QComboBox" name="inventaire_bcae"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="cleabs">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>CPX_Toponyme de cours d'eau</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="cpx_toponyme_de_cours_d_eau">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
      <widget class="QLabel" name="label_14">
       <property name="text">
        <string>Origine</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_1">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>Cleabs interne</string>
+    <item row="10" column="1">
+     <widget class="QLineEdit" name="code_hydrographique">
+      <property name="enabled">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
-    <item row="17" column="2">
-     <widget class="QPushButton" name="pushButtonSpecSens">
-      <property name="minimumSize">
-       <size>
-        <width>20</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>40</width>
-        <height>16777215</height>
-       </size>
-      </property>
+    <item row="4" column="1">
+     <widget class="QComboBox" name="position_par_rapport_au_sol"/>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_12">
       <property name="text">
-       <string>spéc</string>
+       <string>Délimitation</string>
       </property>
      </widget>
     </item>
-    <item row="11" column="1">
-     <widget class="QComboBox" name="type_d_annexe"/>
-    </item>
-    <item row="14" column="2">
+    <item row="5" column="2">
      <widget class="QPushButton" name="pushButtonSpecOrigine">
       <property name="minimumSize">
        <size>
@@ -330,21 +202,10 @@
       </property>
      </widget>
     </item>
-    <item row="11" column="0">
-     <widget class="QLabel" name="label_11">
-      <property name="text">
-       <string>Type d'annexe</string>
-      </property>
-     </widget>
+    <item row="7" column="1">
+     <widget class="QComboBox" name="sens_de_l_ecoulement"/>
     </item>
-    <item row="3" column="1">
-     <widget class="QLineEdit" name="code_hydrographique">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="2">
+    <item row="13" column="2">
      <widget class="QPushButton" name="pushButtonSpecInvenPE">
       <property name="minimumSize">
        <size>
@@ -363,100 +224,10 @@
       </property>
      </widget>
     </item>
-    <item row="16" column="0">
-     <widget class="QLabel" name="label_16">
-      <property name="text">
-       <string>Position par rapport au sol</string>
-      </property>
-     </widget>
-    </item>
-    <item row="17" column="1">
-     <widget class="QComboBox" name="sens_de_l_ecoulement"/>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>CPX_Toponyme de cours d'eau</string>
-      </property>
-     </widget>
-    </item>
-    <item row="15" column="1">
-     <widget class="QComboBox" name="persistance"/>
-    </item>
-    <item row="15" column="0">
-     <widget class="QLabel" name="label_15">
-      <property name="text">
-       <string>Persistance</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QLabel" name="label_8">
-      <property name="text">
-       <string>Date de validation BCAE</string>
-      </property>
-     </widget>
-    </item>
-    <item row="18" column="1">
-     <widget class="QComboBox" name="type_de_bras"/>
-    </item>
-    <item row="5" column="1">
-     <widget class="QComboBox" name="inventaire_bcae"/>
-    </item>
-    <item row="7" column="1">
-     <widget class="QComboBox" name="validation_bcae"/>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="cleabs">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="label_7">
-      <property name="text">
-       <string>Validation BCAE</string>
-      </property>
-     </widget>
-    </item>
     <item row="13" column="1">
-     <widget class="QComboBox" name="fosse"/>
+     <widget class="QComboBox" name="inventaire_police_de_l_eau"/>
     </item>
-    <item row="17" column="0">
-     <widget class="QLabel" name="label_17">
-      <property name="text">
-       <string>Sens de l'ecoulement</string>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="2">
-     <widget class="QPushButton" name="pushButtonSpecDelimitation">
-      <property name="minimumSize">
-       <size>
-        <width>20</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>40</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>spéc</string>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="0">
-     <widget class="QLabel" name="label_10">
-      <property name="text">
-       <string>Identifiant police de l'eau</string>
-      </property>
-     </widget>
-    </item>
-    <item row="18" column="2">
+    <item row="8" column="2">
      <widget class="QPushButton" name="pushButtonSpecTypeBras">
       <property name="minimumSize">
        <size>
@@ -475,13 +246,198 @@
       </property>
      </widget>
     </item>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="fosse"/>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="pushButtonSpecPersistance">
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>spéc</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="2">
+     <widget class="QPushButton" name="pushButtonSpecIdentPE">
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>spéc</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QLineEdit" name="identifiant_police_de_l_eau"/>
+    </item>
+    <item row="7" column="2">
+     <widget class="QPushButton" name="pushButtonSpecSens">
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>spéc</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="pushButtonSpecPosSol">
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>spéc</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QComboBox" name="persistance"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_17">
+      <property name="text">
+       <string>Sens de l'ecoulement</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_inventaire_bcae">
+      <property name="text">
+       <string>Inventaire BCAE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QComboBox" name="origine"/>
+    </item>
+    <item row="10" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Code hydrographique</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_identifiant_police_de_l_eau">
+      <property name="text">
+       <string>Identifiant police de l'eau</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="0">
+     <widget class="QLabel" name="label_inventaire_pe">
+      <property name="text">
+       <string>Inventaire police de l'eau</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>Persistance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="QLineEdit" name="identifiant_bcae"/>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_identifiant_bcae">
+      <property name="text">
+       <string>Identifiant BCAE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QPushButton" name="pushButtonSpecDelimitation">
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>spéc</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="nature"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Nature</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_1">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Cleabs interne</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QComboBox" name="type_de_bras"/>
+    </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>11</x>
-     <y>513</y>
+     <y>390</y>
      <width>371</width>
      <height>64</height>
     </rect>

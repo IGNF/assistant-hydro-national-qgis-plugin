@@ -22,7 +22,7 @@
  ***************************************************************************/
 """
 from PyQt5.QtCore import QDate
-from PyQt5.QtWidgets import QDialog, QLineEdit, QComboBox, QLabel
+from PyQt5.QtWidgets import QDialog, QLineEdit, QComboBox, QLabel, QDateEdit
 from PyQt5.uic import loadUi
 from qgis.core import Qgis
 
@@ -275,11 +275,20 @@ class ClassPlugin:
                 else:
                     widg.setStyleSheet(CUSTOM_WIDGETS[2])
 
+        # CALENDRIER
+        # for widg in self.get_widgets("QDateEdit"):
+        #     list_attr.clear()
+        #     widg.setStyleSheet(CUSTOM_WIDGETS[2])
+        #     # for sel in self.layer_hydro.selectedFeatures():
+        #     #     # list_attr.append(sel[widg.objectName()])
+
     # retourne la liste des widgets dans le gridlayout
     def get_widgets(self, type_widget):
         list_combo = []
         list_line_edit = []
         list_label = []
+        # pas utilisé car pas demandé dans le cahier des charges
+        list_date_edit = []
 
         widgets = self.dlg.children()
         for widg in widgets:
@@ -292,8 +301,10 @@ class ClassPlugin:
                         list_combo.append(child)
                     elif type_widget == "QLabel" and isinstance(child, QLabel):
                         list_label.append(child)
+                    elif type_widget == "QDateEdit" and isinstance(child, QDateEdit):
+                        list_date_edit.append(child)
 
-        tmp = list_line_edit + list_combo + list_label
+        tmp = list_line_edit + list_combo + list_label + list_date_edit
         return tmp
 
     # initialise tous les combobox avec les attributs issus du xml
@@ -378,11 +389,16 @@ class ClassPlugin:
 
         for widget_interface in self.get_widgets("QLabel"):
             widget_interface.setStyleSheet(CUSTOM_WIDGETS[4])
+            if widget_interface.objectName() in LIST_LABEL_BLOC1:
+                widget_interface.setStyleSheet(CUSTOM_WIDGETS[5])
+            if widget_interface.objectName() in LIST_LABEL_BLOC2:
+                widget_interface.setStyleSheet(CUSTOM_WIDGETS[6])
 
+        # PAS UTILISE
         # initialisation à la date actuelle
-        self.dlg.date_de_validation_bcae.setDate(QDate.currentDate())
-        # evenement du QDateEdit
-        self.dlg.date_de_validation_bcae.dateChanged.connect(self.on_date_changed)
+        # self.dlg.date_de_validation_bcae.setDate(QDate.currentDate())
+        # # evenement du QDateEdit
+        # self.dlg.date_de_validation_bcae.dateChanged.connect(self.on_date_changed)
 
         # evenement des widgets
         # for widget_interface in self.get_widgets("QLineEdit"):
