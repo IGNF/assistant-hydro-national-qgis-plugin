@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>390</width>
-    <height>455</height>
+    <height>487</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>390</width>
-    <height>455</height>
+    <height>487</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>390</width>
-    <height>455</height>
+    <height>487</height>
    </size>
   </property>
   <property name="baseSize">
@@ -41,7 +41,7 @@
      <x>11</x>
      <y>11</y>
      <width>368</width>
-     <height>381</height>
+     <height>406</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -437,7 +437,7 @@
    <property name="geometry">
     <rect>
      <x>11</x>
-     <y>390</y>
+     <y>420</y>
      <width>371</width>
      <height>64</height>
     </rect>
@@ -475,7 +475,7 @@
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../(IGN)assisstant_dfci/icons/icon_chemin.png</normaloff>../(IGN)assisstant_dfci/icons/icon_chemin.png</iconset>
+        <normaloff>icons/icon_chemin.png</normaloff>icons/icon_chemin.png</iconset>
       </property>
      </widget>
     </item>
