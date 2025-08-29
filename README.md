@@ -1,2 +1,3 @@
-# assistant-hydro-national-plugin-qgis
-Assistant hydro national
+# Assistant hydro national
+Aide à la saisie des attributs sur les tronçons hydrographiques.
+
