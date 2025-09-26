@@ -38,9 +38,9 @@
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>11</x>
-     <y>11</y>
-     <width>368</width>
+     <x>10</x>
+     <y>0</y>
+     <width>371</width>
      <height>406</height>
     </rect>
    </property>
@@ -436,10 +436,10 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>11</x>
-     <y>420</y>
+     <x>10</x>
+     <y>410</y>
      <width>371</width>
-     <height>64</height>
+     <height>71</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
@@ -542,7 +542,7 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="2">
+    <item row="2" column="2" alignment="Qt::AlignTop">
      <widget class="QLabel" name="labelNbSel">
       <property name="text">
        <string>TextLabel</string>
