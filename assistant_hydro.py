@@ -90,7 +90,7 @@ class ClassPlugin:
         self.iface.mapCanvas().setSelectionColor(couleur)
 
         nbsel = self.layer_hydro.selectedFeatureCount()
-        self.dlg.labelNbSel.setText(f"<b>Nb séléction = <span style ='color: red'> {nbsel}</b></span>")
+        self.dlg.labelNbSel.setText(f"<b>Sélection = <span style ='color: red'> {nbsel}</b></span>")
 
         if self.layer_hydro.selectedFeatureCount() == 2:
             self.dlg.pushButtonCheminCourt.setEnabled(True)
@@ -185,6 +185,7 @@ class ClassPlugin:
         else:
             self.dlg.pushButtonValider.setEnabled(False)
             # widget_interface.setStyleSheet(CUSTOM_WIDGETS[0])
+        print("valeur combo = :",valeur)
 
     # changement de date du QDateEdit
     def on_date_changed(self,date):
@@ -219,6 +220,7 @@ class ClassPlugin:
             for index,valeur in sel.items():
                 # try : si l'index n'existe pas dans le dico (il existe que si la valeur est modifiée)
                 try:
+                    print(f"{self.dico_champs_modifie[index]} : {valeur}")
                     if self.dico_champs_modifie[index] != valeur:
                         return True
                 except KeyError:
