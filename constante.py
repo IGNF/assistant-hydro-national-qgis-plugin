@@ -4,6 +4,10 @@ TITRE = "Assistant hydrographique national"
 PATH_REP = f"{os.path.dirname(__file__)}"
 CLEABS = "cleabs"
 
+# important : permet de remplacer 0 par non et 1 par oui
+# cas de "position par rapport au sol" où là, on veut garder le 0 et le 1
+LIST_COMBO_BOOLEEN = ["fosse","delimitation","inventaire_bcae"]
+
 LIST_LINEEDIT_READ_ONLY = ["cleabs","code_hydrographique","cpx_toponyme_de_cours_d_eau"]
 LIST_COMBOBOX_READ_ONLY = ["fictif","origine","persistance","type_d_annexe"]
 LIST_LABEL_BLOC1 = ["label_inventaire_pe","label_identifiant_police_de_l_eau"]

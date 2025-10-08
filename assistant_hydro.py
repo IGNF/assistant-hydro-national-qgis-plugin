@@ -236,10 +236,10 @@ class ClassPlugin:
             list_attr.clear()
             widg.setStyleSheet(CUSTOM_WIDGETS[2])
             for sel in self.layer_hydro.selectedFeatures():
-                # suppr le try quand la categorie dfci sera en ecriture dans le guichet
                 try:
                     list_attr.append(str(sel[widg.objectName()]))
-                    list_attr = ["Non" if val == "0" else "Oui" if val == "1" else val for val in list_attr]
+                    if str(widg.objectName()) in LIST_COMBO_BOOLEEN:
+                        list_attr = ["Non" if val == "0" else "Oui" if val == "1" else val for val in list_attr]
                 except KeyError:
                     pass
             """"***************
