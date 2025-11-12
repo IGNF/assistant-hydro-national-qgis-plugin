@@ -47,6 +47,8 @@ class ClassPlugin:
         self.cheminpluscourt = None
         self.dico_champs_modifie = {}
 
+        self.is_affiche_sens_num = False
+
         self.layer_hydro = None
         self.dlg = None
         self.iface = iface
@@ -57,6 +59,7 @@ class ClassPlugin:
         loadUi(os.path.join(os.path.dirname(__file__) , "aproposde.ui") ,self.dlgAProposDe)
 
     def valider(self):
+        print("dico :", self.dico_champs_modifie)
         if len(self.dico_champs_modifie) == 0:
             return
         QGuiApplication.setOverrideCursor(Qt.WaitCursor)
@@ -366,6 +369,20 @@ class ClassPlugin:
             self.layer_hydro = layer[0]
             return True
 
+    def sens_num(self):
+        print("sens_num")
+        if self.is_affiche_sens_num:
+            # self.dlg.pushButtonSensNum.setText("Afficher le sens de numerisation")
+            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP,  "sauvegarde_style_initial.qml"))
+            self.is_affiche_sens_num = False
+        else:
+            # self.dlg.pushButtonSensNum.setText("Masquer le sens de numerisation")
+            self.layer_hydro.saveNamedStyle(os.path.join(PATH_REP,  "sauvegarde_style_initial.qml"))
+            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP,  "style_sens_numerisation.qml"))
+            self.is_affiche_sens_num = True
+        self.layer_hydro.triggerRepaint()
+
+
     def affiche_spec(self,attribute):
         import webbrowser
         url = f"https://bdtopoexplorer.ign.fr/?id_theme=40&id_classe=44#attribute_{attribute}"
@@ -435,6 +452,9 @@ class ClassPlugin:
         self.dlg.pushButtonValider.clicked.connect(self.valider)
         self.dlg.pushButtonValider.setStyleSheet(CUSTOM_WIDGETS[3])
 
+        # sens de numérisation
+        self.dlg.pushButton_sens_num.clicked.connect(self.sens_num)
+
         self.dlg.pushButtonAPropos.clicked.connect(self.apropos)
         if self.layer_hydro.selectedFeatureCount() != 2:
             self.dlg.pushButtonCheminCourt.setEnabled(False)
@@ -442,6 +462,8 @@ class ClassPlugin:
 
         # initialisation des widget ccombobox avec xml
         self.init_widgets_from_xml()
+
+        self.layer_hydro.saveNamedStyle(os.path.join(PATH_REP, "sauvegarde_style_initial.qml"))
 
         self.iface.mapCanvas().selectionChanged.connect(self.actualiserSelection)
         self.actualiserSelection()
@@ -453,7 +475,7 @@ class ClassPlugin:
         # Run the dialog event loop
         result = self.dlg.exec_()
         # See if OK was pressed
-        if result:
-            # Do something useful here - delete the line containing pass and
-            # substitute with your code.
-            pass
+        if not result:
+            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP, "sauvegarde_style_initial.qml"))
+            self.layer_hydro.triggerRepaint()
+            self.is_affiche_sens_num = False
