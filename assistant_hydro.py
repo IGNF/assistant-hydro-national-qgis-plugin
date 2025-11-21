@@ -393,8 +393,8 @@ class ClassPlugin:
     def run(self):
 
         self.dlg = ClassPluginDialog()
-        self.dlg.setWindowTitle(TITRE)
-        self.dlgAProposDe.setWindowTitle(TITRE)
+        self.dlg.setWindowTitle(f"{TITRE} {VERSION}")
+        self.dlgAProposDe.setWindowTitle(f"{TITRE} {VERSION}")
         self.dlgAProposDe.pushButtonAffichedoc.clicked.connect(afficheDoc)
 
         # est-ce que les layer de l'espace co sont disponibles

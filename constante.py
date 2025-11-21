@@ -1,6 +1,7 @@
 import os
 
 TITRE = "Assistant hydrographique national"
+VERSION = "v1.0.1"
 PATH_REP = f"{os.path.dirname(__file__)}"
 CLEABS = "cleabs"
 
