@@ -24,6 +24,7 @@
 from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QDialog, QLineEdit, QComboBox, QLabel, QDateEdit
 from PyQt5.uic import loadUi
+from qgis._core import QgsMapLayer
 from qgis.core import Qgis
 
 import xml.etree.ElementTree as ET
@@ -59,7 +60,6 @@ class ClassPlugin:
         loadUi(os.path.join(os.path.dirname(__file__) , "aproposde.ui") ,self.dlgAProposDe)
 
     def valider(self):
-        print("dico :", self.dico_champs_modifie)
         if len(self.dico_champs_modifie) == 0:
             return
         QGuiApplication.setOverrideCursor(Qt.WaitCursor)
@@ -188,7 +188,6 @@ class ClassPlugin:
         else:
             self.dlg.pushButtonValider.setEnabled(False)
             # widget_interface.setStyleSheet(CUSTOM_WIDGETS[0])
-        print("valeur combo = :",valeur)
 
     # changement de date du QDateEdit
     def on_date_changed(self,date):
@@ -223,7 +222,6 @@ class ClassPlugin:
             for index,valeur in sel.items():
                 # try : si l'index n'existe pas dans le dico (il existe que si la valeur est modifiée)
                 try:
-                    print(f"{self.dico_champs_modifie[index]} : {valeur}")
                     if self.dico_champs_modifie[index] != valeur:
                         return True
                 except KeyError:
@@ -370,15 +368,14 @@ class ClassPlugin:
             return True
 
     def sens_num(self):
-        print("sens_num")
         if self.is_affiche_sens_num:
             # self.dlg.pushButtonSensNum.setText("Afficher le sens de numerisation")
-            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP,  "sauvegarde_style_initial.qml"))
+            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP,  "sauvegarde_style_initial.qml"),categories=QgsMapLayer.StyleCategory.Symbology| QgsMapLayer.Labeling)
             self.is_affiche_sens_num = False
         else:
             # self.dlg.pushButtonSensNum.setText("Masquer le sens de numerisation")
-            self.layer_hydro.saveNamedStyle(os.path.join(PATH_REP,  "sauvegarde_style_initial.qml"))
-            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP,  "style_sens_numerisation.qml"))
+            self.layer_hydro.saveNamedStyle(os.path.join(PATH_REP,  "sauvegarde_style_initial.qml"),categories=QgsMapLayer.StyleCategory.Symbology| QgsMapLayer.Labeling)
+            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP,  "style_sens_numerisation.qml"),categories=QgsMapLayer.StyleCategory.Symbology| QgsMapLayer.Labeling)
             self.is_affiche_sens_num = True
         self.layer_hydro.triggerRepaint()
 
@@ -476,6 +473,6 @@ class ClassPlugin:
         result = self.dlg.exec_()
         # See if OK was pressed
         if not result:
-            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP, "sauvegarde_style_initial.qml"))
+            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP, "sauvegarde_style_initial.qml"),categories=QgsMapLayer.StyleCategory.Symbology| QgsMapLayer.Labeling)
             self.layer_hydro.triggerRepaint()
             self.is_affiche_sens_num = False
