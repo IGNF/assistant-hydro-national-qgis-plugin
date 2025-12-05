@@ -33,6 +33,8 @@ from collections import Counter
 from .assistant_hydro_dialog import ClassPluginDialog
 import os.path
 
+from .symbologie import *
+from .modele import *
 from .fonction import *
 from .cheminpluscourt import *
 
@@ -88,6 +90,11 @@ class ClassPlugin:
             self.list_dico_selection.append(dico_tmp)
 
     def actualiserSelection(self):
+        # cas de chargement d'un nouveau projet sans relancer qgis
+        layer = QgsProject.instance().mapLayersByName(LAYER_HYDRO)
+        if not layer:
+            return
+
         # gestion de la couleur de selection
         couleur = self.dlg.mColorButton.color()
         self.iface.mapCanvas().setSelectionColor(couleur)
@@ -369,13 +376,10 @@ class ClassPlugin:
 
     def sens_num(self):
         if self.is_affiche_sens_num:
-            # self.dlg.pushButtonSensNum.setText("Afficher le sens de numerisation")
-            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP,  "sauvegarde_style_initial.qml"),categories=QgsMapLayer.StyleCategory.Symbology| QgsMapLayer.Labeling)
+            suppr_symb_sens_num(self.layer)
             self.is_affiche_sens_num = False
         else:
-            # self.dlg.pushButtonSensNum.setText("Masquer le sens de numerisation")
-            self.layer_hydro.saveNamedStyle(os.path.join(PATH_REP,  "sauvegarde_style_initial.qml"),categories=QgsMapLayer.StyleCategory.Symbology| QgsMapLayer.Labeling)
-            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP,  "style_sens_numerisation.qml"),categories=QgsMapLayer.StyleCategory.Symbology| QgsMapLayer.Labeling)
+            add_symb_sens_num(self.layer)
             self.is_affiche_sens_num = True
         self.layer_hydro.triggerRepaint()
 
@@ -400,6 +404,14 @@ class ClassPlugin:
         # est-ce que les layer de l'espace co sont disponibles
         if not self.islayer_espaceco():
             return
+
+        # ******************************
+        champs_manquant, champs_readonly = test_modele(self.layer_hydro)
+        self.dlg.pushButton_warning.clicked.connect(lambda: config_modele(champs_manquant, champs_readonly))
+        # self.dlg.pushButton_warning.hide()
+        if len(champs_manquant) == 0:
+            self.dlg.pushButton_warning.setStyleSheet("qproperty-icon: none;")
+        # ******************************
 
         self.dlg.mColorButton.colorChanged.connect(self.colorchange)
         self.dlg.mColorButton.setColor(self.iface.mapCanvas().selectionColor())
@@ -473,6 +485,6 @@ class ClassPlugin:
         result = self.dlg.exec_()
         # See if OK was pressed
         if not result:
-            self.layer_hydro.loadNamedStyle(os.path.join(PATH_REP, "sauvegarde_style_initial.qml"),categories=QgsMapLayer.StyleCategory.Symbology| QgsMapLayer.Labeling)
+            suppr_symb_sens_num(self.layer_hydro)
             self.layer_hydro.triggerRepaint()
             self.is_affiche_sens_num = False
