@@ -62,7 +62,7 @@
         <valeur>I-C_bis</valeur>
         <valeur>I-D</valeur>
     </champs>
-    <champs id="delimitation">
+    <champs id="trace_connu">
             <valeur>NULL</valeur>
             <valeur>Non</valeur>
             <valeur>Oui</valeur>

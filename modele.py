@@ -5,7 +5,7 @@ from PyQt5.uic import loadUi
 from qgis.PyQt.QtCore import Qt
 
 CHAMPS_USE = ["cpx_toponyme_de_cours_d_eau","nature","fosse","position_par_rapport_au_sol","origine","persistance",
-              "sens_de_l_ecoulement","type_de_bras","delimitation","code_hydrographique","inventaire_bcae",
+              "sens_de_l_ecoulement","type_de_bras","trace_connu","code_hydrographique","inventaire_bcae",
               "identifiant_bcae","inventaire_police_de_l_eau","identifiant_police_de_l_eau"]
 
 def test_modele(layer):

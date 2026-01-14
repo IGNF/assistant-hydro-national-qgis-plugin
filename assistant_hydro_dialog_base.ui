@@ -107,7 +107,7 @@
      </widget>
     </item>
     <item row="9" column="1">
-     <widget class="QComboBox" name="delimitation">
+     <widget class="QComboBox" name="trace_connu">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -205,7 +205,7 @@
     <item row="9" column="0">
      <widget class="QLabel" name="label_12">
       <property name="text">
-       <string>Délimitation</string>
+       <string>Tracé connu</string>
       </property>
      </widget>
     </item>
