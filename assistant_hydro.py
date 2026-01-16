@@ -376,10 +376,10 @@ class ClassPlugin:
 
     def sens_num(self):
         if self.is_affiche_sens_num:
-            suppr_symb_sens_num(self.layer)
+            suppr_symb_sens_num(self.layer_hydro)
             self.is_affiche_sens_num = False
         else:
-            add_symb_sens_num(self.layer)
+            add_symb_sens_num(self.layer_hydro)
             self.is_affiche_sens_num = True
         self.layer_hydro.triggerRepaint()
 
