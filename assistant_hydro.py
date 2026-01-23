@@ -24,6 +24,7 @@
 from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QDialog, QLineEdit, QComboBox, QLabel, QDateEdit
 from PyQt5.uic import loadUi
+from qgis._core import QgsMapLayer
 from qgis.core import Qgis
 
 import xml.etree.ElementTree as ET
@@ -32,6 +33,8 @@ from collections import Counter
 from .assistant_hydro_dialog import ClassPluginDialog
 import os.path
 
+from .symbologie import *
+from .modele import *
 from .fonction import *
 from .cheminpluscourt import *
 
@@ -46,6 +49,8 @@ class ClassPlugin:
 
         self.cheminpluscourt = None
         self.dico_champs_modifie = {}
+
+        self.is_affiche_sens_num = False
 
         self.layer_hydro = None
         self.dlg = None
@@ -85,6 +90,11 @@ class ClassPlugin:
             self.list_dico_selection.append(dico_tmp)
 
     def actualiserSelection(self):
+        # cas de chargement d'un nouveau projet sans relancer qgis
+        layer = QgsProject.instance().mapLayersByName(LAYER_HYDRO)
+        if not layer:
+            return
+
         # gestion de la couleur de selection
         couleur = self.dlg.mColorButton.color()
         self.iface.mapCanvas().setSelectionColor(couleur)
@@ -185,7 +195,6 @@ class ClassPlugin:
         else:
             self.dlg.pushButtonValider.setEnabled(False)
             # widget_interface.setStyleSheet(CUSTOM_WIDGETS[0])
-        print("valeur combo = :",valeur)
 
     # changement de date du QDateEdit
     def on_date_changed(self,date):
@@ -220,7 +229,6 @@ class ClassPlugin:
             for index,valeur in sel.items():
                 # try : si l'index n'existe pas dans le dico (il existe que si la valeur est modifiée)
                 try:
-                    print(f"{self.dico_champs_modifie[index]} : {valeur}")
                     if self.dico_champs_modifie[index] != valeur:
                         return True
                 except KeyError:
@@ -236,10 +244,10 @@ class ClassPlugin:
             list_attr.clear()
             widg.setStyleSheet(CUSTOM_WIDGETS[2])
             for sel in self.layer_hydro.selectedFeatures():
-                # suppr le try quand la categorie dfci sera en ecriture dans le guichet
                 try:
                     list_attr.append(str(sel[widg.objectName()]))
-                    list_attr = ["Non" if val == "0" else "Oui" if val == "1" else val for val in list_attr]
+                    if str(widg.objectName()) in LIST_COMBO_BOOLEEN:
+                        list_attr = ["Non" if val == "0" else "Oui" if val == "1" else val for val in list_attr]
                 except KeyError:
                     pass
             """"***************
@@ -366,6 +374,16 @@ class ClassPlugin:
             self.layer_hydro = layer[0]
             return True
 
+    def sens_num(self):
+        if self.is_affiche_sens_num:
+            suppr_symb_sens_num(self.layer_hydro)
+            self.is_affiche_sens_num = False
+        else:
+            add_symb_sens_num(self.layer_hydro)
+            self.is_affiche_sens_num = True
+        self.layer_hydro.triggerRepaint()
+
+
     def affiche_spec(self,attribute):
         import webbrowser
         url = f"https://bdtopoexplorer.ign.fr/?id_theme=40&id_classe=44#attribute_{attribute}"
@@ -379,13 +397,21 @@ class ClassPlugin:
     def run(self):
 
         self.dlg = ClassPluginDialog()
-        self.dlg.setWindowTitle(TITRE)
-        self.dlgAProposDe.setWindowTitle(TITRE)
+        self.dlg.setWindowTitle(f"{TITRE} {VERSION}")
+        self.dlgAProposDe.setWindowTitle(f"{TITRE} {VERSION}")
         self.dlgAProposDe.pushButtonAffichedoc.clicked.connect(afficheDoc)
 
         # est-ce que les layer de l'espace co sont disponibles
         if not self.islayer_espaceco():
             return
+
+        # ******************************
+        champs_manquant, champs_readonly = test_modele(self.layer_hydro)
+        self.dlg.pushButton_warning.clicked.connect(lambda: config_modele(champs_manquant, champs_readonly))
+        # self.dlg.pushButton_warning.hide()
+        if len(champs_manquant) == 0:
+            self.dlg.pushButton_warning.setStyleSheet("qproperty-icon: none;")
+        # ******************************
 
         self.dlg.mColorButton.colorChanged.connect(self.colorchange)
         self.dlg.mColorButton.setColor(self.iface.mapCanvas().selectionColor())
@@ -435,6 +461,9 @@ class ClassPlugin:
         self.dlg.pushButtonValider.clicked.connect(self.valider)
         self.dlg.pushButtonValider.setStyleSheet(CUSTOM_WIDGETS[3])
 
+        # sens de numérisation
+        self.dlg.pushButton_sens_num.clicked.connect(self.sens_num)
+
         self.dlg.pushButtonAPropos.clicked.connect(self.apropos)
         if self.layer_hydro.selectedFeatureCount() != 2:
             self.dlg.pushButtonCheminCourt.setEnabled(False)
@@ -442,6 +471,8 @@ class ClassPlugin:
 
         # initialisation des widget ccombobox avec xml
         self.init_widgets_from_xml()
+
+        self.layer_hydro.saveNamedStyle(os.path.join(PATH_REP, "sauvegarde_style_initial.qml"))
 
         self.iface.mapCanvas().selectionChanged.connect(self.actualiserSelection)
         self.actualiserSelection()
@@ -453,7 +484,7 @@ class ClassPlugin:
         # Run the dialog event loop
         result = self.dlg.exec_()
         # See if OK was pressed
-        if result:
-            # Do something useful here - delete the line containing pass and
-            # substitute with your code.
-            pass
+        if not result:
+            suppr_symb_sens_num(self.layer_hydro)
+            self.layer_hydro.triggerRepaint()
+            self.is_affiche_sens_num = False

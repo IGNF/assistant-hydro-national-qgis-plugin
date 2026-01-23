@@ -1,8 +1,13 @@
 import os
 
 TITRE = "Assistant hydrographique national"
+VERSION = "v1.1.0"
 PATH_REP = f"{os.path.dirname(__file__)}"
 CLEABS = "cleabs"
+
+# important : permet de remplacer 0 par non et 1 par oui
+# cas de "position par rapport au sol" où là, on veut garder le 0 et le 1
+LIST_COMBO_BOOLEEN = ["fosse","trace_connu","inventaire_bcae"]
 
 LIST_LINEEDIT_READ_ONLY = ["cleabs","code_hydrographique","cpx_toponyme_de_cours_d_eau"]
 LIST_COMBOBOX_READ_ONLY = ["fictif","origine","persistance","type_d_annexe"]
