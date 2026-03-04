@@ -21,7 +21,12 @@ jobs:
 
       - name: Build plugin zip
         run: |
-          zip -r "IGN_assistant-hydro-national.zip" . -x ".git/*" ".github/*"
+          mkdir -p IGN_assistant-hydro-national
+          rsync -av --progress . IGN_assistant-hydro-national/ \
+            --exclude .git \
+            --exclude .github \
+            --exclude IGN_assistant-hydro-national
+          zip -r IGN_assistant-hydro-national.zip IGN_assistant-hydro-national
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
