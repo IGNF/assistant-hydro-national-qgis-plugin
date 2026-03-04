@@ -10,7 +10,7 @@ version=1.2.0
 author=Gérôme PECHEUR (IGN)
 email=gerome.pecheur@ign.fr
 
-about=Ce plugin est un assistant pour la saisie des attributs PE et BCAE
+about=Ce plugin est un assistant pour la saisie des attributs hydrographiques
 
 tracker=http://bugs
 repository=http://repo
