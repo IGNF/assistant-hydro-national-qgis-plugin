@@ -1,0 +1,36 @@
+name: Release QGIS Plugin
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install zip
+        run: sudo apt-get install zip -y
+
+      - name: Build plugin zip
+        run: |
+          mkdir -p IGN_assistant-hydro-national
+          rsync -av --progress . IGN_assistant-hydro-national/ \
+            --exclude .git \
+            --exclude .github \
+            --exclude IGN_assistant-hydro-national
+          zip -r IGN_assistant-hydro-national.zip IGN_assistant-hydro-national
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: "IGN_assistant-hydro-national.zip"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
