@@ -21,10 +21,7 @@
  *                                                                         *
  ***************************************************************************/
 """
-from PyQt5.QtCore import QDate
-from PyQt5.QtWidgets import QDialog, QLineEdit, QComboBox, QLabel, QDateEdit
-from PyQt5.uic import loadUi
-from qgis._core import QgsMapLayer
+from PyQt5.QtWidgets import  QLineEdit, QComboBox, QDateEdit
 from qgis.core import Qgis
 
 import xml.etree.ElementTree as ET
@@ -43,7 +40,7 @@ class ClassPlugin:
 
     def __init__(self, iface):
 
-        # list contenant pour chaque troncons un dictionnaire : clé = idchamps , val = attributs
+        # list contenant pour chaque tronçon un dictionnaire : clé = idchamps , val = attributs
         self.dico_champs_val_xml = {}
         self.list_dico_selection = []
 
@@ -84,7 +81,7 @@ class ClassPlugin:
         for sel in self.layer_hydro.selectedFeatures():
             for idchamps in self.layer_hydro.fields():
                 # TODO : on prend en compte tous les champs et non plus juste ceux du xml (combobox)
-                # permet d'integrer les lineedit et non plus que les combobox
+                # permet d'intégrer les lineedit et non plus que les combobox
                 # if idchamps.name() in self.dico_champs_val_xml.keys():
                 dico_tmp[self.layer_hydro.fields().indexOf(idchamps.name())] = sel[idchamps.name()]
             self.list_dico_selection.append(dico_tmp)
@@ -118,7 +115,7 @@ class ClassPlugin:
         self.dico_champs_modifie.clear()
         self.init_widgets_from_selection()
 
-        # recuperer les valeurs des attributs de toute la selection
+        # récupérer les valeurs des attributs de toute la selection
         self.getattributs_from_selection()
 
     def apropos(self):
@@ -129,7 +126,7 @@ class ClassPlugin:
         if self.layer_hydro.selectedFeatureCount() != 2:
             QMessageBox.warning(None,TITRE,"Veuillez sélectionner 2 tronçons")
             return
-            # instanciation de la class dhemin le plus court
+            # instanciation de la class chemin le plus court
         self.cheminpluscourt = cheminpluscourt(self.iface, self.layer_hydro)
         self.cheminpluscourt.cheminpluscourt()
 
@@ -165,12 +162,12 @@ class ClassPlugin:
         # self.dlg.pushButtonValider.setEnabled(True)
 
     def vide_attribut_widgets(self):
-        for widget_inerface in self.get_widgets("QLineEdit"):
-            widget_inerface.setText("")
-            widget_inerface.setStyleSheet(CUSTOM_WIDGETS[2])
-        for widget_inerface in self.get_widgets("QComboBox"):
-            widget_inerface.setCurrentIndex(0)
-            widget_inerface.setStyleSheet(CUSTOM_WIDGETS[2])
+        for widget_interface in self.get_widgets("QLineEdit"):
+            widget_interface.setText("")
+            widget_interface.setStyleSheet(CUSTOM_WIDGETS[2])
+        for widget_interface in self.get_widgets("QComboBox"):
+            widget_interface.setCurrentIndex(0)
+            widget_interface.setStyleSheet(CUSTOM_WIDGETS[2])
 
     # detection changement d'un combobox
     def combo_Change_utilisateur(self,widget_interface):
@@ -182,7 +179,7 @@ class ClassPlugin:
             valeur = 1
         self.dico_champs_modifie[index_champs] = valeur
         for sel in self.list_dico_selection:
-            # pas de reel changement (re selection de l'attributs de la selection
+            # pas de reel changement (re selection de l'attribut de la selection
             if sel[index_champs] == valeur:
                 widget_interface.setStyleSheet(CUSTOM_WIDGETS[0])
             else:
@@ -207,12 +204,12 @@ class ClassPlugin:
         if widget_interface.text() == "":
             self.dico_champs_modifie[index_champs] = "NULL"
 
-        # on affecte ici meme si pas de changements car si on modifie puis si
-        # on revient à la valeur initial , le dernier changement n'est pas prit en compte
-        # pb : ca modifie la valeur meme si pas de changements.
+        # on affecte ici meme si pas de changements, car si on modifie puis si
+        # on revient à la valeur initiale, le dernier changement n'est pas pris en compte
+        # pb : ça modifie la valeur meme si pas de changements.
         self.dico_champs_modifie[index_champs] = widget_interface.text()
         for sel in self.list_dico_selection:
-            # pas de reel changement (re selection de l'attributs de la selection
+            # pas de reel changement (re selection de l'attribut de la selection
             if sel[index_champs] == widget_interface.text():
                 widget_interface.setStyleSheet(CUSTOM_WIDGETS[0])
             else:
@@ -251,7 +248,7 @@ class ClassPlugin:
                 except KeyError:
                     pass
             """"***************
-            traitement des occurence pour recherche des attributs communs
+            traitement des occurrences pour recherche des attributs communs
             ****************"""
             compte = Counter(list_attr)
             for elem, count in compte.items():
@@ -297,7 +294,7 @@ class ClassPlugin:
         list_combo = []
         list_line_edit = []
         list_label = []
-        # pas utilisé car pas demandé dans le cahier des charges
+        # pas utilisé, car pas demandé dans le cahier des charges
         list_date_edit = []
 
         widgets = self.dlg.children()
@@ -333,7 +330,7 @@ class ClassPlugin:
         tree = ET.parse(os.path.join(PATH_REP, "XML","Attributs.xml"))
         root = tree.getroot()
         for champs in root.findall("champs"):
-            # il faut reinitialiser la liste, pas juste la vider
+            # il faut réinitialiser la liste, pas juste la vider
             list_valeur = []
             champs_id = champs.get('id')
             for valeur in champs.findall("valeur"):
@@ -426,10 +423,10 @@ class ClassPlugin:
         # PAS UTILISE
         # initialisation à la date actuelle
         # self.dlg.date_de_validation_bcae.setDate(QDate.currentDate())
-        # # evenement du QDateEdit
+        # # événement du QDateEdit
         # self.dlg.date_de_validation_bcae.dateChanged.connect(self.on_date_changed)
 
-        # evenement des widgets
+        # événement des widgets
         # for widget_interface in self.get_widgets("QLineEdit"):
         #     widget_interface.textChanged.connect(lambda _, w1=widget_interface: self.widgetChange(w1))
         # for widget_interface in self.get_widgets("QComboBox"):
@@ -485,6 +482,11 @@ class ClassPlugin:
         result = self.dlg.exec_()
         # See if OK was pressed
         if not result:
+            # on deconnecte le signal en quittant
+            try:
+                self.iface.mapCanvas().selectionChanged.disconnect(self.actualiserSelection)
+            except TypeError:
+                pass  # aucune connexion existante
             suppr_symb_sens_num(self.layer_hydro)
             self.layer_hydro.triggerRepaint()
             self.is_affiche_sens_num = False

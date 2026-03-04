@@ -35,8 +35,6 @@ def add_symb_sens_num(layer):
         layer.setRenderer(QgsSingleSymbolRenderer(sym))
         layer.setCustomProperty("extra_triangle_single",sym.symbolLayerCount() - 1)
 
-    # on supprime le dernier ajouté
-    # il correspond à celui ajouté dans add_symb_sens_nul
     elif renderer.type() == "RuleRenderer":
         print("ON EST DANS UN RuleRenderer")
         root = renderer.rootRule().clone()
