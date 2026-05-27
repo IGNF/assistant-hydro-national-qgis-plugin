@@ -21,7 +21,7 @@
  *                                                                         *
  ***************************************************************************/
 """
-from PyQt5.QtWidgets import  QLineEdit, QComboBox, QDateEdit
+from qgis.PyQt.QtWidgets import  QLineEdit, QComboBox, QDateEdit
 from qgis.core import Qgis
 
 import xml.etree.ElementTree as ET
@@ -34,6 +34,7 @@ from .symbologie import *
 from .modele import *
 from .fonction import *
 from .cheminpluscourt import *
+from .mapping_version import *
 
 class ClassPlugin:
     """QGIS Plugin Implementation."""
@@ -61,7 +62,7 @@ class ClassPlugin:
     def valider(self):
         if len(self.dico_champs_modifie) == 0:
             return
-        QGuiApplication.setOverrideCursor(Qt.WaitCursor)
+        QGuiApplication.setOverrideCursor(WaitCursor)
         self.layer_hydro.startEditing()
         for sel in self.layer_hydro.selectedFeatures():
             # changement d'attributs par paquet (dico de valeurs)
@@ -119,8 +120,8 @@ class ClassPlugin:
         self.getattributs_from_selection()
 
     def apropos(self):
-        self.dlgAProposDe.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.WindowCloseButtonHint)
-        self.dlgAProposDe.exec_()
+        self.dlgAProposDe.setWindowFlags(WindowStaysOnTopHint | WindowCloseButtonHint)
+        self.dlgAProposDe.exec()
 
     def chemin_court(self):
         if self.layer_hydro.selectedFeatureCount() != 2:
@@ -476,10 +477,10 @@ class ClassPlugin:
 
         # show the dialog
         self.dlg.setParent(self.iface.mainWindow())
-        self.dlg.setWindowFlags(Qt.Dialog | Qt.WindowTitleHint | Qt.WindowCloseButtonHint)
+        self.dlg.setWindowFlags(Dialog | WindowTitleHint | WindowCloseButtonHint)
         self.dlg.show()
         # Run the dialog event loop
-        result = self.dlg.exec_()
+        result = self.dlg.exec()
         # See if OK was pressed
         if not result:
             # on deconnecte le signal en quittant

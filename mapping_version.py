@@ -17,6 +17,7 @@ try :
     # RightSide = QTabBar.ButtonPosition.RightSide
     # LeftSide = QTabBar.ButtonPosition.LeftSide
     Warning = QMessageBox.Icon.Warning
+    Information = QMessageBox.Icon.Information
     YesRole = QMessageBox.ButtonRole.YesRole
     AcceptRole = QMessageBox.ButtonRole.AcceptRole
     Ok = QMessageBox.StandardButton.Ok
@@ -37,6 +38,7 @@ try :
     CrossCursor = Qt.CursorShape.CrossCursor
     ArrowCursor = Qt.CursorShape.ArrowCursor
     red = Qt.GlobalColor.red
+    RejectRole = QMessageBox.ButtonRole.RejectRole
 
 
 # QT5
@@ -55,6 +57,7 @@ except :
     # RightSide = QTabBar.RightSide
     # LeftSide = QTabBar.LeftSide
     Warning = QMessageBox.Warning
+    Information = QMessageBox.Information
     YesRole = QMessageBox.YesRole
     AcceptRole = QMessageBox.AcceptRole
     Ok = QMessageBox.Ok
@@ -75,3 +78,5 @@ except :
     CrossCursor = Qt.CrossCursor
     ArrowCursor = Qt.ArrowCursor
     red = Qt.red
+    RejectRole = QMessageBox.RejectRole
+
