@@ -145,12 +145,12 @@
     </profileMarkerSymbol>
   </elevation>
   <renderer-v2 symbollevels="0" forceraster="0" enableorderby="0" referencescale="-1" type="RuleRenderer">
-    <rules key="{e740ae32-74f4-4e62-bb12-056a0131784d}">
-      <rule label="Inscrit" symbol="0" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Inscrit')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{528247c3-8859-41ed-a1d5-918abd646c0d}"/>
-      <rule label="Non inscrit" symbol="1" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Non inscrit')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{67789984-f057-4047-9e65-5b2f5dd1bc12}"/>
-      <rule label="Expertise en cours" symbol="2" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Expertise en cours')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{9f246b4e-0022-4185-9865-ffb08a0a1829}"/>
-      <rule label="Disparu" symbol="3" filter="&quot;etat_de_l_objet&quot; IN ('Disparu')" key="{abb2b66d-36b0-4c9d-b0b6-8461a5c4d64e}"/>
-      <rule label="style_ipe" symbol="4" filter="ELSE" key="{f37d6534-be8e-4673-b9ef-821572bc8966}"/>
+    <rules key="{0d08da70-84c2-42a3-9fe1-17dac3975d84}">
+      <rule label="Inscrit" symbol="0" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Inscrit')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{71450be1-ea25-4255-a4ae-5ec2e9ebd3b0}"/>
+      <rule label="Non inscrit" symbol="1" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Non inscrit')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{3a747670-cc4e-442d-a7d4-42620a66e521}"/>
+      <rule label="Expertise en cours" symbol="2" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Expertise en cours')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{7e139868-9b50-4032-b8aa-00ead68b35e3}"/>
+      <rule label="Disparu" symbol="3" filter="&quot;etat_de_l_objet&quot; IN ('Disparu')" key="{3fc3e6fe-1c40-4611-bfb0-96d70a1dc6e1}"/>
+      <rule label="style_ipe" symbol="4" filter="ELSE" key="{d2ec64cf-2758-4bde-bd85-922e9cee5850}"/>
     </rules>
     <symbols>
       <symbol name="0" frame_rate="10" clip_to_extent="1" force_rhr="0" alpha="1" is_animated="0" type="line">
