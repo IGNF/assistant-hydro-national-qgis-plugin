@@ -145,12 +145,12 @@
     </profileMarkerSymbol>
   </elevation>
   <renderer-v2 type="RuleRenderer" enableorderby="0" forceraster="0" referencescale="-1" symbollevels="0">
-    <rules key="{f19dfd7a-862e-47c5-b3e0-32f720c7bb94}">
-      <rule symbol="0" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Inscrit')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{d456635c-9894-4f63-adf8-2e04f6d1a131}" label="Inscrit"/>
-      <rule symbol="1" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Non inscrit')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{022cc849-3bfc-4c8f-99c7-9dcc8075e839}" label="Non inscrit"/>
-      <rule symbol="2" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Expertise en cours')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{659da296-f0cc-4bd0-9978-4212030244a6}" label="Expertise en cours"/>
-      <rule symbol="3" filter="&quot;etat_de_l_objet&quot; IN ('Disparu')" key="{8c2c0dcf-6879-467b-8907-d656b035e506}" label="Disparu"/>
-      <rule symbol="4" filter="ELSE" key="{cfc19914-140c-44a1-af0b-90fd3974f8c3}" label="style_ipe"/>
+    <rules key="{34012671-9655-461e-bf92-e3563c0c3876}">
+      <rule symbol="0" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Inscrit')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{ab9c59b1-5b1b-4fd7-8c53-6852c3ceb5b1}" label="Inscrit"/>
+      <rule symbol="1" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Non inscrit')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{e59eed6a-5fcf-4e20-9b4d-f6f4ddfdcd34}" label="Non inscrit"/>
+      <rule symbol="2" filter="(&quot;inventaire_police_de_l_eau&quot; IN ('Expertise en cours')) AND (&quot;etat_de_l_objet&quot; NOT IN ('Disparu'))" key="{9937dfa1-996d-41c6-b6ef-886d1f9e0db8}" label="Expertise en cours"/>
+      <rule symbol="3" filter="&quot;etat_de_l_objet&quot; IN ('Disparu')" key="{1032bcbf-a12b-4cf2-832b-eed21b134df9}" label="Disparu"/>
+      <rule symbol="4" filter="ELSE" key="{7473dd1e-1064-49bc-8297-1343a682b75b}" label="style_ipe"/>
     </rules>
     <symbols>
       <symbol alpha="1" type="line" force_rhr="0" is_animated="0" name="0" clip_to_extent="1" frame_rate="10">
