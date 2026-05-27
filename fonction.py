@@ -1,4 +1,6 @@
 import os.path
+import webbrowser
+
 from qgis.PyQt.QtWidgets import QMessageBox
 from qgis.PyQt.QtCore import Qt
 
@@ -9,10 +11,7 @@ import subprocess
 
 
 def afficheDoc():
-    if not os.path.isfile(os.path.join(os.path.dirname(__file__) , "contribution directe (hydro national).pdf")):
-        afficheerreur("La documentation est introuvable", "Information")
-    else:
-        os.popen(os.path.join(os.path.dirname(__file__) , "contribution directe (hydro national).pdf"))
+    webbrowser.open("https://ignf.github.io/assistant-hydro-national-qgis-plugin/")
 
 def afficheerreur(text, titre=TITRE):
     msg = QMessageBox()
