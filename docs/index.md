@@ -11,7 +11,7 @@ alt="logo_IGN_pour_lettre" /></td>
 <td style="text-align: center;"><p><strong>Manuel utilisateur du
 plugin</strong></p>
 <p><strong>« contribution directe (hydro national) »</strong></p>
-<p><strong>V1.1.0</strong></p></td>
+<p><strong>V1.2.1</strong></p></td>
 </tr>
 <tr>
 <td style="text-align: center;"></td>
@@ -20,11 +20,6 @@ plugin</strong></p>
 </table>
 
 
-
-| Version |    Date    | Modifié par     | Historique des modifications  |
-|:-------:|:----------:|-----------------|-------------------------------|
-| V1.0.0  | 25/08/2025 | Gérôme PECHEUR  | Création                      |
-| V1.1.0  | 20/01/2026 | Philippe Gallen | Adaptation à la version 1.1.0 |
 
 **Sommaire**
 
@@ -40,7 +35,7 @@ plugin</strong></p>
 
 [6 Exemple de manipulation : je veux modifier la nature d’un tronçon](#exemple-de-manipulation-je-veux-modifier-la-nature-dun-tronçon)
 
-# 
+
 
 # Prérequis
 
