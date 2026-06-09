@@ -21,8 +21,10 @@
  *                                                                         *
  ***************************************************************************/
 """
-from PyQt5.QtWidgets import  QLineEdit, QComboBox, QDateEdit
-from qgis.core import Qgis
+from qgis.PyQt.QtGui import QGuiApplication
+from qgis.PyQt.QtWidgets import  QLineEdit, QComboBox, QDateEdit
+from qgis.core import Qgis,QgsProject
+from qgis.utils import plugins
 
 import xml.etree.ElementTree as ET
 from collections import Counter
@@ -30,13 +32,22 @@ from collections import Counter
 from .assistant_hydro_dialog import ClassPluginDialog
 import os.path
 
-from .symbologie import *
 from .modele import *
 from .fonction import *
-from .cheminpluscourt import *
+from .mapping_version import *
 
 class ClassPlugin:
     """QGIS Plugin Implementation."""
+
+    # dorénavant le "chemin le plus court" dépend du plugin "(IGN)chemin-le-plus-court"
+    def runchepluscourt(self):
+        try:
+            processing_plugin = plugins[PLUGIN_CHE_PLUS_COURT]
+            processing_plugin.run()
+        except KeyError:
+            QMessageBox.warning(None, "Attention",
+                                f"Le plugin {PLUGIN_CHE_PLUS_COURT} n'est pas installé ou pas activé\n"
+                                f"- Veuillez l'activer dans le menu \"Installer/Gérer les extensions de QGIS\"")
 
     def __init__(self, iface):
 
@@ -44,10 +55,7 @@ class ClassPlugin:
         self.dico_champs_val_xml = {}
         self.list_dico_selection = []
 
-        self.cheminpluscourt = None
         self.dico_champs_modifie = {}
-
-        self.is_affiche_sens_num = False
 
         self.layer_hydro = None
         self.dlg = None
@@ -61,7 +69,7 @@ class ClassPlugin:
     def valider(self):
         if len(self.dico_champs_modifie) == 0:
             return
-        QGuiApplication.setOverrideCursor(Qt.WaitCursor)
+        QGuiApplication.setOverrideCursor(WaitCursor)
         self.layer_hydro.startEditing()
         for sel in self.layer_hydro.selectedFeatures():
             # changement d'attributs par paquet (dico de valeurs)
@@ -119,18 +127,9 @@ class ClassPlugin:
         self.getattributs_from_selection()
 
     def apropos(self):
-        self.dlgAProposDe.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.WindowCloseButtonHint)
-        self.dlgAProposDe.exec_()
+        self.dlgAProposDe.setWindowFlags(WindowStaysOnTopHint | WindowCloseButtonHint)
+        self.dlgAProposDe.exec()
 
-    def chemin_court(self):
-        if self.layer_hydro.selectedFeatureCount() != 2:
-            QMessageBox.warning(None,TITRE,"Veuillez sélectionner 2 tronçons")
-            return
-            # instanciation de la class chemin le plus court
-        self.cheminpluscourt = cheminpluscourt(self.iface, self.layer_hydro)
-        self.cheminpluscourt.cheminpluscourt()
-
-        self.actualiserSelection()
 
     def initGui(self):
         pass
@@ -371,14 +370,14 @@ class ClassPlugin:
             self.layer_hydro = layer[0]
             return True
 
-    def sens_num(self):
-        if self.is_affiche_sens_num:
-            suppr_symb_sens_num(self.layer_hydro)
-            self.is_affiche_sens_num = False
-        else:
-            add_symb_sens_num(self.layer_hydro)
-            self.is_affiche_sens_num = True
-        self.layer_hydro.triggerRepaint()
+    def on_sens_num(self):
+        try:
+            processing_plugin = plugins[PLUGIN_SENS_NUM]
+            processing_plugin.run()
+        except KeyError:
+            QMessageBox.warning(None, "Attention",
+                                f"Le plugin {PLUGIN_SENS_NUM} n'est pas installé ou pas activé\n"
+                                f"- Veuillez l'activer dans le menu \"Installer/Gérer les extensions de QGIS\"")
 
 
     def affiche_spec(self,attribute):
@@ -459,12 +458,12 @@ class ClassPlugin:
         self.dlg.pushButtonValider.setStyleSheet(CUSTOM_WIDGETS[3])
 
         # sens de numérisation
-        self.dlg.pushButton_sens_num.clicked.connect(self.sens_num)
+        self.dlg.pushButton_sens_num.clicked.connect(self.on_sens_num)
 
         self.dlg.pushButtonAPropos.clicked.connect(self.apropos)
         if self.layer_hydro.selectedFeatureCount() != 2:
             self.dlg.pushButtonCheminCourt.setEnabled(False)
-        self.dlg.pushButtonCheminCourt.clicked.connect(self.chemin_court)
+        self.dlg.pushButtonCheminCourt.clicked.connect(self.runchepluscourt)
 
         # initialisation des widget ccombobox avec xml
         self.init_widgets_from_xml()
@@ -476,10 +475,10 @@ class ClassPlugin:
 
         # show the dialog
         self.dlg.setParent(self.iface.mainWindow())
-        self.dlg.setWindowFlags(Qt.Dialog | Qt.WindowTitleHint | Qt.WindowCloseButtonHint)
+        self.dlg.setWindowFlags(Dialog | WindowTitleHint | WindowCloseButtonHint)
         self.dlg.show()
         # Run the dialog event loop
-        result = self.dlg.exec_()
+        result = self.dlg.exec()
         # See if OK was pressed
         if not result:
             # on deconnecte le signal en quittant
@@ -487,6 +486,12 @@ class ClassPlugin:
                 self.iface.mapCanvas().selectionChanged.disconnect(self.actualiserSelection)
             except TypeError:
                 pass  # aucune connexion existante
-            suppr_symb_sens_num(self.layer_hydro)
+
+            # si on quitte, on remet la vue sans le sens de numérisation via le plugin
+            try:
+                processing_plugin = plugins[PLUGIN_SENS_NUM]
+                processing_plugin.suppr_symb_sens_num(self.layer_hydro)
+            except:
+                pass
             self.layer_hydro.triggerRepaint()
-            self.is_affiche_sens_num = False
+            self.dlgAProposDe.close()

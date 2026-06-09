@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/plugins/squelette" >
-        <file>icon.png</file>
-    </qresource>
-</RCC>
