@@ -8,45 +8,48 @@
 <td rowspan="2"><img src="images/image2.jpeg"
 style="width:1.38681in;height:1.47153in"
 alt="logo_IGN_pour_lettre" /></td>
-<td style="text-align: center;"><p><strong>Manuel utilisateur du
-plugin</strong></p>
-<p><strong>« contribution directe (hydro national) »</strong></p>
+<td style="font-size: 24px;text-align: center;"><p><strong>Manuel utilisateur du plugin « contribution directe (hydro national) »</strong></p>
 <p><strong>V1.2.1</strong></p></td>
 </tr>
 <tr>
-<td style="text-align: center;"></td>
+<td style="font-size: 16px;text-align: center;">Développeur  : Gérôme PECHEUR (IGN)</td>
 </tr>
 </tbody>
 </table>
 
 
 
-**Sommaire**
+## Sommaire
 
-[1 Prérequis](#prérequis)
+- [1. Prérequis](#prerequis)
 
-[2 Résumé](#résumé)
+- [2. Résumé](#resume)
 
-[3 Installation](#installation)
+- [3. Installation](#installation)
 
-[4 Présentation](#présentation)
+- [4. Présentation](#presentation)
 
-[5 Utilisation](#utilisation)
+- [5. Utilisation](#utilisation)
 
-[6 Exemple de manipulation : je veux modifier la nature d’un tronçon](#exemple-de-manipulation-je-veux-modifier-la-nature-dun-tronçon)
+- [6. Exemple de manipulation : je veux modifier la nature d’un tronçon](#exemple-de-manipulation-je-veux-modifier-la-nature-dun-tronçon)
 
 
 
-# Prérequis
+<div  style="background-color: #00ADC5; border: 1px solid black; padding: 5px; text-align: justify;margin-bottom:10px;">
+  <h2 id="prerequis" style="color: white;margin:0;" >1. Prérequis</h2>
+</div>
 
 Version de QGIS : 3.28 ou supérieur
 
 Ce plugin fonctionne en parallèle du plugin « IGN Espace collaboratif »
 version 4.2.2 minimum.
 
-Le plugin « maitre » doit impérativement être installé.
+Le plugin « maitre » doit préalablement être installé : 
+[maitre-qgis-plugin sur GitHub](https://github.com/IGNF/maitre-qgis-plugin)
 
-# Résumé
+<div  style="background-color: #00ADC5; border: 1px solid black; padding: 5px; text-align: justify;margin-bottom:10px;">
+  <h2 id="resume" style="color: white;margin:0;" >2. Résumé</h2>
+</div>
 
 Ce plugin est une aide à la modification sémantique des tronçons
 hydrographique
@@ -56,7 +59,9 @@ tronçons hydrographiques des guichets Espace collaboratif « Inventaires
 hydrographiques de l’Etat » et « Inventaires hydrographiques de l’Etat –
 FORMATION ».
 
-# Installation
+<div  style="background-color: #00ADC5; border: 1px solid black; padding: 5px; text-align: justify;margin-bottom:10px;">
+  <h2 id="installation" style="color: white;margin:0;" >3. Installation</h2>
+</div>
 
 Ouvrir QGIS.
 
@@ -67,7 +72,9 @@ Installer le plugin.
 <img src="images/image3.png"
 style="width:6.83889in;height:1.525in" />
 
-# Présentation
+<div  style="background-color: #00ADC5; border: 1px solid black; padding: 5px; text-align: justify;margin-bottom:10px;">
+  <h2 id="presentation" style="color: white;margin:0;" >4. Présentation</h2>
+</div>
 
 <img src="images/image4.png"
 style="width:3.7259in;height:4.81031in" />
@@ -121,7 +128,9 @@ la BDTOPO.
 style="width:1.27515in;height:2.03518in" />
 </figure>
 
-# Utilisation
+<div  style="background-color: #00ADC5; border: 1px solid black; padding: 5px; text-align: justify;margin-bottom:10px;">
+  <h2 id="utilisation" style="color: white;margin:0;" >5. Utilisation</h2>
+</div>
 
 > <span class="mark">IMPORTANT</span> : Ce plugin a été développé pour
 > être utilisé avec les guichets **Inventaires hydrographiques de
@@ -153,7 +162,9 @@ style="width:1.27515in;height:2.03518in" />
 > tronçon d’arrivé doivent être visible à l’écran avant de lancer le
 > calcul.
 
-# Exemple de manipulation : je veux modifier la nature d’un tronçon
+<div  style="background-color: #00ADC5; border: 1px solid black; padding: 5px; text-align: justify;margin-bottom:10px;">
+  <h2 id="exemple-de-manipulation-je-veux-modifier-la-nature-dun-tronçon" style="color: white;margin:0;" >6. Exemple de manipulation : je veux modifier la nature d’un tronçon</h2>
+</div>
 
 > Je veux modifier la nature d’un tronçon de Ecoulement naturel en Canal
 
