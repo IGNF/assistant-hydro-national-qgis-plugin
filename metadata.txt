@@ -8,7 +8,7 @@ qgisMinimumVersion=3.0
 qgisMaximumVersion=4.99
 
 description=plugin generique
-version=1.2.1
+version=1.2.2
 author=Gérôme PECHEUR (IGN)
 email=gerome.pecheur@ign.fr
 license=GNU AGPL v3

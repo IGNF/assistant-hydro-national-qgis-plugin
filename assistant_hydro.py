@@ -23,7 +23,7 @@
 """
 from qgis.PyQt.QtGui import QGuiApplication
 from qgis.PyQt.QtWidgets import  QLineEdit, QComboBox, QDateEdit
-from qgis.core import Qgis,QgsProject
+from qgis.core import Qgis,QgsProject,QgsApplication
 from qgis.utils import plugins
 
 import xml.etree.ElementTree as ET
@@ -35,6 +35,7 @@ import os.path
 from .modele import *
 from .fonction import *
 from .mapping_version import *
+from .window_manager import *
 
 class ClassPlugin:
     """QGIS Plugin Implementation."""
@@ -132,7 +133,9 @@ class ClassPlugin:
 
 
     def initGui(self):
-        pass
+        self.iface.projectRead.connect(self.on_project_opened)
+        # événement fermeture de qgis
+        QgsApplication.instance().aboutToQuit.connect(self.fermeture_qgis)
 
     def unload(self):
         pass
@@ -390,7 +393,36 @@ class ClassPlugin:
         url = "https://bdtopoexplorer.ign.fr/?attr_communs_theme=Hydrographie#attribute_296"
         webbrowser.open(url)
 
+    def on_project_opened(self):
+        settings = QSettings(QSettings.NativeFormat, QSettings.UserScope, "IGN", TITRE)
+        visible = settings.value("visible", False, type=bool)
+        if visible:
+            self.run()
+
+    def on_dialog_closed(self):
+        # on deconnecte le signal en quittant
+        try:
+            self.iface.mapCanvas().selectionChanged.disconnect(self.actualiserSelection)
+        except TypeError:
+            pass  # aucune connexion existante
+
+        # si on quitte, on remet la vue sans le sens de numérisation via le plugin
+        try:
+            processing_plugin = plugins[PLUGIN_SENS_NUM]
+            processing_plugin.suppr_symb_sens_num(self.layer_hydro)
+        except:
+            pass
+        self.layer_hydro.triggerRepaint()
+        self.dlgAProposDe.close()
+        sauve_position_dial(self.dlg)
+        self.dlg = None
+
+    def fermeture_qgis(self):
+        sauve_position_dial(self.dlg)
+
     def run(self):
+        if self.dlg is not None and self.dlg.isVisible():
+            return
 
         self.dlg = ClassPluginDialog()
         self.dlg.setWindowTitle(f"{TITRE}")
@@ -400,6 +432,10 @@ class ClassPlugin:
         # est-ce que les layer de l'espace co sont disponibles
         if not self.islayer_espaceco():
             return
+
+        # connection de la fermeture du dialogue
+        self.dlg.finished.connect(self.on_dialog_closed)
+        restore_position_dial(self.dlg)
 
         # ******************************
         champs_manquant, champs_readonly = test_modele(self.layer_hydro)
@@ -478,20 +514,20 @@ class ClassPlugin:
         self.dlg.setWindowFlags(Dialog | WindowTitleHint | WindowCloseButtonHint)
         self.dlg.show()
         # Run the dialog event loop
-        result = self.dlg.exec()
+        # result = self.dlg.exec()
         # See if OK was pressed
-        if not result:
-            # on deconnecte le signal en quittant
-            try:
-                self.iface.mapCanvas().selectionChanged.disconnect(self.actualiserSelection)
-            except TypeError:
-                pass  # aucune connexion existante
-
-            # si on quitte, on remet la vue sans le sens de numérisation via le plugin
-            try:
-                processing_plugin = plugins[PLUGIN_SENS_NUM]
-                processing_plugin.suppr_symb_sens_num(self.layer_hydro)
-            except:
-                pass
-            self.layer_hydro.triggerRepaint()
-            self.dlgAProposDe.close()
+        # if not result:
+            # # on deconnecte le signal en quittant
+            # try:
+            #     self.iface.mapCanvas().selectionChanged.disconnect(self.actualiserSelection)
+            # except TypeError:
+            #     pass  # aucune connexion existante
+            #
+            # # si on quitte, on remet la vue sans le sens de numérisation via le plugin
+            # try:
+            #     processing_plugin = plugins[PLUGIN_SENS_NUM]
+            #     processing_plugin.suppr_symb_sens_num(self.layer_hydro)
+            # except:
+            #     pass
+            # self.layer_hydro.triggerRepaint()
+            # self.dlgAProposDe.close()
