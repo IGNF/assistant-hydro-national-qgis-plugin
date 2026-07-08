@@ -1,5 +1,5 @@
 from qgis.PyQt.QtWidgets import QMessageBox,QTextEdit,QSizePolicy,QDialog
-from qgis.PyQt.QtCore import Qt
+from qgis.PyQt.QtCore import Qt,QSettings
 
 # QT6
 try :
@@ -39,6 +39,8 @@ try :
     ArrowCursor = Qt.CursorShape.ArrowCursor
     red = Qt.GlobalColor.red
     RejectRole = QMessageBox.ButtonRole.RejectRole
+    NativeFormat = QSettings.Format.NativeFormat
+    UserScope = QSettings.Scope.UserScope
 
 
 # QT5
@@ -79,4 +81,6 @@ except :
     ArrowCursor = Qt.ArrowCursor
     red = Qt.red
     RejectRole = QMessageBox.RejectRole
+    NativeFormat = QSettings.NativeFormat
+    UserScope = QSettings.UserScope
 
