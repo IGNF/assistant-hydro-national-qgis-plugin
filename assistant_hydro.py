@@ -394,7 +394,7 @@ class ClassPlugin:
         webbrowser.open(url)
 
     def on_project_opened(self):
-        settings = QSettings(QSettings.NativeFormat, QSettings.UserScope, "IGN", TITRE)
+        settings = QSettings(NativeFormat, UserScope, "IGN", TITRE)
         visible = settings.value("visible", False, type=bool)
         if visible:
             self.run()

@@ -1,8 +1,8 @@
 import os
 
 TITRE = "Assistant hydrographique national"
-PLUGIN_CHE_PLUS_COURT = "IGN_chemin_le_plus_court"
-PLUGIN_SENS_NUM = "IGN_sens_numerisation"
+PLUGIN_CHE_PLUS_COURT = "IGN_ShortestPath"
+PLUGIN_SENS_NUM = "IGN_DigitizingDirection"
 PATH_REP = f"{os.path.dirname(__file__)}"
 CLEABS = "cleabs"
 
