@@ -1,6 +1,6 @@
 import os
 
-TITRE = "Assistant hydrographique national"
+TITRE = "IGN Assistant hydrographique"
 PLUGIN_CHE_PLUS_COURT = "IGN_ShortestPath"
 PLUGIN_SENS_NUM = "IGN_DigitizingDirection"
 PATH_REP = f"{os.path.dirname(__file__)}"
@@ -24,8 +24,8 @@ LAYER_HYDRO = "troncon_hydrographique"
 # 4 : label → gris clair
 # 5 : bloc de label 1
 # 6 : bloc de label 2
-CUSTOM_WIDGETS = (" *{background-color: #2ee321;font-weight: bold;} *:disabled {background-color: #dcdcdc;color: grey}",
-                    "background-color: #ff8080 ;font-weight: bold",
+CUSTOM_WIDGETS = (" *{background-color: #47bee3;font-weight: bold;} *:disabled {background-color: #dcdcdc;color: grey}",
+                    "background-color: #16ba39 ;font-weight: bold",
                     "background-color: None",
                     "background-color: #df920d ;font-weight: bold",
                     "background-color: #dcdcdc",

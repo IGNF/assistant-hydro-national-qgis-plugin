@@ -8,8 +8,8 @@
 <td rowspan="2"><img src="images/image2.jpeg"
 style="width:1.38681in;height:1.47153in"
 alt="logo_IGN_pour_lettre" /></td>
-<td style="font-size: 24px;text-align: center;"><p><strong>Manuel utilisateur du plugin « contribution directe (hydro national) »</strong></p>
-<p><strong>V1.2.2</strong></p></td>
+<td style="font-size: 24px;text-align: center;"><p><strong>Manuel utilisateur du plugin « IGN Assistant hydrographique »</strong></p>
+</td>
 </tr>
 <tr>
 <td style="font-size: 16px;text-align: center;">Développeur  : Gérôme PECHEUR (IGN)</td>
@@ -39,13 +39,12 @@ alt="logo_IGN_pour_lettre" /></td>
   <h2 id="prerequis" style="color: white;margin:0;" >1. Prérequis</h2>
 </div>
 
-Version de QGIS : 3.28 ou supérieur
+Version de QGIS : 3.34 ou supérieur
 
 Ce plugin fonctionne en parallèle du plugin « IGN Espace collaboratif »
 version 4.2.2 minimum.
 
-Le plugin « maitre » doit préalablement être installé : 
-[maitre-qgis-plugin sur GitHub](https://github.com/IGNF/maitre-qgis-plugin)
+Le plugin «IGN PluginsManager» doit préalablement être installé, il est disponible dans le dépôt officiel.
 
 <div  style="background-color: #00ADC5; border: 1px solid black; padding: 5px; text-align: justify;margin-bottom:10px;">
   <h2 id="resume" style="color: white;margin:0;" >2. Résumé</h2>
@@ -63,21 +62,15 @@ FORMATION ».
   <h2 id="installation" style="color: white;margin:0;" >3. Installation</h2>
 </div>
 
-Ouvrir QGIS.
+Au préalable, il faut installer le plugin « PluginsManager », c’est lui qui gère l’intégration du plugin dans le menu IGN et / ou dans les barres d’outils. Sans lui le plugin « jeux d’attributs » ne sera pas accessible.
 
-Allez dans Extensions/Installer/Gérer les extensions, cliquez sur
-Installer depuis un ZIP, sélectionner le fichier ZIP puis cliquez sur
-Installer le plugin.
-
-<img src="images/image3.png"
-style="width:6.83889in;height:1.525in" />
+<img src="images/image3.png" style="width:6.83889in;height:1.525in" />
 
 <div  style="background-color: #00ADC5; border: 1px solid black; padding: 5px; text-align: justify;margin-bottom:10px;">
   <h2 id="presentation" style="color: white;margin:0;" >4. Présentation</h2>
 </div>
 
-<img src="images/image4.png"
-style="width:3.7259in;height:4.81031in" />
+<img src="images/image4.png" style="width:3.7259in;height:4.81031in" />
 
 Cette interface permet de modifier certains champs des tronçons
 hydrographiques
@@ -89,33 +82,26 @@ Si plusieurs tronçons sont sélectionnés seules les valeurs communes
 apparaissent surlignées en vert. Les valeurs qui diffèrent
 n’apparaissent pas.
 
-<img src="images/image5.PNG"
-style="width:0.42708in;height:0.25in" /> Ce bouton permet d’afficher la
+<img src="images/image5.PNG" style="width:0.42708in;height:0.25in" /> Ce bouton permet d’afficher la
 documentation du champs correspondant (https://bdtopoexplorer.ign.fr/)
 
-<img src="images/image6.png"
-style="width:0.26955in;height:0.26162in" /> Ce bouton permet de
+<img src="images/image6.png" style="width:0.26955in;height:0.26162in" /> Ce bouton permet de
 sélectionner tous les tronçons compris entre 2 tronçons sélectionnés (un
 tronçon de départ et un tronçon d’arrivée).
 
-<img src="images/image7.png"
-style="width:0.31254in;height:0.26045in" /> Affiche le sens de
+<img src="images/image7.png" style="width:0.31254in;height:0.26045in" /> Affiche le sens de
 numérisation des tronçons hydrographiques
 
-<img src="images/image8.png"
-style="width:0.28125in;height:0.28125in" /> Affiche l’historique des
+<img src="images/image8.png" style="width:0.28125in;height:0.28125in" /> Affiche l’historique des
 versions et la documentation de l’outil
 
-<img src="images/image9.PNG"
-style="width:1.92708in;height:0.24981in" /> Valide dans QGIS les
+<img src="images/image9.PNG" style="width:1.92708in;height:0.24981in" /> Valide dans QGIS les
 modifications saisies dans l’outil
 
-<img src="images/image10.PNG"
-style="width:0.875in;height:0.20833in" /> Modifie la couleur de la
+<img src="images/image10.PNG" style="width:0.875in;height:0.20833in" /> Modifie la couleur de la
 sélection
 
-<img src="images/image11.png"
-style="width:1.69815in;height:0.23962in" />
+<img src="images/image11.png" style="width:1.69815in;height:0.23962in" />
 
 A l’ouverture de l’outil il y a une vérification de la présence dans le
 projet des couches nécessaires. Afficher l’état du modèle permet de
@@ -150,8 +136,7 @@ style="width:1.27515in;height:2.03518in" />
 > affichant en vert uniquement les valeurs d’attributs qui sont communes
 > à tous les tronçons sélectionnés.
 >
-> Le bouton <img src="images/image6.png"
-> style="width:0.35417in;height:0.34375in" /> permet de sélectionner
+> Le bouton <img src="images/image6.png" style="width:0.35417in;height:0.34375in" /> permet de sélectionner
 > tous les tronçons hydro compris entre un tronçon de départ et un
 > tronçon d’arrivée (cela facilite la sélection pour de longs cours
 > d’eau), cet algorithme détermine le chemin le plus court, il convient
@@ -171,8 +156,7 @@ style="width:1.27515in;height:2.03518in" />
 1.  Je sélectionne le tronçon à modifier. Les valeurs de ses attributs
     s’affichent en vert dans l’outil.
 
-> <img src="images/image13.png"
-> style="width:2.48789in;height:3.21198in" />
+> <img src="images/image13.png" style="width:2.48789in;height:3.21198in"/>
 
 2.  Je clique sur la valeur Ecoulement naturel pour dérouler les valeurs
     possibles
@@ -180,18 +164,14 @@ style="width:1.27515in;height:2.03518in" />
 3.  Je choisis Canal. Cette valeur apparait sur fond rouge/rose tant que
     la modification n’est pas validée.
 
-> <img src="images/image14.png"
-> style="width:3.08956in;height:3.98877in" />
+> <img src="images/image14.png" style="width:3.08956in;height:3.98877in" />
 
-4.  Je clique sur : <img src="images/image9.PNG"
-    style="width:2.25031in;height:0.29171in" /> pour valider les
+4.  Je clique sur : <img src="images/image9.PNG"    style="width:2.25031in;height:0.29171in" /> pour valider les
     modifications dans QGIS.
 
 Un message QGIS confirme la prise en compte des modifications.
 
-<img src="images/image16.png"
-style="width:4.72917in;height:0.35417in" />
+<img src="images/image16.png" style="width:4.72917in;height:0.35417in" />
 
 > <span class="mark">Attention :</span> ne pas confondre avec le bouton
-> d’enregistrement du projet : <img src="images/image17.PNG"
-> style="width:0.27087in;height:0.29171in" />
+> d’enregistrement du projet : <img src="images/image17.PNG" style="width:0.27087in;height:0.29171in" />
