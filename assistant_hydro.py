@@ -26,7 +26,7 @@ from qgis.PyQt.QtWidgets import  QLineEdit, QComboBox, QDateEdit
 from qgis.core import Qgis,QgsProject,QgsApplication
 from qgis.utils import plugins
 
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET # nosec B405
 from collections import Counter
 
 from .assistant_hydro_dialog import ClassPluginDialog
@@ -328,7 +328,7 @@ class ClassPlugin:
         # initialisation du dictionnaire des champs, attributs associés
         # à partir du xml
         self.dico_champs_val_xml = {}
-        tree = ET.parse(os.path.join(PATH_REP, "XML","Attributs.xml"))
+        tree = ET.parse(os.path.join(PATH_REP, "XML","Attributs.xml")) # nosec B314
         root = tree.getroot()
         for champs in root.findall("champs"):
             # il faut réinitialiser la liste, pas juste la vider
