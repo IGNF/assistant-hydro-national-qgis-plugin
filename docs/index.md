@@ -62,9 +62,8 @@ FORMATION ».
   <h2 id="installation" style="color: white;margin:0;" >3. Installation</h2>
 </div>
 
-Au préalable, il faut installer le plugin « PluginsManager », c’est lui qui gère l’intégration du plugin dans le menu IGN et / ou dans les barres d’outils. Sans lui le plugin « jeux d’attributs » ne sera pas accessible.
+Au préalable, il faut installer le plugin « PluginsManager », c’est lui qui gère l’intégration du plugin dans le menu IGN et / ou dans les barres d’outils. Sans lui le plugin « IGN Assistant hydrographique » ne sera pas accessible.
 
-<img src="images/image3.png" style="width:6.83889in;height:1.525in" />
 
 <div  style="background-color: #00ADC5; border: 1px solid black; padding: 5px; text-align: justify;margin-bottom:10px;">
   <h2 id="presentation" style="color: white;margin:0;" >4. Présentation</h2>
@@ -156,7 +155,7 @@ style="width:1.27515in;height:2.03518in" />
 1.  Je sélectionne le tronçon à modifier. Les valeurs de ses attributs
     s’affichent en vert dans l’outil.
 
-> <img src="images/image13.png" style="width:2.48789in;height:3.21198in"/>
+> <img src="images/image4.png" style="width:2.48789in;height:3.21198in"/>
 
 2.  Je clique sur la valeur Ecoulement naturel pour dérouler les valeurs
     possibles
