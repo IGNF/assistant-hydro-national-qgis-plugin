@@ -32,7 +32,7 @@ jobs:
             --exclude .git \
             --exclude .github \
             --exclude IGN_assistant_hydrographique
-          zip -r IGN_assistant-hydro-national.zip IGN_assistant_hydrographique
+          zip -r IGN_assistant_hydrographique.zip IGN_assistant_hydrographique
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
