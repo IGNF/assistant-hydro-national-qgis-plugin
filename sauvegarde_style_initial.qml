@@ -1,194 +1,194 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis symbologyReferenceScale="-1" version="3.44.8-Solothurn" autoRefreshMode="Disabled" minScale="136495" labelsEnabled="0" simplifyDrawingHints="1" simplifyDrawingTol="1" maxScale="533" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="1" autoRefreshTime="0" styleCategories="AllStyleCategories" simplifyLocal="1" simplifyAlgorithm="0" readOnly="1">
+<qgis maxScale="533" simplifyDrawingHints="1" autoRefreshTime="0" readOnly="1" simplifyDrawingTol="1" simplifyLocal="1" styleCategories="AllStyleCategories" symbologyReferenceScale="-1" minScale="136495" labelsEnabled="0" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="1" version="3.44.8-Solothurn" simplifyAlgorithm="0" autoRefreshMode="Disabled">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
     <Private>0</Private>
   </flags>
-  <temporal limitMode="0" startField="" durationUnit="min" startExpression="" mode="0" enabled="0" endExpression="" durationField="" endField="" fixedDuration="0" accumulate="0">
+  <temporal mode="0" accumulate="0" durationField="" durationUnit="min" enabled="0" endExpression="" startField="" endField="" limitMode="0" startExpression="" fixedDuration="0">
     <fixedRange>
       <start></start>
       <end></end>
     </fixedRange>
   </temporal>
-  <elevation type="IndividualFeatures" clamping="Absolute" zoffset="0" showMarkerSymbolInSurfacePlots="0" customToleranceEnabled="1" extrusionEnabled="0" extrusion="0" zscale="1" binding="Centroid" symbology="Line" respectLayerSymbol="1">
+  <elevation customToleranceEnabled="1" symbology="Line" clamping="Absolute" binding="Centroid" respectLayerSymbol="1" zoffset="0" extrusion="0" extrusionEnabled="0" showMarkerSymbolInSurfacePlots="0" zscale="1" type="IndividualFeatures">
     <data-defined-properties>
       <Option type="Map">
-        <Option type="QString" name="name" value=""/>
+        <Option name="name" value="" type="QString"/>
         <Option name="properties"/>
-        <Option type="QString" name="type" value="collection"/>
+        <Option name="type" value="collection" type="QString"/>
       </Option>
     </data-defined-properties>
     <profileLineSymbol>
-      <symbol clip_to_extent="1" type="line" force_rhr="0" alpha="1" name="" frame_rate="10" is_animated="0">
+      <symbol name="" clip_to_extent="1" alpha="1" is_animated="0" frame_rate="10" type="line" force_rhr="0">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" name="name" value=""/>
+            <Option name="name" value="" type="QString"/>
             <Option name="properties"/>
-            <Option type="QString" name="type" value="collection"/>
+            <Option name="type" value="collection" type="QString"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SimpleLine" pass="0" id="{89f1fc95-09a0-437f-9789-1ec83b06303a}" enabled="1">
+        <layer pass="0" enabled="1" locked="0" class="SimpleLine" id="{89f1fc95-09a0-437f-9789-1ec83b06303a}">
           <Option type="Map">
-            <Option type="QString" name="align_dash_pattern" value="0"/>
-            <Option type="QString" name="capstyle" value="square"/>
-            <Option type="QString" name="customdash" value="5;2"/>
-            <Option type="QString" name="customdash_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="customdash_unit" value="MM"/>
-            <Option type="QString" name="dash_pattern_offset" value="0"/>
-            <Option type="QString" name="dash_pattern_offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="dash_pattern_offset_unit" value="MM"/>
-            <Option type="QString" name="draw_inside_polygon" value="0"/>
-            <Option type="QString" name="joinstyle" value="bevel"/>
-            <Option type="QString" name="line_color" value="213,180,60,255,rgb:0.8352941,0.7058824,0.2352941,1"/>
-            <Option type="QString" name="line_style" value="solid"/>
-            <Option type="QString" name="line_width" value="0.6"/>
-            <Option type="QString" name="line_width_unit" value="MM"/>
-            <Option type="QString" name="offset" value="0"/>
-            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="offset_unit" value="MM"/>
-            <Option type="QString" name="ring_filter" value="0"/>
-            <Option type="QString" name="trim_distance_end" value="0"/>
-            <Option type="QString" name="trim_distance_end_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="trim_distance_end_unit" value="MM"/>
-            <Option type="QString" name="trim_distance_start" value="0"/>
-            <Option type="QString" name="trim_distance_start_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="trim_distance_start_unit" value="MM"/>
-            <Option type="QString" name="tweak_dash_pattern_on_corners" value="0"/>
-            <Option type="QString" name="use_custom_dash" value="0"/>
-            <Option type="QString" name="width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option name="align_dash_pattern" value="0" type="QString"/>
+            <Option name="capstyle" value="square" type="QString"/>
+            <Option name="customdash" value="5;2" type="QString"/>
+            <Option name="customdash_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="customdash_unit" value="MM" type="QString"/>
+            <Option name="dash_pattern_offset" value="0" type="QString"/>
+            <Option name="dash_pattern_offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="dash_pattern_offset_unit" value="MM" type="QString"/>
+            <Option name="draw_inside_polygon" value="0" type="QString"/>
+            <Option name="joinstyle" value="bevel" type="QString"/>
+            <Option name="line_color" value="213,180,60,255,rgb:0.8352941,0.7058824,0.2352941,1" type="QString"/>
+            <Option name="line_style" value="solid" type="QString"/>
+            <Option name="line_width" value="0.6" type="QString"/>
+            <Option name="line_width_unit" value="MM" type="QString"/>
+            <Option name="offset" value="0" type="QString"/>
+            <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="offset_unit" value="MM" type="QString"/>
+            <Option name="ring_filter" value="0" type="QString"/>
+            <Option name="trim_distance_end" value="0" type="QString"/>
+            <Option name="trim_distance_end_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="trim_distance_end_unit" value="MM" type="QString"/>
+            <Option name="trim_distance_start" value="0" type="QString"/>
+            <Option name="trim_distance_start_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="trim_distance_start_unit" value="MM" type="QString"/>
+            <Option name="tweak_dash_pattern_on_corners" value="0" type="QString"/>
+            <Option name="use_custom_dash" value="0" type="QString"/>
+            <Option name="width_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </profileLineSymbol>
     <profileFillSymbol>
-      <symbol clip_to_extent="1" type="fill" force_rhr="0" alpha="1" name="" frame_rate="10" is_animated="0">
+      <symbol name="" clip_to_extent="1" alpha="1" is_animated="0" frame_rate="10" type="fill" force_rhr="0">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" name="name" value=""/>
+            <Option name="name" value="" type="QString"/>
             <Option name="properties"/>
-            <Option type="QString" name="type" value="collection"/>
+            <Option name="type" value="collection" type="QString"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SimpleFill" pass="0" id="{599d41e7-2ae7-494c-8115-85a6c8419a10}" enabled="1">
+        <layer pass="0" enabled="1" locked="0" class="SimpleFill" id="{599d41e7-2ae7-494c-8115-85a6c8419a10}">
           <Option type="Map">
-            <Option type="QString" name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="color" value="213,180,60,255,rgb:0.8352941,0.7058824,0.2352941,1"/>
-            <Option type="QString" name="joinstyle" value="bevel"/>
-            <Option type="QString" name="offset" value="0,0"/>
-            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="offset_unit" value="MM"/>
-            <Option type="QString" name="outline_color" value="152,129,43,255,rgb:0.5966278,0.5042039,0.1680629,1"/>
-            <Option type="QString" name="outline_style" value="solid"/>
-            <Option type="QString" name="outline_width" value="0.2"/>
-            <Option type="QString" name="outline_width_unit" value="MM"/>
-            <Option type="QString" name="style" value="solid"/>
+            <Option name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="color" value="213,180,60,255,rgb:0.8352941,0.7058824,0.2352941,1" type="QString"/>
+            <Option name="joinstyle" value="bevel" type="QString"/>
+            <Option name="offset" value="0,0" type="QString"/>
+            <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="offset_unit" value="MM" type="QString"/>
+            <Option name="outline_color" value="152,129,43,255,rgb:0.5966278,0.5042039,0.1680629,1" type="QString"/>
+            <Option name="outline_style" value="solid" type="QString"/>
+            <Option name="outline_width" value="0.2" type="QString"/>
+            <Option name="outline_width_unit" value="MM" type="QString"/>
+            <Option name="style" value="solid" type="QString"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </profileFillSymbol>
     <profileMarkerSymbol>
-      <symbol clip_to_extent="1" type="marker" force_rhr="0" alpha="1" name="" frame_rate="10" is_animated="0">
+      <symbol name="" clip_to_extent="1" alpha="1" is_animated="0" frame_rate="10" type="marker" force_rhr="0">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" name="name" value=""/>
+            <Option name="name" value="" type="QString"/>
             <Option name="properties"/>
-            <Option type="QString" name="type" value="collection"/>
+            <Option name="type" value="collection" type="QString"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SimpleMarker" pass="0" id="{89989bc2-9af0-4f73-bd92-2e8b159e024e}" enabled="1">
+        <layer pass="0" enabled="1" locked="0" class="SimpleMarker" id="{89989bc2-9af0-4f73-bd92-2e8b159e024e}">
           <Option type="Map">
-            <Option type="QString" name="angle" value="0"/>
-            <Option type="QString" name="cap_style" value="square"/>
-            <Option type="QString" name="color" value="213,180,60,255,rgb:0.8352941,0.7058824,0.2352941,1"/>
-            <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="joinstyle" value="bevel"/>
-            <Option type="QString" name="name" value="diamond"/>
-            <Option type="QString" name="offset" value="0,0"/>
-            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="offset_unit" value="MM"/>
-            <Option type="QString" name="outline_color" value="152,129,43,255,rgb:0.5966278,0.5042039,0.1680629,1"/>
-            <Option type="QString" name="outline_style" value="solid"/>
-            <Option type="QString" name="outline_width" value="0.2"/>
-            <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="outline_width_unit" value="MM"/>
-            <Option type="QString" name="scale_method" value="diameter"/>
-            <Option type="QString" name="size" value="3"/>
-            <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="size_unit" value="MM"/>
-            <Option type="QString" name="vertical_anchor_point" value="1"/>
+            <Option name="angle" value="0" type="QString"/>
+            <Option name="cap_style" value="square" type="QString"/>
+            <Option name="color" value="213,180,60,255,rgb:0.8352941,0.7058824,0.2352941,1" type="QString"/>
+            <Option name="horizontal_anchor_point" value="1" type="QString"/>
+            <Option name="joinstyle" value="bevel" type="QString"/>
+            <Option name="name" value="diamond" type="QString"/>
+            <Option name="offset" value="0,0" type="QString"/>
+            <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="offset_unit" value="MM" type="QString"/>
+            <Option name="outline_color" value="152,129,43,255,rgb:0.5966278,0.5042039,0.1680629,1" type="QString"/>
+            <Option name="outline_style" value="solid" type="QString"/>
+            <Option name="outline_width" value="0.2" type="QString"/>
+            <Option name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="outline_width_unit" value="MM" type="QString"/>
+            <Option name="scale_method" value="diameter" type="QString"/>
+            <Option name="size" value="3" type="QString"/>
+            <Option name="size_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="size_unit" value="MM" type="QString"/>
+            <Option name="vertical_anchor_point" value="1" type="QString"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </profileMarkerSymbol>
   </elevation>
-  <renderer-v2 symbollevels="0" type="singleSymbol" forceraster="0" referencescale="-1" enableorderby="0">
+  <renderer-v2 referencescale="-1" enableorderby="0" symbollevels="0" type="singleSymbol" forceraster="0">
     <symbols>
-      <symbol clip_to_extent="1" type="line" force_rhr="0" alpha="1" name="0" frame_rate="10" is_animated="0">
+      <symbol name="0" clip_to_extent="1" alpha="1" is_animated="0" frame_rate="10" type="line" force_rhr="0">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" name="name" value=""/>
+            <Option name="name" value="" type="QString"/>
             <Option name="properties"/>
-            <Option type="QString" name="type" value="collection"/>
+            <Option name="type" value="collection" type="QString"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SimpleLine" pass="0" id="{ece71ca2-2e6f-4198-8f16-3cac78dd2d24}" enabled="1">
+        <layer pass="0" enabled="1" locked="0" class="SimpleLine" id="{ece71ca2-2e6f-4198-8f16-3cac78dd2d24}">
           <Option type="Map">
-            <Option type="QString" name="align_dash_pattern" value="0"/>
-            <Option type="QString" name="capstyle" value="square"/>
-            <Option type="QString" name="customdash" value="5;2"/>
-            <Option type="QString" name="customdash_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="customdash_unit" value="Pixel"/>
-            <Option type="QString" name="dash_pattern_offset" value="0"/>
-            <Option type="QString" name="dash_pattern_offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="dash_pattern_offset_unit" value="Pixel"/>
-            <Option type="QString" name="draw_inside_polygon" value="0"/>
-            <Option type="QString" name="joinstyle" value="round"/>
-            <Option type="QString" name="line_color" value="0,148,234,255,hsv:0.56141666666666667,1,0.91764705882352937,1"/>
-            <Option type="QString" name="line_style" value="solid"/>
-            <Option type="QString" name="line_width" value="0.6"/>
-            <Option type="QString" name="line_width_unit" value="Pixel"/>
-            <Option type="QString" name="offset" value="0"/>
-            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="offset_unit" value="Pixel"/>
-            <Option type="QString" name="ring_filter" value="0"/>
-            <Option type="QString" name="trim_distance_end" value="0"/>
-            <Option type="QString" name="trim_distance_end_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="trim_distance_end_unit" value="Pixel"/>
-            <Option type="QString" name="trim_distance_start" value="0"/>
-            <Option type="QString" name="trim_distance_start_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="trim_distance_start_unit" value="Pixel"/>
-            <Option type="QString" name="tweak_dash_pattern_on_corners" value="0"/>
-            <Option type="QString" name="use_custom_dash" value="0"/>
-            <Option type="QString" name="width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option name="align_dash_pattern" value="0" type="QString"/>
+            <Option name="capstyle" value="square" type="QString"/>
+            <Option name="customdash" value="5;2" type="QString"/>
+            <Option name="customdash_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="customdash_unit" value="Pixel" type="QString"/>
+            <Option name="dash_pattern_offset" value="0" type="QString"/>
+            <Option name="dash_pattern_offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="dash_pattern_offset_unit" value="Pixel" type="QString"/>
+            <Option name="draw_inside_polygon" value="0" type="QString"/>
+            <Option name="joinstyle" value="round" type="QString"/>
+            <Option name="line_color" value="0,148,234,255,hsv:0.56141666666666667,1,0.91764705882352937,1" type="QString"/>
+            <Option name="line_style" value="solid" type="QString"/>
+            <Option name="line_width" value="0.6" type="QString"/>
+            <Option name="line_width_unit" value="Pixel" type="QString"/>
+            <Option name="offset" value="0" type="QString"/>
+            <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="offset_unit" value="Pixel" type="QString"/>
+            <Option name="ring_filter" value="0" type="QString"/>
+            <Option name="trim_distance_end" value="0" type="QString"/>
+            <Option name="trim_distance_end_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="trim_distance_end_unit" value="Pixel" type="QString"/>
+            <Option name="trim_distance_start" value="0" type="QString"/>
+            <Option name="trim_distance_start_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="trim_distance_start_unit" value="Pixel" type="QString"/>
+            <Option name="tweak_dash_pattern_on_corners" value="0" type="QString"/>
+            <Option name="use_custom_dash" value="0" type="QString"/>
+            <Option name="width_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -198,58 +198,58 @@
     <sizescale/>
     <data-defined-properties>
       <Option type="Map">
-        <Option type="QString" name="name" value=""/>
+        <Option name="name" value="" type="QString"/>
         <Option name="properties"/>
-        <Option type="QString" name="type" value="collection"/>
+        <Option name="type" value="collection" type="QString"/>
       </Option>
     </data-defined-properties>
   </renderer-v2>
   <selection mode="Default">
     <selectionColor invalid="1"/>
     <selectionSymbol>
-      <symbol clip_to_extent="1" type="line" force_rhr="0" alpha="1" name="" frame_rate="10" is_animated="0">
+      <symbol name="" clip_to_extent="1" alpha="1" is_animated="0" frame_rate="10" type="line" force_rhr="0">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" name="name" value=""/>
+            <Option name="name" value="" type="QString"/>
             <Option name="properties"/>
-            <Option type="QString" name="type" value="collection"/>
+            <Option name="type" value="collection" type="QString"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SimpleLine" pass="0" id="{e1fa691f-34ab-4d8d-b492-d8e4388c321d}" enabled="1">
+        <layer pass="0" enabled="1" locked="0" class="SimpleLine" id="{e1fa691f-34ab-4d8d-b492-d8e4388c321d}">
           <Option type="Map">
-            <Option type="QString" name="align_dash_pattern" value="0"/>
-            <Option type="QString" name="capstyle" value="square"/>
-            <Option type="QString" name="customdash" value="5;2"/>
-            <Option type="QString" name="customdash_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="customdash_unit" value="MM"/>
-            <Option type="QString" name="dash_pattern_offset" value="0"/>
-            <Option type="QString" name="dash_pattern_offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="dash_pattern_offset_unit" value="MM"/>
-            <Option type="QString" name="draw_inside_polygon" value="0"/>
-            <Option type="QString" name="joinstyle" value="bevel"/>
-            <Option type="QString" name="line_color" value="35,35,35,255,rgb:0.1372549,0.1372549,0.1372549,1"/>
-            <Option type="QString" name="line_style" value="solid"/>
-            <Option type="QString" name="line_width" value="0.26"/>
-            <Option type="QString" name="line_width_unit" value="MM"/>
-            <Option type="QString" name="offset" value="0"/>
-            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="offset_unit" value="MM"/>
-            <Option type="QString" name="ring_filter" value="0"/>
-            <Option type="QString" name="trim_distance_end" value="0"/>
-            <Option type="QString" name="trim_distance_end_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="trim_distance_end_unit" value="MM"/>
-            <Option type="QString" name="trim_distance_start" value="0"/>
-            <Option type="QString" name="trim_distance_start_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-            <Option type="QString" name="trim_distance_start_unit" value="MM"/>
-            <Option type="QString" name="tweak_dash_pattern_on_corners" value="0"/>
-            <Option type="QString" name="use_custom_dash" value="0"/>
-            <Option type="QString" name="width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option name="align_dash_pattern" value="0" type="QString"/>
+            <Option name="capstyle" value="square" type="QString"/>
+            <Option name="customdash" value="5;2" type="QString"/>
+            <Option name="customdash_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="customdash_unit" value="MM" type="QString"/>
+            <Option name="dash_pattern_offset" value="0" type="QString"/>
+            <Option name="dash_pattern_offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="dash_pattern_offset_unit" value="MM" type="QString"/>
+            <Option name="draw_inside_polygon" value="0" type="QString"/>
+            <Option name="joinstyle" value="bevel" type="QString"/>
+            <Option name="line_color" value="35,35,35,255,rgb:0.1372549,0.1372549,0.1372549,1" type="QString"/>
+            <Option name="line_style" value="solid" type="QString"/>
+            <Option name="line_width" value="0.26" type="QString"/>
+            <Option name="line_width_unit" value="MM" type="QString"/>
+            <Option name="offset" value="0" type="QString"/>
+            <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="offset_unit" value="MM" type="QString"/>
+            <Option name="ring_filter" value="0" type="QString"/>
+            <Option name="trim_distance_end" value="0" type="QString"/>
+            <Option name="trim_distance_end_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="trim_distance_end_unit" value="MM" type="QString"/>
+            <Option name="trim_distance_start" value="0" type="QString"/>
+            <Option name="trim_distance_start_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
+            <Option name="trim_distance_start_unit" value="MM" type="QString"/>
+            <Option name="tweak_dash_pattern_on_corners" value="0" type="QString"/>
+            <Option name="use_custom_dash" value="0" type="QString"/>
+            <Option name="width_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" name="name" value=""/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" name="type" value="collection"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -264,11 +264,11 @@
   <layerOpacity>1</layerOpacity>
   <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
     <activeChecks type="StringList">
-      <Option type="QString" value=""/>
+      <Option value="" type="QString"/>
     </activeChecks>
     <checkConfiguration/>
   </geometryOptions>
-  <legend type="default-vector" showLabelLegend="0"/>
+  <legend showLabelLegend="0" type="default-vector"/>
   <referencedLayers/>
   <referencingLayers/>
   <fieldConfiguration>
@@ -276,8 +276,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -286,8 +286,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -296,8 +296,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -306,37 +306,37 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="Aqueduc" value="Aqueduc"/>
-              <Option type="QString" name="Canal" value="Canal"/>
-              <Option type="QString" name="Conduit buse" value="Conduit buse"/>
-              <Option type="QString" name="Conduit forcé" value="Conduit forcé"/>
-              <Option type="QString" name="Delta" value="Delta"/>
-              <Option type="QString" name="Ecoulement canalisé" value="Ecoulement canalisé"/>
-              <Option type="QString" name="Ecoulement endoréique" value="Ecoulement endoréique"/>
-              <Option type="QString" name="Ecoulement hyporhéique" value="Ecoulement hyporhéique"/>
-              <Option type="QString" name="Ecoulement karstique" value="Ecoulement karstique"/>
-              <Option type="QString" name="Ecoulement naturel" value="Ecoulement naturel"/>
-              <Option type="QString" name="Ecoulement phréatique" value="Ecoulement phréatique"/>
-              <Option type="QString" name="Estuaire" value="Estuaire"/>
-              <Option type="QString" name="Glacier, névé" value="Glacier, névé"/>
-              <Option type="QString" name="Inconnue" value="Inconnue"/>
-              <Option type="QString" name="Lac" value="Lac"/>
-              <Option type="QString" name="Lagon" value="Lagon"/>
-              <Option type="QString" name="Lagune" value="Lagune"/>
-              <Option type="QString" name="Mangrove" value="Mangrove"/>
-              <Option type="QString" name="Marais" value="Marais"/>
-              <Option type="QString" name="Mare" value="Mare"/>
-              <Option type="QString" name="Plan d'eau de gravière" value="Plan d'eau de gravière"/>
-              <Option type="QString" name="Plan d'eau de mine" value="Plan d'eau de mine"/>
-              <Option type="QString" name="Ravine" value="Ravine"/>
-              <Option type="QString" name="Retenue" value="Retenue"/>
-              <Option type="QString" name="Retenue-barrage" value="Retenue-barrage"/>
-              <Option type="QString" name="Retenue-bassin portuaire" value="Retenue-bassin portuaire"/>
-              <Option type="QString" name="Retenue-digue" value="Retenue-digue"/>
-              <Option type="QString" name="Réservoir-bassin" value="Réservoir-bassin"/>
-              <Option type="QString" name="Réservoir-bassin d'orage" value="Réservoir-bassin d'orage"/>
-              <Option type="QString" name="Réservoir-bassin piscicole" value="Réservoir-bassin piscicole"/>
+            <Option name="map" type="Map">
+              <Option name="Aqueduc" value="Aqueduc" type="QString"/>
+              <Option name="Canal" value="Canal" type="QString"/>
+              <Option name="Conduit buse" value="Conduit buse" type="QString"/>
+              <Option name="Conduit forcé" value="Conduit forcé" type="QString"/>
+              <Option name="Delta" value="Delta" type="QString"/>
+              <Option name="Ecoulement canalisé" value="Ecoulement canalisé" type="QString"/>
+              <Option name="Ecoulement endoréique" value="Ecoulement endoréique" type="QString"/>
+              <Option name="Ecoulement hyporhéique" value="Ecoulement hyporhéique" type="QString"/>
+              <Option name="Ecoulement karstique" value="Ecoulement karstique" type="QString"/>
+              <Option name="Ecoulement naturel" value="Ecoulement naturel" type="QString"/>
+              <Option name="Ecoulement phréatique" value="Ecoulement phréatique" type="QString"/>
+              <Option name="Estuaire" value="Estuaire" type="QString"/>
+              <Option name="Glacier, névé" value="Glacier, névé" type="QString"/>
+              <Option name="Inconnue" value="Inconnue" type="QString"/>
+              <Option name="Lac" value="Lac" type="QString"/>
+              <Option name="Lagon" value="Lagon" type="QString"/>
+              <Option name="Lagune" value="Lagune" type="QString"/>
+              <Option name="Mangrove" value="Mangrove" type="QString"/>
+              <Option name="Marais" value="Marais" type="QString"/>
+              <Option name="Mare" value="Mare" type="QString"/>
+              <Option name="Plan d'eau de gravière" value="Plan d'eau de gravière" type="QString"/>
+              <Option name="Plan d'eau de mine" value="Plan d'eau de mine" type="QString"/>
+              <Option name="Ravine" value="Ravine" type="QString"/>
+              <Option name="Retenue" value="Retenue" type="QString"/>
+              <Option name="Retenue-barrage" value="Retenue-barrage" type="QString"/>
+              <Option name="Retenue-bassin portuaire" value="Retenue-bassin portuaire" type="QString"/>
+              <Option name="Retenue-digue" value="Retenue-digue" type="QString"/>
+              <Option name="Réservoir-bassin" value="Réservoir-bassin" type="QString"/>
+              <Option name="Réservoir-bassin d'orage" value="Réservoir-bassin d'orage" type="QString"/>
+              <Option name="Réservoir-bassin piscicole" value="Réservoir-bassin piscicole" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -346,10 +346,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -359,11 +359,11 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="Disparu" value="Disparu"/>
-              <Option type="QString" name="En construction" value="En construction"/>
-              <Option type="QString" name="En projet" value="En projet"/>
-              <Option type="QString" name="En service" value="En service"/>
+            <Option name="map" type="Map">
+              <Option name="Disparu" value="Disparu" type="QString"/>
+              <Option name="En construction" value="En construction" type="QString"/>
+              <Option name="En projet" value="En projet" type="QString"/>
+              <Option name="En service" value="En service" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -373,13 +373,13 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="-1" value="-1"/>
-              <Option type="QString" name="-2" value="-2"/>
-              <Option type="QString" name="0" value="0"/>
-              <Option type="QString" name="1" value="1"/>
-              <Option type="QString" name="2" value="2"/>
-              <Option type="QString" name="Inconnue" value="Inconnue"/>
+            <Option name="map" type="Map">
+              <Option name="-1" value="-1" type="QString"/>
+              <Option name="-2" value="-2" type="QString"/>
+              <Option name="0" value="0" type="QString"/>
+              <Option name="1" value="1" type="QString"/>
+              <Option name="2" value="2" type="QString"/>
+              <Option name="Inconnue" value="Inconnue" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -389,10 +389,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -402,11 +402,11 @@
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" name="allow_null" value="true"/>
-            <Option type="bool" name="calendar_popup" value="true"/>
-            <Option type="QString" name="display_format" value="yyyy-MM-dd HH:mm:ss"/>
-            <Option type="QString" name="field_format" value="yyyy-MM-dd HH:mm:ss"/>
-            <Option type="bool" name="field_iso_format" value="false"/>
+            <Option name="allow_null" value="true" type="bool"/>
+            <Option name="calendar_popup" value="true" type="bool"/>
+            <Option name="display_format" value="yyyy-MM-dd HH:mm:ss" type="QString"/>
+            <Option name="field_format" value="yyyy-MM-dd HH:mm:ss" type="QString"/>
+            <Option name="field_iso_format" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -415,11 +415,11 @@
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" name="allow_null" value="true"/>
-            <Option type="bool" name="calendar_popup" value="true"/>
-            <Option type="QString" name="display_format" value="yyyy-MM-dd HH:mm:ss"/>
-            <Option type="QString" name="field_format" value="yyyy-MM-dd HH:mm:ss"/>
-            <Option type="bool" name="field_iso_format" value="false"/>
+            <Option name="allow_null" value="true" type="bool"/>
+            <Option name="calendar_popup" value="true" type="bool"/>
+            <Option name="display_format" value="yyyy-MM-dd HH:mm:ss" type="QString"/>
+            <Option name="field_format" value="yyyy-MM-dd HH:mm:ss" type="QString"/>
+            <Option name="field_iso_format" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -428,11 +428,11 @@
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" name="allow_null" value="true"/>
-            <Option type="bool" name="calendar_popup" value="true"/>
-            <Option type="QString" name="display_format" value="yyyy-MM-dd HH:mm:ss"/>
-            <Option type="QString" name="field_format" value="yyyy-MM-dd HH:mm:ss"/>
-            <Option type="bool" name="field_iso_format" value="false"/>
+            <Option name="allow_null" value="true" type="bool"/>
+            <Option name="calendar_popup" value="true" type="bool"/>
+            <Option name="display_format" value="yyyy-MM-dd HH:mm:ss" type="QString"/>
+            <Option name="field_format" value="yyyy-MM-dd HH:mm:ss" type="QString"/>
+            <Option name="field_iso_format" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -441,11 +441,11 @@
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" name="allow_null" value="true"/>
-            <Option type="bool" name="calendar_popup" value="true"/>
-            <Option type="QString" name="display_format" value="yyyy-MM-dd"/>
-            <Option type="QString" name="field_format" value="yyyy-MM-dd"/>
-            <Option type="bool" name="field_iso_format" value="false"/>
+            <Option name="allow_null" value="true" type="bool"/>
+            <Option name="calendar_popup" value="true" type="bool"/>
+            <Option name="display_format" value="yyyy-MM-dd" type="QString"/>
+            <Option name="field_format" value="yyyy-MM-dd" type="QString"/>
+            <Option name="field_iso_format" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -454,11 +454,11 @@
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" name="allow_null" value="true"/>
-            <Option type="bool" name="calendar_popup" value="true"/>
-            <Option type="QString" name="display_format" value="yyyy-MM-dd"/>
-            <Option type="QString" name="field_format" value="yyyy-MM-dd"/>
-            <Option type="bool" name="field_iso_format" value="false"/>
+            <Option name="allow_null" value="true" type="bool"/>
+            <Option name="calendar_popup" value="true" type="bool"/>
+            <Option name="display_format" value="yyyy-MM-dd" type="QString"/>
+            <Option name="field_format" value="yyyy-MM-dd" type="QString"/>
+            <Option name="field_iso_format" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -467,8 +467,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -477,8 +477,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -487,8 +487,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -497,33 +497,33 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="BDCarto" value="BDCarto"/>
-              <Option type="QString" name="BDNyme" value="BDNyme"/>
-              <Option type="QString" name="BDParcellaire" value="BDParcellaire"/>
-              <Option type="QString" name="BDParcellaire recalée" value="BDParcellaire recalée"/>
-              <Option type="QString" name="BDTopo" value="BDTopo"/>
-              <Option type="QString" name="Calcul d'enveloppe urbaine" value="Calcul d'enveloppe urbaine"/>
-              <Option type="QString" name="Calculé" value="Calculé"/>
-              <Option type="QString" name="Fichier numérique décimétrique" value="Fichier numérique décimétrique"/>
-              <Option type="QString" name="Fichier numérique métrique" value="Fichier numérique métrique"/>
-              <Option type="QString" name="Fichier numérique non métrique" value="Fichier numérique non métrique"/>
-              <Option type="QString" name="Géocodage" value="Géocodage"/>
-              <Option type="QString" name="Géoroute" value="Géoroute"/>
-              <Option type="QString" name="Image satellite" value="Image satellite"/>
-              <Option type="QString" name="Image satellite HR" value="Image satellite HR"/>
-              <Option type="QString" name="Inconnue" value="Inconnue"/>
-              <Option type="QString" name="Levé GPS" value="Levé GPS"/>
-              <Option type="QString" name="Levé non GPS" value="Levé non GPS"/>
-              <Option type="QString" name="Lidar" value="Lidar"/>
-              <Option type="QString" name="Lidar HD" value="Lidar HD"/>
-              <Option type="QString" name="Orthophotographie" value="Orthophotographie"/>
-              <Option type="QString" name="Photogrammétrie" value="Photogrammétrie"/>
-              <Option type="QString" name="Plan métrique papier" value="Plan métrique papier"/>
-              <Option type="QString" name="Plan non métrique papier" value="Plan non métrique papier"/>
-              <Option type="QString" name="Processus IA métrique" value="Processus IA métrique"/>
-              <Option type="QString" name="Processus IA non métrique" value="Processus IA non métrique"/>
-              <Option type="QString" name="Scan25" value="Scan25"/>
+            <Option name="map" type="Map">
+              <Option name="BDCarto" value="BDCarto" type="QString"/>
+              <Option name="BDNyme" value="BDNyme" type="QString"/>
+              <Option name="BDParcellaire" value="BDParcellaire" type="QString"/>
+              <Option name="BDParcellaire recalée" value="BDParcellaire recalée" type="QString"/>
+              <Option name="BDTopo" value="BDTopo" type="QString"/>
+              <Option name="Calcul d'enveloppe urbaine" value="Calcul d'enveloppe urbaine" type="QString"/>
+              <Option name="Calculé" value="Calculé" type="QString"/>
+              <Option name="Fichier numérique décimétrique" value="Fichier numérique décimétrique" type="QString"/>
+              <Option name="Fichier numérique métrique" value="Fichier numérique métrique" type="QString"/>
+              <Option name="Fichier numérique non métrique" value="Fichier numérique non métrique" type="QString"/>
+              <Option name="Géocodage" value="Géocodage" type="QString"/>
+              <Option name="Géoroute" value="Géoroute" type="QString"/>
+              <Option name="Image satellite" value="Image satellite" type="QString"/>
+              <Option name="Image satellite HR" value="Image satellite HR" type="QString"/>
+              <Option name="Inconnue" value="Inconnue" type="QString"/>
+              <Option name="Levé GPS" value="Levé GPS" type="QString"/>
+              <Option name="Levé non GPS" value="Levé non GPS" type="QString"/>
+              <Option name="Lidar" value="Lidar" type="QString"/>
+              <Option name="Lidar HD" value="Lidar HD" type="QString"/>
+              <Option name="Orthophotographie" value="Orthophotographie" type="QString"/>
+              <Option name="Photogrammétrie" value="Photogrammétrie" type="QString"/>
+              <Option name="Plan métrique papier" value="Plan métrique papier" type="QString"/>
+              <Option name="Plan non métrique papier" value="Plan non métrique papier" type="QString"/>
+              <Option name="Processus IA métrique" value="Processus IA métrique" type="QString"/>
+              <Option name="Processus IA non métrique" value="Processus IA non métrique" type="QString"/>
+              <Option name="Scan25" value="Scan25" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -533,8 +533,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -543,22 +543,22 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="BDAlti" value="BDAlti"/>
-              <Option type="QString" name="BDTopo" value="BDTopo"/>
-              <Option type="QString" name="Corrélation" value="Corrélation"/>
-              <Option type="QString" name="Fichier numérique" value="Fichier numérique"/>
-              <Option type="QString" name="Fichier numérique décimétrique" value="Fichier numérique décimétrique"/>
-              <Option type="QString" name="Interpolation bâti BDTopo" value="Interpolation bâti BDTopo"/>
-              <Option type="QString" name="Levé GPS" value="Levé GPS"/>
-              <Option type="QString" name="Lidar" value="Lidar"/>
-              <Option type="QString" name="Lidar HD" value="Lidar HD"/>
-              <Option type="QString" name="Pas de Z" value="Pas de Z"/>
-              <Option type="QString" name="Photogrammétrie" value="Photogrammétrie"/>
-              <Option type="QString" name="Photogrammétrie longue focale" value="Photogrammétrie longue focale"/>
-              <Option type="QString" name="Plan coté" value="Plan coté"/>
-              <Option type="QString" name="Radar" value="Radar"/>
-              <Option type="QString" name="Z corrigé" value="Z corrigé"/>
+            <Option name="map" type="Map">
+              <Option name="BDAlti" value="BDAlti" type="QString"/>
+              <Option name="BDTopo" value="BDTopo" type="QString"/>
+              <Option name="Corrélation" value="Corrélation" type="QString"/>
+              <Option name="Fichier numérique" value="Fichier numérique" type="QString"/>
+              <Option name="Fichier numérique décimétrique" value="Fichier numérique décimétrique" type="QString"/>
+              <Option name="Interpolation bâti BDTopo" value="Interpolation bâti BDTopo" type="QString"/>
+              <Option name="Levé GPS" value="Levé GPS" type="QString"/>
+              <Option name="Lidar" value="Lidar" type="QString"/>
+              <Option name="Lidar HD" value="Lidar HD" type="QString"/>
+              <Option name="Pas de Z" value="Pas de Z" type="QString"/>
+              <Option name="Photogrammétrie" value="Photogrammétrie" type="QString"/>
+              <Option name="Photogrammétrie longue focale" value="Photogrammétrie longue focale" type="QString"/>
+              <Option name="Plan coté" value="Plan coté" type="QString"/>
+              <Option name="Radar" value="Radar" type="QString"/>
+              <Option name="Z corrigé" value="Z corrigé" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -568,8 +568,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -578,20 +578,20 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Autres modes" value="Autres modes"/>
-              <Option type="QString" name="Carte bathymétrique" value="Carte bathymétrique"/>
-              <Option type="QString" name="Carte géoréférencée" value="Carte géoréférencée"/>
-              <Option type="QString" name="Carte marine de navigation" value="Carte marine de navigation"/>
-              <Option type="QString" name="Carte non géoréférencée" value="Carte non géoréférencée"/>
-              <Option type="QString" name="GPS/GNSS autonome" value="GPS/GNSS autonome"/>
-              <Option type="QString" name="GPS/GNSS différentiel" value="GPS/GNSS différentiel"/>
-              <Option type="QString" name="Globe virtuel" value="Globe virtuel"/>
-              <Option type="QString" name="Imagerie satellite ou aérienne" value="Imagerie satellite ou aérienne"/>
-              <Option type="QString" name="Inconnu" value="Inconnu"/>
-              <Option type="QString" name="Planche cadastrale" value="Planche cadastrale"/>
-              <Option type="QString" name="Théodolite" value="Théodolite"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Autres modes" value="Autres modes" type="QString"/>
+              <Option name="Carte bathymétrique" value="Carte bathymétrique" type="QString"/>
+              <Option name="Carte géoréférencée" value="Carte géoréférencée" type="QString"/>
+              <Option name="Carte marine de navigation" value="Carte marine de navigation" type="QString"/>
+              <Option name="Carte non géoréférencée" value="Carte non géoréférencée" type="QString"/>
+              <Option name="GPS/GNSS autonome" value="GPS/GNSS autonome" type="QString"/>
+              <Option name="GPS/GNSS différentiel" value="GPS/GNSS différentiel" type="QString"/>
+              <Option name="Globe virtuel" value="Globe virtuel" type="QString"/>
+              <Option name="Imagerie satellite ou aérienne" value="Imagerie satellite ou aérienne" type="QString"/>
+              <Option name="Inconnu" value="Inconnu" type="QString"/>
+              <Option name="Planche cadastrale" value="Planche cadastrale" type="QString"/>
+              <Option name="Théodolite" value="Théodolite" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -601,21 +601,21 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Altimétrie radar" value="Altimétrie radar"/>
-              <Option type="QString" name="Autres modes" value="Autres modes"/>
-              <Option type="QString" name="Carte bathymétrique" value="Carte bathymétrique"/>
-              <Option type="QString" name="Carte marine de navigation" value="Carte marine de navigation"/>
-              <Option type="QString" name="Carte topographique géoréférencée" value="Carte topographique géoréférencée"/>
-              <Option type="QString" name="Carte topographique non géoréférencée" value="Carte topographique non géoréférencée"/>
-              <Option type="QString" name="GPS/GNSS autonome" value="GPS/GNSS autonome"/>
-              <Option type="QString" name="GPS/GNSS différentiel" value="GPS/GNSS différentiel"/>
-              <Option type="QString" name="Globe virtuel" value="Globe virtuel"/>
-              <Option type="QString" name="Inconnu" value="Inconnu"/>
-              <Option type="QString" name="MNT" value="MNT"/>
-              <Option type="QString" name="Nivellement" value="Nivellement"/>
-              <Option type="QString" name="Sondeur acoustique" value="Sondeur acoustique"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Altimétrie radar" value="Altimétrie radar" type="QString"/>
+              <Option name="Autres modes" value="Autres modes" type="QString"/>
+              <Option name="Carte bathymétrique" value="Carte bathymétrique" type="QString"/>
+              <Option name="Carte marine de navigation" value="Carte marine de navigation" type="QString"/>
+              <Option name="Carte topographique géoréférencée" value="Carte topographique géoréférencée" type="QString"/>
+              <Option name="Carte topographique non géoréférencée" value="Carte topographique non géoréférencée" type="QString"/>
+              <Option name="GPS/GNSS autonome" value="GPS/GNSS autonome" type="QString"/>
+              <Option name="GPS/GNSS différentiel" value="GPS/GNSS différentiel" type="QString"/>
+              <Option name="Globe virtuel" value="Globe virtuel" type="QString"/>
+              <Option name="Inconnu" value="Inconnu" type="QString"/>
+              <Option name="MNT" value="MNT" type="QString"/>
+              <Option name="Nivellement" value="Nivellement" type="QString"/>
+              <Option name="Sondeur acoustique" value="Sondeur acoustique" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -625,8 +625,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -635,10 +635,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Gelé" value="Gelé"/>
-              <Option type="QString" name="Validé" value="Validé"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Gelé" value="Gelé" type="QString"/>
+              <Option name="Validé" value="Validé" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -648,12 +648,12 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="Ephémère" value="Ephémère"/>
-              <Option type="QString" name="Inconnue" value="Inconnue"/>
-              <Option type="QString" name="Intermittent" value="Intermittent"/>
-              <Option type="QString" name="Permanent" value="Permanent"/>
-              <Option type="QString" name="Sec" value="Sec"/>
+            <Option name="map" type="Map">
+              <Option name="Ephémère" value="Ephémère" type="QString"/>
+              <Option name="Inconnue" value="Inconnue" type="QString"/>
+              <Option name="Intermittent" value="Intermittent" type="QString"/>
+              <Option name="Permanent" value="Permanent" type="QString"/>
+              <Option name="Sec" value="Sec" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -663,10 +663,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -676,10 +676,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -689,10 +689,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -702,8 +702,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -712,8 +712,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -722,12 +722,12 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Artificielle" value="Artificielle"/>
-              <Option type="QString" name="Inconnue" value="Inconnue"/>
-              <Option type="QString" name="Naturelle aménagée" value="Naturelle aménagée"/>
-              <Option type="QString" name="Naturelle non aménagée" value="Naturelle non aménagée"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Artificielle" value="Artificielle" type="QString"/>
+              <Option name="Inconnue" value="Inconnue" type="QString"/>
+              <Option name="Naturelle aménagée" value="Naturelle aménagée" type="QString"/>
+              <Option name="Naturelle non aménagée" value="Naturelle non aménagée" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -737,8 +737,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -747,11 +747,11 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="Double sens" value="Double sens"/>
-              <Option type="QString" name="Inconnu" value="Inconnu"/>
-              <Option type="QString" name="Sens direct" value="Sens direct"/>
-              <Option type="QString" name="Sens inverse" value="Sens inverse"/>
+            <Option name="map" type="Map">
+              <Option name="Double sens" value="Double sens" type="QString"/>
+              <Option name="Inconnu" value="Inconnu" type="QString"/>
+              <Option name="Sens direct" value="Sens direct" type="QString"/>
+              <Option name="Sens inverse" value="Sens inverse" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -761,10 +761,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -774,10 +774,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -787,10 +787,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -800,17 +800,17 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="En attente de mise à jour" value="En attente de mise à jour"/>
-              <Option type="QString" name="Entre 0 et 5 m" value="Entre 0 et 5 m"/>
-              <Option type="QString" name="Entre 15 et 50 m" value="Entre 15 et 50 m"/>
-              <Option type="QString" name="Entre 250 et 1250 m" value="Entre 250 et 1250 m"/>
-              <Option type="QString" name="Entre 5 et 15 m" value="Entre 5 et 15 m"/>
-              <Option type="QString" name="Entre 50 et 250 m" value="Entre 50 et 250 m"/>
-              <Option type="QString" name="Plus de 1250 m" value="Plus de 1250 m"/>
-              <Option type="QString" name="Plus de 50 m" value="Plus de 50 m"/>
-              <Option type="QString" name="Sans objet" value="Sans objet"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="En attente de mise à jour" value="En attente de mise à jour" type="QString"/>
+              <Option name="Entre 0 et 5 m" value="Entre 0 et 5 m" type="QString"/>
+              <Option name="Entre 15 et 50 m" value="Entre 15 et 50 m" type="QString"/>
+              <Option name="Entre 250 et 1250 m" value="Entre 250 et 1250 m" type="QString"/>
+              <Option name="Entre 5 et 15 m" value="Entre 5 et 15 m" type="QString"/>
+              <Option name="Entre 50 et 250 m" value="Entre 50 et 250 m" type="QString"/>
+              <Option name="Plus de 1250 m" value="Plus de 1250 m" type="QString"/>
+              <Option name="Plus de 50 m" value="Plus de 50 m" type="QString"/>
+              <Option name="Sans objet" value="Sans objet" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -820,13 +820,13 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Inconnu" value="Inconnu"/>
-              <Option type="QString" name="Mort" value="Mort"/>
-              <Option type="QString" name="Principal" value="Principal"/>
-              <Option type="QString" name="Sans objet" value="Sans objet"/>
-              <Option type="QString" name="Secondaire" value="Secondaire"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Inconnu" value="Inconnu" type="QString"/>
+              <Option name="Mort" value="Mort" type="QString"/>
+              <Option name="Principal" value="Principal" type="QString"/>
+              <Option name="Sans objet" value="Sans objet" type="QString"/>
+              <Option name="Secondaire" value="Secondaire" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -836,8 +836,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -846,8 +846,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -856,8 +856,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -866,8 +866,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -876,8 +876,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -886,8 +886,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -896,8 +896,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -906,11 +906,11 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Expertise en cours" value="Expertise en cours"/>
-              <Option type="QString" name="Inscrit" value="Inscrit"/>
-              <Option type="QString" name="Non inscrit" value="Non inscrit"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Expertise en cours" value="Expertise en cours" type="QString"/>
+              <Option name="Inscrit" value="Inscrit" type="QString"/>
+              <Option name="Non inscrit" value="Non inscrit" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -920,8 +920,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -930,8 +930,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -940,8 +940,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -950,8 +950,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -960,8 +960,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -970,8 +970,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -980,8 +980,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -990,8 +990,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -1000,8 +1000,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -1010,8 +1010,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -1020,8 +1020,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -1030,10 +1030,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -1043,8 +1043,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" name="IsMultiline" value="false"/>
-            <Option type="bool" name="UseHtml" value="false"/>
+            <Option name="IsMultiline" value="false" type="bool"/>
+            <Option name="UseHtml" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -1053,14 +1053,14 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="I-A" value="I-A"/>
-              <Option type="QString" name="I-A_bis" value="I-A_bis"/>
-              <Option type="QString" name="I-B" value="I-B"/>
-              <Option type="QString" name="I-C" value="I-C"/>
-              <Option type="QString" name="I-C_bis" value="I-C_bis"/>
-              <Option type="QString" name="I-D" value="I-D"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="I-A" value="I-A" type="QString"/>
+              <Option name="I-A_bis" value="I-A_bis" type="QString"/>
+              <Option name="I-B" value="I-B" type="QString"/>
+              <Option name="I-C" value="I-C" type="QString"/>
+              <Option name="I-C_bis" value="I-C_bis" type="QString"/>
+              <Option name="I-D" value="I-D" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -1070,11 +1070,11 @@
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" name="allow_null" value="true"/>
-            <Option type="bool" name="calendar_popup" value="true"/>
-            <Option type="QString" name="display_format" value="yyyy-MM-dd"/>
-            <Option type="QString" name="field_format" value="yyyy-MM-dd"/>
-            <Option type="bool" name="field_iso_format" value="false"/>
+            <Option name="allow_null" value="true" type="bool"/>
+            <Option name="calendar_popup" value="true" type="bool"/>
+            <Option name="display_format" value="yyyy-MM-dd" type="QString"/>
+            <Option name="field_format" value="yyyy-MM-dd" type="QString"/>
+            <Option name="field_iso_format" value="false" type="bool"/>
           </Option>
         </config>
       </editWidget>
@@ -1083,10 +1083,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -1096,10 +1096,10 @@
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
-            <Option type="Map" name="map">
-              <Option type="QString" name="" value="NULL"/>
-              <Option type="QString" name="Non" value="0"/>
-              <Option type="QString" name="Oui" value="1"/>
+            <Option name="map" type="Map">
+              <Option name="" value="NULL" type="QString"/>
+              <Option name="Non" value="0" type="QString"/>
+              <Option name="Oui" value="1" type="QString"/>
             </Option>
           </Option>
         </config>
@@ -1121,345 +1121,345 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias index="0" name="Cleabs" field="cleabs"/>
-    <alias index="1" name="Code hydrographique" field="code_hydrographique"/>
-    <alias index="2" name="Code du pays" field="code_du_pays"/>
-    <alias index="3" name="Nature" field="nature"/>
-    <alias index="4" name="Fictif" field="fictif"/>
-    <alias index="5" name="Etat de l'objet" field="etat_de_l_objet"/>
-    <alias index="6" name="Position par rapport au sol" field="position_par_rapport_au_sol"/>
-    <alias index="7" name="Détruit" field="detruit"/>
-    <alias index="8" name="Date de création" field="date_creation"/>
-    <alias index="9" name="Date de modification" field="date_modification"/>
-    <alias index="10" name="Date de destruction" field="date_destruction"/>
-    <alias index="11" name="Date d'apparition" field="date_d_apparition"/>
-    <alias index="12" name="Date de confirmation" field="date_de_confirmation"/>
-    <alias index="13" name="Source détaillée" field="source_detaillee"/>
-    <alias index="14" name="Sources" field="sources"/>
-    <alias index="15" name="Identifiants sources" field="identifiants_sources"/>
-    <alias index="16" name="Méthode d'acquisition planimétrique" field="methode_d_acquisition_planimetrique"/>
-    <alias index="17" name="Précision planimétrique" field="precision_planimetrique"/>
-    <alias index="18" name="Méthode d'acquisition altimétrique" field="methode_d_acquisition_altimetrique"/>
-    <alias index="19" name="Précision altimétrique" field="precision_altimetrique"/>
-    <alias index="20" name="Mode d'obtention des coordonnées" field="mode_d_obtention_des_coordonnees"/>
-    <alias index="21" name="Mode d'obtention de l'altitude" field="mode_d_obtention_de_l_altitude"/>
-    <alias index="22" name="Complément" field="complement"/>
-    <alias index="23" name="Statut de l'objet hydrographique" field="statut"/>
-    <alias index="24" name="Persistance" field="persistance"/>
-    <alias index="25" name="Fossé" field="fosse"/>
-    <alias index="26" name="Navigabilité" field="navigabilite"/>
-    <alias index="27" name="Salinité" field="salinite"/>
-    <alias index="28" name="Numéro d'ordre" field="numero_d_ordre"/>
-    <alias index="29" name="Stratégie de classement" field="strategie_de_classement"/>
-    <alias index="30" name="Origine" field="origine"/>
-    <alias index="31" name="Périmètre d'utilisation ou origine" field="perimetre_d_utilisation_ou_origine"/>
-    <alias index="32" name="Sens de l'écoulement" field="sens_de_l_ecoulement"/>
-    <alias index="33" name="Réseau principal coulant" field="reseau_principal_coulant"/>
-    <alias index="34" name="Délimitation" field="delimitation"/>
-    <alias index="35" name="Tracé connu" field="trace_connu"/>
-    <alias index="36" name="Classe de largeur" field="classe_de_largeur"/>
-    <alias index="37" name="Type de bras" field="type_de_bras"/>
-    <alias index="38" name="Nom" field="nom"/>
-    <alias index="39" name="Commentaire centralisé" field="commentaire_centralise"/>
-    <alias index="40" name="Commentaire collecteur" field="commentaire_collecteur"/>
-    <alias index="41" name="Commentaire sur l'objet hydro" field="commentaire_sur_l_objet_hydro"/>
-    <alias index="42" name="Code du cours d'eau BDCarthage" field="code_du_cours_d_eau_bdcarthage"/>
-    <alias index="43" name="Source restitution" field="source_restitution"/>
-    <alias index="44" name="Métadonnées unification hydro" field="metadonnees_unification"/>
-    <alias index="45" name="Inventaire police de l'eau" field="inventaire_police_de_l_eau"/>
-    <alias index="46" name="Identifiant police de l'eau" field="identifiant_police_de_l_eau"/>
-    <alias index="47" name="V1_Cleabs" field="v1_cleabs"/>
-    <alias index="48" name="Liens vers cours d'eau" field="liens_vers_cours_d_eau"/>
-    <alias index="49" name="Liens vers cours d'eau GE" field="liens_vers_cours_d_eau_ge"/>
-    <alias index="50" name="Lien vers noeud hydrographique ini" field="lien_vers_noeud_hydrographique_ini"/>
-    <alias index="51" name="Lien vers noeud hydrographique fin" field="lien_vers_noeud_hydrographique_fin"/>
-    <alias index="52" name="Liens vers surface hydrographique" field="liens_vers_surface_hydrographique"/>
-    <alias index="53" name="Lien vers entité de transition" field="lien_vers_entite_de_transition"/>
-    <alias index="54" name="CPX_Toponyme de cours d'eau" field="cpx_toponyme_de_cours_d_eau"/>
-    <alias index="55" name="CPX_Toponyme de cours d'eau GE" field="cpx_toponyme_de_cours_d_eau_ge"/>
-    <alias index="56" name="CPX_Toponyme d'entité de transition" field="cpx_toponyme_d_entite_de_transition"/>
-    <alias index="57" name="Inventaire BCAE" field="inventaire_bcae"/>
-    <alias index="58" name="Identifiant BCAE" field="identifiant_bcae"/>
-    <alias index="59" name="Type d'annexe" field="type_d_annexe"/>
-    <alias index="60" name="Date de validation BCAE" field="date_de_validation_bcae"/>
-    <alias index="61" name="Validation BCAE" field="validation_bcae"/>
-    <alias index="62" name="Directive cadre de l'eau" field="directive_cadre_de_l_eau"/>
-    <alias index="63" name="" field="id_sqlite_1gnQg1s"/>
-    <alias index="64" name="" field="gcms_fingerprint"/>
+    <alias name="Cleabs" field="cleabs" index="0"/>
+    <alias name="Code hydrographique" field="code_hydrographique" index="1"/>
+    <alias name="Code du pays" field="code_du_pays" index="2"/>
+    <alias name="Nature" field="nature" index="3"/>
+    <alias name="Fictif" field="fictif" index="4"/>
+    <alias name="Etat de l'objet" field="etat_de_l_objet" index="5"/>
+    <alias name="Position par rapport au sol" field="position_par_rapport_au_sol" index="6"/>
+    <alias name="Détruit" field="detruit" index="7"/>
+    <alias name="Date de création" field="date_creation" index="8"/>
+    <alias name="Date de modification" field="date_modification" index="9"/>
+    <alias name="Date de destruction" field="date_destruction" index="10"/>
+    <alias name="Date d'apparition" field="date_d_apparition" index="11"/>
+    <alias name="Date de confirmation" field="date_de_confirmation" index="12"/>
+    <alias name="Source détaillée" field="source_detaillee" index="13"/>
+    <alias name="Sources" field="sources" index="14"/>
+    <alias name="Identifiants sources" field="identifiants_sources" index="15"/>
+    <alias name="Méthode d'acquisition planimétrique" field="methode_d_acquisition_planimetrique" index="16"/>
+    <alias name="Précision planimétrique" field="precision_planimetrique" index="17"/>
+    <alias name="Méthode d'acquisition altimétrique" field="methode_d_acquisition_altimetrique" index="18"/>
+    <alias name="Précision altimétrique" field="precision_altimetrique" index="19"/>
+    <alias name="Mode d'obtention des coordonnées" field="mode_d_obtention_des_coordonnees" index="20"/>
+    <alias name="Mode d'obtention de l'altitude" field="mode_d_obtention_de_l_altitude" index="21"/>
+    <alias name="Complément" field="complement" index="22"/>
+    <alias name="Statut de l'objet hydrographique" field="statut" index="23"/>
+    <alias name="Persistance" field="persistance" index="24"/>
+    <alias name="Fossé" field="fosse" index="25"/>
+    <alias name="Navigabilité" field="navigabilite" index="26"/>
+    <alias name="Salinité" field="salinite" index="27"/>
+    <alias name="Numéro d'ordre" field="numero_d_ordre" index="28"/>
+    <alias name="Stratégie de classement" field="strategie_de_classement" index="29"/>
+    <alias name="Origine" field="origine" index="30"/>
+    <alias name="Périmètre d'utilisation ou origine" field="perimetre_d_utilisation_ou_origine" index="31"/>
+    <alias name="Sens de l'écoulement" field="sens_de_l_ecoulement" index="32"/>
+    <alias name="Réseau principal coulant" field="reseau_principal_coulant" index="33"/>
+    <alias name="Délimitation" field="delimitation" index="34"/>
+    <alias name="Tracé connu" field="trace_connu" index="35"/>
+    <alias name="Classe de largeur" field="classe_de_largeur" index="36"/>
+    <alias name="Type de bras" field="type_de_bras" index="37"/>
+    <alias name="Nom" field="nom" index="38"/>
+    <alias name="Commentaire centralisé" field="commentaire_centralise" index="39"/>
+    <alias name="Commentaire collecteur" field="commentaire_collecteur" index="40"/>
+    <alias name="Commentaire sur l'objet hydro" field="commentaire_sur_l_objet_hydro" index="41"/>
+    <alias name="Code du cours d'eau BDCarthage" field="code_du_cours_d_eau_bdcarthage" index="42"/>
+    <alias name="Source restitution" field="source_restitution" index="43"/>
+    <alias name="Métadonnées unification hydro" field="metadonnees_unification" index="44"/>
+    <alias name="Inventaire police de l'eau" field="inventaire_police_de_l_eau" index="45"/>
+    <alias name="Identifiant police de l'eau" field="identifiant_police_de_l_eau" index="46"/>
+    <alias name="V1_Cleabs" field="v1_cleabs" index="47"/>
+    <alias name="Liens vers cours d'eau" field="liens_vers_cours_d_eau" index="48"/>
+    <alias name="Liens vers cours d'eau GE" field="liens_vers_cours_d_eau_ge" index="49"/>
+    <alias name="Lien vers noeud hydrographique ini" field="lien_vers_noeud_hydrographique_ini" index="50"/>
+    <alias name="Lien vers noeud hydrographique fin" field="lien_vers_noeud_hydrographique_fin" index="51"/>
+    <alias name="Liens vers surface hydrographique" field="liens_vers_surface_hydrographique" index="52"/>
+    <alias name="Lien vers entité de transition" field="lien_vers_entite_de_transition" index="53"/>
+    <alias name="CPX_Toponyme de cours d'eau" field="cpx_toponyme_de_cours_d_eau" index="54"/>
+    <alias name="CPX_Toponyme de cours d'eau GE" field="cpx_toponyme_de_cours_d_eau_ge" index="55"/>
+    <alias name="CPX_Toponyme d'entité de transition" field="cpx_toponyme_d_entite_de_transition" index="56"/>
+    <alias name="Inventaire BCAE" field="inventaire_bcae" index="57"/>
+    <alias name="Identifiant BCAE" field="identifiant_bcae" index="58"/>
+    <alias name="Type d'annexe" field="type_d_annexe" index="59"/>
+    <alias name="Date de validation BCAE" field="date_de_validation_bcae" index="60"/>
+    <alias name="Validation BCAE" field="validation_bcae" index="61"/>
+    <alias name="Directive cadre de l'eau" field="directive_cadre_de_l_eau" index="62"/>
+    <alias name="" field="id_sqlite_1gnQg1s" index="63"/>
+    <alias name="" field="gcms_fingerprint" index="64"/>
   </aliases>
   <defaults>
-    <default applyOnUpdate="0" expression="" field="cleabs"/>
-    <default applyOnUpdate="0" expression="" field="code_hydrographique"/>
-    <default applyOnUpdate="0" expression="" field="code_du_pays"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="nature"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="fictif"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="etat_de_l_objet"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="position_par_rapport_au_sol"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="detruit"/>
-    <default applyOnUpdate="0" expression="" field="date_creation"/>
-    <default applyOnUpdate="0" expression="" field="date_modification"/>
-    <default applyOnUpdate="0" expression="" field="date_destruction"/>
-    <default applyOnUpdate="0" expression="" field="date_d_apparition"/>
-    <default applyOnUpdate="0" expression="" field="date_de_confirmation"/>
-    <default applyOnUpdate="0" expression="" field="source_detaillee"/>
-    <default applyOnUpdate="0" expression="" field="sources"/>
-    <default applyOnUpdate="0" expression="" field="identifiants_sources"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="methode_d_acquisition_planimetrique"/>
-    <default applyOnUpdate="0" expression="" field="precision_planimetrique"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="methode_d_acquisition_altimetrique"/>
-    <default applyOnUpdate="0" expression="" field="precision_altimetrique"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="mode_d_obtention_des_coordonnees"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="mode_d_obtention_de_l_altitude"/>
-    <default applyOnUpdate="0" expression="" field="complement"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="statut"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="persistance"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="fosse"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="navigabilite"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="salinite"/>
-    <default applyOnUpdate="0" expression="" field="numero_d_ordre"/>
-    <default applyOnUpdate="0" expression="" field="strategie_de_classement"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="origine"/>
-    <default applyOnUpdate="0" expression="" field="perimetre_d_utilisation_ou_origine"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="sens_de_l_ecoulement"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="reseau_principal_coulant"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="delimitation"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="trace_connu"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="classe_de_largeur"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="type_de_bras"/>
-    <default applyOnUpdate="0" expression="" field="nom"/>
-    <default applyOnUpdate="0" expression="" field="commentaire_centralise"/>
-    <default applyOnUpdate="0" expression="" field="commentaire_collecteur"/>
-    <default applyOnUpdate="0" expression="" field="commentaire_sur_l_objet_hydro"/>
-    <default applyOnUpdate="0" expression="" field="code_du_cours_d_eau_bdcarthage"/>
-    <default applyOnUpdate="0" expression="" field="source_restitution"/>
-    <default applyOnUpdate="0" expression="" field="metadonnees_unification"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="inventaire_police_de_l_eau"/>
-    <default applyOnUpdate="0" expression="" field="identifiant_police_de_l_eau"/>
-    <default applyOnUpdate="0" expression="" field="v1_cleabs"/>
-    <default applyOnUpdate="0" expression="" field="liens_vers_cours_d_eau"/>
-    <default applyOnUpdate="0" expression="" field="liens_vers_cours_d_eau_ge"/>
-    <default applyOnUpdate="0" expression="" field="lien_vers_noeud_hydrographique_ini"/>
-    <default applyOnUpdate="0" expression="" field="lien_vers_noeud_hydrographique_fin"/>
-    <default applyOnUpdate="0" expression="" field="liens_vers_surface_hydrographique"/>
-    <default applyOnUpdate="0" expression="" field="lien_vers_entite_de_transition"/>
-    <default applyOnUpdate="0" expression="" field="cpx_toponyme_de_cours_d_eau"/>
-    <default applyOnUpdate="0" expression="" field="cpx_toponyme_de_cours_d_eau_ge"/>
-    <default applyOnUpdate="0" expression="" field="cpx_toponyme_d_entite_de_transition"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="inventaire_bcae"/>
-    <default applyOnUpdate="0" expression="" field="identifiant_bcae"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="type_d_annexe"/>
-    <default applyOnUpdate="0" expression="" field="date_de_validation_bcae"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="validation_bcae"/>
-    <default applyOnUpdate="0" expression="'NULL'" field="directive_cadre_de_l_eau"/>
-    <default applyOnUpdate="0" expression="" field="id_sqlite_1gnQg1s"/>
-    <default applyOnUpdate="0" expression="" field="gcms_fingerprint"/>
+    <default expression="" field="cleabs" applyOnUpdate="0"/>
+    <default expression="" field="code_hydrographique" applyOnUpdate="0"/>
+    <default expression="" field="code_du_pays" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="nature" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="fictif" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="etat_de_l_objet" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="position_par_rapport_au_sol" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="detruit" applyOnUpdate="0"/>
+    <default expression="" field="date_creation" applyOnUpdate="0"/>
+    <default expression="" field="date_modification" applyOnUpdate="0"/>
+    <default expression="" field="date_destruction" applyOnUpdate="0"/>
+    <default expression="" field="date_d_apparition" applyOnUpdate="0"/>
+    <default expression="" field="date_de_confirmation" applyOnUpdate="0"/>
+    <default expression="" field="source_detaillee" applyOnUpdate="0"/>
+    <default expression="" field="sources" applyOnUpdate="0"/>
+    <default expression="" field="identifiants_sources" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="methode_d_acquisition_planimetrique" applyOnUpdate="0"/>
+    <default expression="" field="precision_planimetrique" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="methode_d_acquisition_altimetrique" applyOnUpdate="0"/>
+    <default expression="" field="precision_altimetrique" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="mode_d_obtention_des_coordonnees" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="mode_d_obtention_de_l_altitude" applyOnUpdate="0"/>
+    <default expression="" field="complement" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="statut" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="persistance" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="fosse" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="navigabilite" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="salinite" applyOnUpdate="0"/>
+    <default expression="" field="numero_d_ordre" applyOnUpdate="0"/>
+    <default expression="" field="strategie_de_classement" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="origine" applyOnUpdate="0"/>
+    <default expression="" field="perimetre_d_utilisation_ou_origine" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="sens_de_l_ecoulement" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="reseau_principal_coulant" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="delimitation" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="trace_connu" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="classe_de_largeur" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="type_de_bras" applyOnUpdate="0"/>
+    <default expression="" field="nom" applyOnUpdate="0"/>
+    <default expression="" field="commentaire_centralise" applyOnUpdate="0"/>
+    <default expression="" field="commentaire_collecteur" applyOnUpdate="0"/>
+    <default expression="" field="commentaire_sur_l_objet_hydro" applyOnUpdate="0"/>
+    <default expression="" field="code_du_cours_d_eau_bdcarthage" applyOnUpdate="0"/>
+    <default expression="" field="source_restitution" applyOnUpdate="0"/>
+    <default expression="" field="metadonnees_unification" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="inventaire_police_de_l_eau" applyOnUpdate="0"/>
+    <default expression="" field="identifiant_police_de_l_eau" applyOnUpdate="0"/>
+    <default expression="" field="v1_cleabs" applyOnUpdate="0"/>
+    <default expression="" field="liens_vers_cours_d_eau" applyOnUpdate="0"/>
+    <default expression="" field="liens_vers_cours_d_eau_ge" applyOnUpdate="0"/>
+    <default expression="" field="lien_vers_noeud_hydrographique_ini" applyOnUpdate="0"/>
+    <default expression="" field="lien_vers_noeud_hydrographique_fin" applyOnUpdate="0"/>
+    <default expression="" field="liens_vers_surface_hydrographique" applyOnUpdate="0"/>
+    <default expression="" field="lien_vers_entite_de_transition" applyOnUpdate="0"/>
+    <default expression="" field="cpx_toponyme_de_cours_d_eau" applyOnUpdate="0"/>
+    <default expression="" field="cpx_toponyme_de_cours_d_eau_ge" applyOnUpdate="0"/>
+    <default expression="" field="cpx_toponyme_d_entite_de_transition" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="inventaire_bcae" applyOnUpdate="0"/>
+    <default expression="" field="identifiant_bcae" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="type_d_annexe" applyOnUpdate="0"/>
+    <default expression="" field="date_de_validation_bcae" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="validation_bcae" applyOnUpdate="0"/>
+    <default expression="'NULL'" field="directive_cadre_de_l_eau" applyOnUpdate="0"/>
+    <default expression="" field="id_sqlite_1gnQg1s" applyOnUpdate="0"/>
+    <default expression="" field="gcms_fingerprint" applyOnUpdate="0"/>
   </defaults>
   <constraints>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="cleabs" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="code_hydrographique" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="code_du_pays" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="5" notnull_strength="1" field="nature" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="5" notnull_strength="1" field="fictif" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="5" notnull_strength="1" field="etat_de_l_objet" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="5" notnull_strength="1" field="position_par_rapport_au_sol" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="detruit" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="date_creation" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="date_modification" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="date_destruction" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="date_d_apparition" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="date_de_confirmation" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="source_detaillee" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="sources" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="identifiants_sources" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="5" notnull_strength="1" field="methode_d_acquisition_planimetrique" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="precision_planimetrique" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="5" notnull_strength="1" field="methode_d_acquisition_altimetrique" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="precision_altimetrique" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="mode_d_obtention_des_coordonnees" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="mode_d_obtention_de_l_altitude" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="complement" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="statut" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="5" notnull_strength="1" field="persistance" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="fosse" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="navigabilite" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="salinite" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="numero_d_ordre" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="strategie_de_classement" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="origine" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="perimetre_d_utilisation_ou_origine" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="5" notnull_strength="1" field="sens_de_l_ecoulement" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="reseau_principal_coulant" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="delimitation" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="trace_connu" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="classe_de_largeur" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="type_de_bras" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="nom" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="commentaire_centralise" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="commentaire_collecteur" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="commentaire_sur_l_objet_hydro" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="code_du_cours_d_eau_bdcarthage" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="source_restitution" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="metadonnees_unification" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="inventaire_police_de_l_eau" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="identifiant_police_de_l_eau" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="v1_cleabs" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="liens_vers_cours_d_eau" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="liens_vers_cours_d_eau_ge" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="lien_vers_noeud_hydrographique_ini" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="lien_vers_noeud_hydrographique_fin" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="liens_vers_surface_hydrographique" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="lien_vers_entite_de_transition" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="cpx_toponyme_de_cours_d_eau" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="cpx_toponyme_de_cours_d_eau_ge" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="cpx_toponyme_d_entite_de_transition" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="inventaire_bcae" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="identifiant_bcae" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="4" notnull_strength="0" field="type_d_annexe" exp_strength="1"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="date_de_validation_bcae" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="validation_bcae" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="directive_cadre_de_l_eau" exp_strength="0"/>
-    <constraint unique_strength="1" constraints="3" notnull_strength="1" field="id_sqlite_1gnQg1s" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="gcms_fingerprint" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="cleabs" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="code_hydrographique" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="code_du_pays" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="5" notnull_strength="1" field="nature" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="5" notnull_strength="1" field="fictif" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="5" notnull_strength="1" field="etat_de_l_objet" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="5" notnull_strength="1" field="position_par_rapport_au_sol" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="detruit" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="date_creation" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="date_modification" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="date_destruction" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="date_d_apparition" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="date_de_confirmation" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="source_detaillee" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="sources" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="identifiants_sources" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="5" notnull_strength="1" field="methode_d_acquisition_planimetrique" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="precision_planimetrique" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="5" notnull_strength="1" field="methode_d_acquisition_altimetrique" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="precision_altimetrique" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="4" notnull_strength="0" field="mode_d_obtention_des_coordonnees" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="4" notnull_strength="0" field="mode_d_obtention_de_l_altitude" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="complement" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="4" notnull_strength="0" field="statut" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="5" notnull_strength="1" field="persistance" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="fosse" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="navigabilite" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="salinite" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="numero_d_ordre" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="strategie_de_classement" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="4" notnull_strength="0" field="origine" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="perimetre_d_utilisation_ou_origine" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="5" notnull_strength="1" field="sens_de_l_ecoulement" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="reseau_principal_coulant" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="delimitation" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="trace_connu" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="4" notnull_strength="0" field="classe_de_largeur" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="4" notnull_strength="0" field="type_de_bras" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="nom" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="commentaire_centralise" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="commentaire_collecteur" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="commentaire_sur_l_objet_hydro" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="code_du_cours_d_eau_bdcarthage" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="source_restitution" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="metadonnees_unification" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="4" notnull_strength="0" field="inventaire_police_de_l_eau" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="identifiant_police_de_l_eau" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="v1_cleabs" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="4" notnull_strength="0" field="liens_vers_cours_d_eau" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="4" notnull_strength="0" field="liens_vers_cours_d_eau_ge" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="4" notnull_strength="0" field="lien_vers_noeud_hydrographique_ini" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="4" notnull_strength="0" field="lien_vers_noeud_hydrographique_fin" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="4" notnull_strength="0" field="liens_vers_surface_hydrographique" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="4" notnull_strength="0" field="lien_vers_entite_de_transition" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="cpx_toponyme_de_cours_d_eau" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="cpx_toponyme_de_cours_d_eau_ge" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="cpx_toponyme_d_entite_de_transition" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="inventaire_bcae" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="identifiant_bcae" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="4" notnull_strength="0" field="type_d_annexe" unique_strength="0" exp_strength="1"/>
+    <constraint constraints="0" notnull_strength="0" field="date_de_validation_bcae" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="validation_bcae" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="directive_cadre_de_l_eau" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="3" notnull_strength="1" field="id_sqlite_1gnQg1s" unique_strength="1" exp_strength="0"/>
+    <constraint constraints="0" notnull_strength="0" field="gcms_fingerprint" unique_strength="0" exp_strength="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint exp="" desc="" field="cleabs"/>
-    <constraint exp="" desc="" field="code_hydrographique"/>
-    <constraint exp="" desc="" field="code_du_pays"/>
-    <constraint exp="(&quot;nature&quot; != 'NULL') AND ((length(&quot;nature&quot;) &lt;= 27))" desc="" field="nature"/>
-    <constraint exp="&quot;fictif&quot; != 'NULL'" desc="" field="fictif"/>
-    <constraint exp="(&quot;etat_de_l_objet&quot; != 'NULL') AND ((length(&quot;etat_de_l_objet&quot;) &lt;= 15))" desc="" field="etat_de_l_objet"/>
-    <constraint exp="(&quot;position_par_rapport_au_sol&quot; != 'NULL') AND ((length(&quot;position_par_rapport_au_sol&quot;) &lt;= 8))" desc="" field="position_par_rapport_au_sol"/>
-    <constraint exp="" desc="" field="detruit"/>
-    <constraint exp="" desc="" field="date_creation"/>
-    <constraint exp="" desc="" field="date_modification"/>
-    <constraint exp="" desc="" field="date_destruction"/>
-    <constraint exp="" desc="" field="date_d_apparition"/>
-    <constraint exp="" desc="" field="date_de_confirmation"/>
-    <constraint exp="" desc="" field="source_detaillee"/>
-    <constraint exp="" desc="" field="sources"/>
-    <constraint exp="" desc="" field="identifiants_sources"/>
-    <constraint exp="(&quot;methode_d_acquisition_planimetrique&quot; != 'NULL') AND ((length(&quot;methode_d_acquisition_planimetrique&quot;) &lt;= 33))" desc="" field="methode_d_acquisition_planimetrique"/>
-    <constraint exp="" desc="" field="precision_planimetrique"/>
-    <constraint exp="(&quot;methode_d_acquisition_altimetrique&quot; != 'NULL') AND ((length(&quot;methode_d_acquisition_altimetrique&quot;) &lt;= 33))" desc="" field="methode_d_acquisition_altimetrique"/>
-    <constraint exp="" desc="" field="precision_altimetrique"/>
-    <constraint exp="(&quot;mode_d_obtention_des_coordonnees&quot; is NULL or (length(&quot;mode_d_obtention_des_coordonnees&quot;) &lt;= 31))" desc="" field="mode_d_obtention_des_coordonnees"/>
-    <constraint exp="(&quot;mode_d_obtention_de_l_altitude&quot; is NULL or (length(&quot;mode_d_obtention_de_l_altitude&quot;) &lt;= 41))" desc="" field="mode_d_obtention_de_l_altitude"/>
-    <constraint exp="" desc="" field="complement"/>
-    <constraint exp="(&quot;statut&quot; is NULL or (length(&quot;statut&quot;) &lt;= 7))" desc="" field="statut"/>
-    <constraint exp="(&quot;persistance&quot; != 'NULL') AND ((length(&quot;persistance&quot;) &lt;= 12))" desc="" field="persistance"/>
-    <constraint exp="" desc="" field="fosse"/>
-    <constraint exp="" desc="" field="navigabilite"/>
-    <constraint exp="" desc="" field="salinite"/>
-    <constraint exp="" desc="" field="numero_d_ordre"/>
-    <constraint exp="" desc="" field="strategie_de_classement"/>
-    <constraint exp="(&quot;origine&quot; is NULL or (length(&quot;origine&quot;) &lt;= 24))" desc="" field="origine"/>
-    <constraint exp="" desc="" field="perimetre_d_utilisation_ou_origine"/>
-    <constraint exp="(&quot;sens_de_l_ecoulement&quot; != 'NULL') AND ((length(&quot;sens_de_l_ecoulement&quot;) &lt;= 12))" desc="" field="sens_de_l_ecoulement"/>
-    <constraint exp="" desc="" field="reseau_principal_coulant"/>
-    <constraint exp="" desc="" field="delimitation"/>
-    <constraint exp="" desc="" field="trace_connu"/>
-    <constraint exp="(&quot;classe_de_largeur&quot; is NULL or (length(&quot;classe_de_largeur&quot;) &lt;= 26))" desc="" field="classe_de_largeur"/>
-    <constraint exp="(&quot;type_de_bras&quot; is NULL or (length(&quot;type_de_bras&quot;) &lt;= 10))" desc="" field="type_de_bras"/>
-    <constraint exp="" desc="" field="nom"/>
-    <constraint exp="" desc="" field="commentaire_centralise"/>
-    <constraint exp="" desc="" field="commentaire_collecteur"/>
-    <constraint exp="" desc="" field="commentaire_sur_l_objet_hydro"/>
-    <constraint exp="" desc="" field="code_du_cours_d_eau_bdcarthage"/>
-    <constraint exp="" desc="" field="source_restitution"/>
-    <constraint exp="" desc="" field="metadonnees_unification"/>
-    <constraint exp="(&quot;inventaire_police_de_l_eau&quot; is NULL or (length(&quot;inventaire_police_de_l_eau&quot;) &lt;= 18))" desc="" field="inventaire_police_de_l_eau"/>
-    <constraint exp="" desc="" field="identifiant_police_de_l_eau"/>
-    <constraint exp="" desc="" field="v1_cleabs"/>
-    <constraint exp="(&quot;liens_vers_cours_d_eau&quot; is NULL or (length(&quot;liens_vers_cours_d_eau&quot;) &lt;= 199))" desc="" field="liens_vers_cours_d_eau"/>
-    <constraint exp="(&quot;liens_vers_cours_d_eau_ge&quot; is NULL or (length(&quot;liens_vers_cours_d_eau_ge&quot;) &lt;= 199))" desc="" field="liens_vers_cours_d_eau_ge"/>
-    <constraint exp="(&quot;lien_vers_noeud_hydrographique_ini&quot; is NULL or (length(&quot;lien_vers_noeud_hydrographique_ini&quot;) &lt;= 199))" desc="" field="lien_vers_noeud_hydrographique_ini"/>
-    <constraint exp="(&quot;lien_vers_noeud_hydrographique_fin&quot; is NULL or (length(&quot;lien_vers_noeud_hydrographique_fin&quot;) &lt;= 199))" desc="" field="lien_vers_noeud_hydrographique_fin"/>
-    <constraint exp="(&quot;liens_vers_surface_hydrographique&quot; is NULL or (length(&quot;liens_vers_surface_hydrographique&quot;) &lt;= 199))" desc="" field="liens_vers_surface_hydrographique"/>
-    <constraint exp="(&quot;lien_vers_entite_de_transition&quot; is NULL or (length(&quot;lien_vers_entite_de_transition&quot;) &lt;= 199))" desc="" field="lien_vers_entite_de_transition"/>
-    <constraint exp="" desc="" field="cpx_toponyme_de_cours_d_eau"/>
-    <constraint exp="" desc="" field="cpx_toponyme_de_cours_d_eau_ge"/>
-    <constraint exp="" desc="" field="cpx_toponyme_d_entite_de_transition"/>
-    <constraint exp="" desc="" field="inventaire_bcae"/>
-    <constraint exp="" desc="" field="identifiant_bcae"/>
-    <constraint exp="(&quot;type_d_annexe&quot; is NULL or (length(&quot;type_d_annexe&quot;) &lt;= 7))" desc="" field="type_d_annexe"/>
-    <constraint exp="" desc="" field="date_de_validation_bcae"/>
-    <constraint exp="" desc="" field="validation_bcae"/>
-    <constraint exp="" desc="" field="directive_cadre_de_l_eau"/>
-    <constraint exp="" desc="" field="id_sqlite_1gnQg1s"/>
-    <constraint exp="" desc="" field="gcms_fingerprint"/>
+    <constraint exp="" field="cleabs" desc=""/>
+    <constraint exp="" field="code_hydrographique" desc=""/>
+    <constraint exp="" field="code_du_pays" desc=""/>
+    <constraint exp="(&quot;nature&quot; != 'NULL') AND ((length(&quot;nature&quot;) &lt;= 27))" field="nature" desc=""/>
+    <constraint exp="&quot;fictif&quot; != 'NULL'" field="fictif" desc=""/>
+    <constraint exp="(&quot;etat_de_l_objet&quot; != 'NULL') AND ((length(&quot;etat_de_l_objet&quot;) &lt;= 15))" field="etat_de_l_objet" desc=""/>
+    <constraint exp="(&quot;position_par_rapport_au_sol&quot; != 'NULL') AND ((length(&quot;position_par_rapport_au_sol&quot;) &lt;= 8))" field="position_par_rapport_au_sol" desc=""/>
+    <constraint exp="" field="detruit" desc=""/>
+    <constraint exp="" field="date_creation" desc=""/>
+    <constraint exp="" field="date_modification" desc=""/>
+    <constraint exp="" field="date_destruction" desc=""/>
+    <constraint exp="" field="date_d_apparition" desc=""/>
+    <constraint exp="" field="date_de_confirmation" desc=""/>
+    <constraint exp="" field="source_detaillee" desc=""/>
+    <constraint exp="" field="sources" desc=""/>
+    <constraint exp="" field="identifiants_sources" desc=""/>
+    <constraint exp="(&quot;methode_d_acquisition_planimetrique&quot; != 'NULL') AND ((length(&quot;methode_d_acquisition_planimetrique&quot;) &lt;= 33))" field="methode_d_acquisition_planimetrique" desc=""/>
+    <constraint exp="" field="precision_planimetrique" desc=""/>
+    <constraint exp="(&quot;methode_d_acquisition_altimetrique&quot; != 'NULL') AND ((length(&quot;methode_d_acquisition_altimetrique&quot;) &lt;= 33))" field="methode_d_acquisition_altimetrique" desc=""/>
+    <constraint exp="" field="precision_altimetrique" desc=""/>
+    <constraint exp="(&quot;mode_d_obtention_des_coordonnees&quot; is NULL or (length(&quot;mode_d_obtention_des_coordonnees&quot;) &lt;= 31))" field="mode_d_obtention_des_coordonnees" desc=""/>
+    <constraint exp="(&quot;mode_d_obtention_de_l_altitude&quot; is NULL or (length(&quot;mode_d_obtention_de_l_altitude&quot;) &lt;= 41))" field="mode_d_obtention_de_l_altitude" desc=""/>
+    <constraint exp="" field="complement" desc=""/>
+    <constraint exp="(&quot;statut&quot; is NULL or (length(&quot;statut&quot;) &lt;= 7))" field="statut" desc=""/>
+    <constraint exp="(&quot;persistance&quot; != 'NULL') AND ((length(&quot;persistance&quot;) &lt;= 12))" field="persistance" desc=""/>
+    <constraint exp="" field="fosse" desc=""/>
+    <constraint exp="" field="navigabilite" desc=""/>
+    <constraint exp="" field="salinite" desc=""/>
+    <constraint exp="" field="numero_d_ordre" desc=""/>
+    <constraint exp="" field="strategie_de_classement" desc=""/>
+    <constraint exp="(&quot;origine&quot; is NULL or (length(&quot;origine&quot;) &lt;= 24))" field="origine" desc=""/>
+    <constraint exp="" field="perimetre_d_utilisation_ou_origine" desc=""/>
+    <constraint exp="(&quot;sens_de_l_ecoulement&quot; != 'NULL') AND ((length(&quot;sens_de_l_ecoulement&quot;) &lt;= 12))" field="sens_de_l_ecoulement" desc=""/>
+    <constraint exp="" field="reseau_principal_coulant" desc=""/>
+    <constraint exp="" field="delimitation" desc=""/>
+    <constraint exp="" field="trace_connu" desc=""/>
+    <constraint exp="(&quot;classe_de_largeur&quot; is NULL or (length(&quot;classe_de_largeur&quot;) &lt;= 26))" field="classe_de_largeur" desc=""/>
+    <constraint exp="(&quot;type_de_bras&quot; is NULL or (length(&quot;type_de_bras&quot;) &lt;= 10))" field="type_de_bras" desc=""/>
+    <constraint exp="" field="nom" desc=""/>
+    <constraint exp="" field="commentaire_centralise" desc=""/>
+    <constraint exp="" field="commentaire_collecteur" desc=""/>
+    <constraint exp="" field="commentaire_sur_l_objet_hydro" desc=""/>
+    <constraint exp="" field="code_du_cours_d_eau_bdcarthage" desc=""/>
+    <constraint exp="" field="source_restitution" desc=""/>
+    <constraint exp="" field="metadonnees_unification" desc=""/>
+    <constraint exp="(&quot;inventaire_police_de_l_eau&quot; is NULL or (length(&quot;inventaire_police_de_l_eau&quot;) &lt;= 18))" field="inventaire_police_de_l_eau" desc=""/>
+    <constraint exp="" field="identifiant_police_de_l_eau" desc=""/>
+    <constraint exp="" field="v1_cleabs" desc=""/>
+    <constraint exp="(&quot;liens_vers_cours_d_eau&quot; is NULL or (length(&quot;liens_vers_cours_d_eau&quot;) &lt;= 199))" field="liens_vers_cours_d_eau" desc=""/>
+    <constraint exp="(&quot;liens_vers_cours_d_eau_ge&quot; is NULL or (length(&quot;liens_vers_cours_d_eau_ge&quot;) &lt;= 199))" field="liens_vers_cours_d_eau_ge" desc=""/>
+    <constraint exp="(&quot;lien_vers_noeud_hydrographique_ini&quot; is NULL or (length(&quot;lien_vers_noeud_hydrographique_ini&quot;) &lt;= 199))" field="lien_vers_noeud_hydrographique_ini" desc=""/>
+    <constraint exp="(&quot;lien_vers_noeud_hydrographique_fin&quot; is NULL or (length(&quot;lien_vers_noeud_hydrographique_fin&quot;) &lt;= 199))" field="lien_vers_noeud_hydrographique_fin" desc=""/>
+    <constraint exp="(&quot;liens_vers_surface_hydrographique&quot; is NULL or (length(&quot;liens_vers_surface_hydrographique&quot;) &lt;= 199))" field="liens_vers_surface_hydrographique" desc=""/>
+    <constraint exp="(&quot;lien_vers_entite_de_transition&quot; is NULL or (length(&quot;lien_vers_entite_de_transition&quot;) &lt;= 199))" field="lien_vers_entite_de_transition" desc=""/>
+    <constraint exp="" field="cpx_toponyme_de_cours_d_eau" desc=""/>
+    <constraint exp="" field="cpx_toponyme_de_cours_d_eau_ge" desc=""/>
+    <constraint exp="" field="cpx_toponyme_d_entite_de_transition" desc=""/>
+    <constraint exp="" field="inventaire_bcae" desc=""/>
+    <constraint exp="" field="identifiant_bcae" desc=""/>
+    <constraint exp="(&quot;type_d_annexe&quot; is NULL or (length(&quot;type_d_annexe&quot;) &lt;= 7))" field="type_d_annexe" desc=""/>
+    <constraint exp="" field="date_de_validation_bcae" desc=""/>
+    <constraint exp="" field="validation_bcae" desc=""/>
+    <constraint exp="" field="directive_cadre_de_l_eau" desc=""/>
+    <constraint exp="" field="id_sqlite_1gnQg1s" desc=""/>
+    <constraint exp="" field="gcms_fingerprint" desc=""/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
-    <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+    <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
   </attributeactions>
-  <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+  <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
     <columns>
-      <column type="field" hidden="0" name="cleabs" width="-1"/>
-      <column type="field" hidden="0" name="code_hydrographique" width="-1"/>
-      <column type="field" hidden="0" name="code_du_pays" width="-1"/>
-      <column type="field" hidden="0" name="nature" width="-1"/>
-      <column type="field" hidden="0" name="fictif" width="-1"/>
-      <column type="field" hidden="0" name="etat_de_l_objet" width="-1"/>
-      <column type="field" hidden="0" name="position_par_rapport_au_sol" width="-1"/>
-      <column type="field" hidden="0" name="detruit" width="-1"/>
-      <column type="field" hidden="0" name="date_creation" width="-1"/>
-      <column type="field" hidden="0" name="date_modification" width="-1"/>
-      <column type="field" hidden="0" name="date_destruction" width="-1"/>
-      <column type="field" hidden="0" name="date_d_apparition" width="-1"/>
-      <column type="field" hidden="0" name="date_de_confirmation" width="-1"/>
-      <column type="field" hidden="0" name="source_detaillee" width="-1"/>
-      <column type="field" hidden="0" name="sources" width="-1"/>
-      <column type="field" hidden="0" name="identifiants_sources" width="-1"/>
-      <column type="field" hidden="0" name="methode_d_acquisition_planimetrique" width="-1"/>
-      <column type="field" hidden="0" name="precision_planimetrique" width="-1"/>
-      <column type="field" hidden="0" name="methode_d_acquisition_altimetrique" width="-1"/>
-      <column type="field" hidden="0" name="precision_altimetrique" width="-1"/>
-      <column type="field" hidden="0" name="mode_d_obtention_des_coordonnees" width="-1"/>
-      <column type="field" hidden="0" name="mode_d_obtention_de_l_altitude" width="-1"/>
-      <column type="field" hidden="0" name="complement" width="-1"/>
-      <column type="field" hidden="0" name="statut" width="-1"/>
-      <column type="field" hidden="0" name="persistance" width="-1"/>
-      <column type="field" hidden="0" name="fosse" width="-1"/>
-      <column type="field" hidden="0" name="navigabilite" width="-1"/>
-      <column type="field" hidden="0" name="salinite" width="-1"/>
-      <column type="field" hidden="0" name="numero_d_ordre" width="-1"/>
-      <column type="field" hidden="0" name="strategie_de_classement" width="-1"/>
-      <column type="field" hidden="0" name="origine" width="-1"/>
-      <column type="field" hidden="0" name="perimetre_d_utilisation_ou_origine" width="-1"/>
-      <column type="field" hidden="0" name="sens_de_l_ecoulement" width="-1"/>
-      <column type="field" hidden="0" name="reseau_principal_coulant" width="-1"/>
-      <column type="field" hidden="0" name="delimitation" width="-1"/>
-      <column type="field" hidden="0" name="trace_connu" width="-1"/>
-      <column type="field" hidden="0" name="classe_de_largeur" width="-1"/>
-      <column type="field" hidden="0" name="type_de_bras" width="-1"/>
-      <column type="field" hidden="0" name="nom" width="-1"/>
-      <column type="field" hidden="0" name="commentaire_centralise" width="-1"/>
-      <column type="field" hidden="0" name="commentaire_collecteur" width="-1"/>
-      <column type="field" hidden="0" name="commentaire_sur_l_objet_hydro" width="-1"/>
-      <column type="field" hidden="0" name="code_du_cours_d_eau_bdcarthage" width="-1"/>
-      <column type="field" hidden="0" name="source_restitution" width="-1"/>
-      <column type="field" hidden="0" name="metadonnees_unification" width="-1"/>
-      <column type="field" hidden="0" name="inventaire_police_de_l_eau" width="-1"/>
-      <column type="field" hidden="0" name="identifiant_police_de_l_eau" width="-1"/>
-      <column type="field" hidden="0" name="v1_cleabs" width="-1"/>
-      <column type="field" hidden="0" name="liens_vers_cours_d_eau" width="-1"/>
-      <column type="field" hidden="0" name="liens_vers_cours_d_eau_ge" width="-1"/>
-      <column type="field" hidden="0" name="lien_vers_noeud_hydrographique_ini" width="-1"/>
-      <column type="field" hidden="0" name="lien_vers_noeud_hydrographique_fin" width="-1"/>
-      <column type="field" hidden="0" name="liens_vers_surface_hydrographique" width="-1"/>
-      <column type="field" hidden="0" name="lien_vers_entite_de_transition" width="-1"/>
-      <column type="field" hidden="0" name="cpx_toponyme_de_cours_d_eau" width="-1"/>
-      <column type="field" hidden="0" name="cpx_toponyme_de_cours_d_eau_ge" width="-1"/>
-      <column type="field" hidden="0" name="cpx_toponyme_d_entite_de_transition" width="-1"/>
-      <column type="field" hidden="0" name="inventaire_bcae" width="-1"/>
-      <column type="field" hidden="0" name="identifiant_bcae" width="-1"/>
-      <column type="field" hidden="0" name="type_d_annexe" width="-1"/>
-      <column type="field" hidden="0" name="date_de_validation_bcae" width="-1"/>
-      <column type="field" hidden="0" name="validation_bcae" width="-1"/>
-      <column type="field" hidden="0" name="directive_cadre_de_l_eau" width="-1"/>
-      <column type="field" hidden="1" name="id_sqlite_1gnQg1s" width="-1"/>
-      <column type="field" hidden="1" name="gcms_fingerprint" width="-1"/>
-      <column type="actions" hidden="1" width="-1"/>
+      <column name="cleabs" hidden="0" type="field" width="-1"/>
+      <column name="code_hydrographique" hidden="0" type="field" width="-1"/>
+      <column name="code_du_pays" hidden="0" type="field" width="-1"/>
+      <column name="nature" hidden="0" type="field" width="-1"/>
+      <column name="fictif" hidden="0" type="field" width="-1"/>
+      <column name="etat_de_l_objet" hidden="0" type="field" width="-1"/>
+      <column name="position_par_rapport_au_sol" hidden="0" type="field" width="-1"/>
+      <column name="detruit" hidden="0" type="field" width="-1"/>
+      <column name="date_creation" hidden="0" type="field" width="-1"/>
+      <column name="date_modification" hidden="0" type="field" width="-1"/>
+      <column name="date_destruction" hidden="0" type="field" width="-1"/>
+      <column name="date_d_apparition" hidden="0" type="field" width="-1"/>
+      <column name="date_de_confirmation" hidden="0" type="field" width="-1"/>
+      <column name="source_detaillee" hidden="0" type="field" width="-1"/>
+      <column name="sources" hidden="0" type="field" width="-1"/>
+      <column name="identifiants_sources" hidden="0" type="field" width="-1"/>
+      <column name="methode_d_acquisition_planimetrique" hidden="0" type="field" width="-1"/>
+      <column name="precision_planimetrique" hidden="0" type="field" width="-1"/>
+      <column name="methode_d_acquisition_altimetrique" hidden="0" type="field" width="-1"/>
+      <column name="precision_altimetrique" hidden="0" type="field" width="-1"/>
+      <column name="mode_d_obtention_des_coordonnees" hidden="0" type="field" width="-1"/>
+      <column name="mode_d_obtention_de_l_altitude" hidden="0" type="field" width="-1"/>
+      <column name="complement" hidden="0" type="field" width="-1"/>
+      <column name="statut" hidden="0" type="field" width="-1"/>
+      <column name="persistance" hidden="0" type="field" width="-1"/>
+      <column name="fosse" hidden="0" type="field" width="-1"/>
+      <column name="navigabilite" hidden="0" type="field" width="-1"/>
+      <column name="salinite" hidden="0" type="field" width="-1"/>
+      <column name="numero_d_ordre" hidden="0" type="field" width="-1"/>
+      <column name="strategie_de_classement" hidden="0" type="field" width="-1"/>
+      <column name="origine" hidden="0" type="field" width="-1"/>
+      <column name="perimetre_d_utilisation_ou_origine" hidden="0" type="field" width="-1"/>
+      <column name="sens_de_l_ecoulement" hidden="0" type="field" width="-1"/>
+      <column name="reseau_principal_coulant" hidden="0" type="field" width="-1"/>
+      <column name="delimitation" hidden="0" type="field" width="-1"/>
+      <column name="trace_connu" hidden="0" type="field" width="-1"/>
+      <column name="classe_de_largeur" hidden="0" type="field" width="-1"/>
+      <column name="type_de_bras" hidden="0" type="field" width="-1"/>
+      <column name="nom" hidden="0" type="field" width="-1"/>
+      <column name="commentaire_centralise" hidden="0" type="field" width="-1"/>
+      <column name="commentaire_collecteur" hidden="0" type="field" width="-1"/>
+      <column name="commentaire_sur_l_objet_hydro" hidden="0" type="field" width="-1"/>
+      <column name="code_du_cours_d_eau_bdcarthage" hidden="0" type="field" width="-1"/>
+      <column name="source_restitution" hidden="0" type="field" width="-1"/>
+      <column name="metadonnees_unification" hidden="0" type="field" width="-1"/>
+      <column name="inventaire_police_de_l_eau" hidden="0" type="field" width="-1"/>
+      <column name="identifiant_police_de_l_eau" hidden="0" type="field" width="-1"/>
+      <column name="v1_cleabs" hidden="0" type="field" width="-1"/>
+      <column name="liens_vers_cours_d_eau" hidden="0" type="field" width="-1"/>
+      <column name="liens_vers_cours_d_eau_ge" hidden="0" type="field" width="-1"/>
+      <column name="lien_vers_noeud_hydrographique_ini" hidden="0" type="field" width="-1"/>
+      <column name="lien_vers_noeud_hydrographique_fin" hidden="0" type="field" width="-1"/>
+      <column name="liens_vers_surface_hydrographique" hidden="0" type="field" width="-1"/>
+      <column name="lien_vers_entite_de_transition" hidden="0" type="field" width="-1"/>
+      <column name="cpx_toponyme_de_cours_d_eau" hidden="0" type="field" width="-1"/>
+      <column name="cpx_toponyme_de_cours_d_eau_ge" hidden="0" type="field" width="-1"/>
+      <column name="cpx_toponyme_d_entite_de_transition" hidden="0" type="field" width="-1"/>
+      <column name="inventaire_bcae" hidden="0" type="field" width="-1"/>
+      <column name="identifiant_bcae" hidden="0" type="field" width="-1"/>
+      <column name="type_d_annexe" hidden="0" type="field" width="-1"/>
+      <column name="date_de_validation_bcae" hidden="0" type="field" width="-1"/>
+      <column name="validation_bcae" hidden="0" type="field" width="-1"/>
+      <column name="directive_cadre_de_l_eau" hidden="0" type="field" width="-1"/>
+      <column name="id_sqlite_1gnQg1s" hidden="1" type="field" width="-1"/>
+      <column name="gcms_fingerprint" hidden="1" type="field" width="-1"/>
+      <column hidden="1" type="actions" width="-1"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -1475,11 +1475,11 @@
   <featformsuppress>0</featformsuppress>
   <editorlayout>generatedlayout</editorlayout>
   <editable>
-    <field editable="0" name="cleabs"/>
-    <field editable="0" name="date_creation"/>
-    <field editable="0" name="date_destruction"/>
-    <field editable="0" name="date_modification"/>
-    <field editable="0" name="detruit"/>
+    <field name="cleabs" editable="0"/>
+    <field name="date_creation" editable="0"/>
+    <field name="date_destruction" editable="0"/>
+    <field name="date_modification" editable="0"/>
+    <field name="detruit" editable="0"/>
   </editable>
   <labelOnTop/>
   <reuseLastValue/>

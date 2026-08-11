@@ -80,7 +80,7 @@ class ClassPlugin:
             f"Les modifications ont été effectués sur : {self.layer_hydro.selectedFeatureCount()} tronçon(s)")
 
     def afficheMessageBar(self, message):
-        self.iface.messageBar().pushMessage("Info", message, level=Qgis.Info, duration=5)
+        self.iface.messageBar().pushMessage("Info", message, level=Qgis.MessageLevel.Info, duration=5)
 
     def getattributs_from_selection(self):
         self.list_dico_selection.clear()
@@ -409,7 +409,7 @@ class ClassPlugin:
         try:
             processing_plugin = plugins[PLUGIN_SENS_NUM]
             processing_plugin.suppr_symb_sens_num(self.layer_hydro)
-        except:
+        except (KeyError, AttributeError):
             pass
         self.layer_hydro.triggerRepaint()
         self.dlgAProposDe.close()
