@@ -34,7 +34,6 @@ import os.path
 
 from .modele import *
 from .fonction import *
-from .mapping_version import *
 from .window_manager import *
 
 class ClassPlugin:
@@ -70,7 +69,7 @@ class ClassPlugin:
     def valider(self):
         if len(self.dico_champs_modifie) == 0:
             return
-        QGuiApplication.setOverrideCursor(WaitCursor)
+        QGuiApplication.setOverrideCursor(Qt.CursorShape.WaitCursor)
         self.layer_hydro.startEditing()
         for sel in self.layer_hydro.selectedFeatures():
             # changement d'attributs par paquet (dico de valeurs)
@@ -128,7 +127,7 @@ class ClassPlugin:
         self.getattributs_from_selection()
 
     def apropos(self):
-        self.dlgAProposDe.setWindowFlags(WindowStaysOnTopHint | WindowCloseButtonHint)
+        self.dlgAProposDe.setWindowFlags(Qt.WindowType.Dialog | Qt.WindowType.WindowCloseButtonHint)
         self.dlgAProposDe.exec()
 
 
@@ -394,7 +393,7 @@ class ClassPlugin:
         webbrowser.open(url)
 
     def on_project_opened(self):
-        settings = QSettings(NativeFormat, UserScope, "IGN", TITRE)
+        settings = QSettings(QSettings.Format.NativeFormat, QSettings.Scope.UserScope, "IGN", TITRE)
         visible = settings.value("visible", False, type=bool)
         if visible:
             self.run()
@@ -511,23 +510,5 @@ class ClassPlugin:
 
         # show the dialog
         self.dlg.setParent(self.iface.mainWindow())
-        self.dlg.setWindowFlags(Dialog | WindowTitleHint | WindowCloseButtonHint)
+        self.dlg.setWindowFlags(Qt.WindowType.Dialog | Qt.WindowType.WindowTitleHint | Qt.WindowType.WindowCloseButtonHint)
         self.dlg.show()
-        # Run the dialog event loop
-        # result = self.dlg.exec()
-        # See if OK was pressed
-        # if not result:
-            # # on deconnecte le signal en quittant
-            # try:
-            #     self.iface.mapCanvas().selectionChanged.disconnect(self.actualiserSelection)
-            # except TypeError:
-            #     pass  # aucune connexion existante
-            #
-            # # si on quitte, on remet la vue sans le sens de numérisation via le plugin
-            # try:
-            #     processing_plugin = plugins[PLUGIN_SENS_NUM]
-            #     processing_plugin.suppr_symb_sens_num(self.layer_hydro)
-            # except:
-            #     pass
-            # self.layer_hydro.triggerRepaint()
-            # self.dlgAProposDe.close()
